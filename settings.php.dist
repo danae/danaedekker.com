@@ -1,0 +1,14 @@
+<?php
+// Soundcloud API credentials
+$soundcloudId = '<client_id>';
+$soundcloudSecret = '<client_secret>';
+
+// ReCaptcha API credentials
+$recaptchaSecret = '<client_secret>';
+
+// SMTP server credentials
+$smtpServer = 'localhost';
+$smtpPort = 25;
+$smtpEncryption = 'tls';
+$smtpUsername = '<username>';
+$smtpPassword = '<password>';

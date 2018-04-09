@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700|Fresca");
+.color-text {
+  color: #303030 !important; }
+
+.color-accent {
+  color: #AA0050 !important; }
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #FCFCFF;
+  color: #303030; }
+
+.container {
+  max-width: 720px !important; }
+
+.bar {
+  width: 100%;
+  padding: 20px;
+  background-color: #0A0A0A;
+  color: #FCFCFF; }
+
+a {
+  color: #AA0050;
+  border-bottom: 1px #AA0050 dotted;
+  transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out; }
+  a:hover, a:focus {
+    color: #0A0A0A;
+    border-bottom-color: #0A0A0A !important;
+    text-decoration: none; }
+
+nav {
+  padding: 20px 0px 40px;
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase; }
+  nav > * {
+    margin-right: 24px; }
+  nav a {
+    display: inline-block;
+    padding: 4px 0px;
+    color: #303030;
+    border-bottom: 2px #FCFCFF solid; }
+    nav a:hover, nav a:focus {
+      border-bottom-color: #303030; }
+    nav a.active {
+      color: #AA0050;
+      border-bottom-color: #AA0050; }
+      nav a.active:hover, nav a.active:focus {
+        border-bottom-color: #AA0050; }
+  nav img {
+    margin-right: 24px; }
+
+footer {
+  padding: 40px 0px 20px;
+  text-align: center;
+  color: gray;
+  font-size: small; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fresca", sans-serif;
+  margin-bottom: 1rem; }
+
+h1, h2 {
+  color: #AA0050; }
+
+div.card {
+  margin-bottom: 1rem; }
+
+img {
+  max-width: 100%; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.superbig {
+  font-size: 5rem; }
+
+div.media {
+  display: table; }
+  div.media-image {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 12px;
+    color: #AA0050; }
+    div.media-image.right {
+      padding-left: 12px;
+      padding-right: 0px; }
+    div.media-image > * {
+      display: block; }
+  div.media-body {
+    display: table-cell;
+    vertical-align: top; }
+    div.media-body.centered {
+      vertical-align: middle; }
+    div.media-body :first-child {
+      margin-top: 0px; }
+    div.media-body h1 {
+      font-weight: 300;
+      margin: 0px 0px 0.5em; }
+    div.media-body p {
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=styles.css.map */

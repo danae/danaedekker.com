@@ -1,0 +1,12 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "~7.0",
+    "dengsn/feather": "^0.1",
+    "dengsn/soundcloud": "^1.9",
+    "swiftmailer/swiftmailer": "^6.0",
+    "symfony/http-kernel": "^3.4",
+    "google/recaptcha": "^1.1"
+  }
+}

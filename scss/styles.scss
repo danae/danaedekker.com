@@ -1,0 +1,153 @@
+@import 'variables';
+
+// Body layout
+body {
+  font-family: $font-text;
+  
+  background-color: $color-background;
+  color: $color-text;
+}
+.container {
+  max-width: 720px !important;
+}
+.bar {
+  width: 100%;
+  padding: 20px;
+  
+  background-color: $color-dark;
+  color: $color-background;
+}
+
+// Links
+a {
+  color: $color-accent;
+  border-bottom: 1px $color-accent dotted;
+  
+  transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  
+  &:hover, &:focus {
+    color: $color-dark;
+    border-bottom-color: $color-dark !important;
+    text-decoration: none;
+  }
+}
+
+// Navigation layout
+nav {
+  padding: 20px 0px 40px;
+  
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase;
+  
+  & > * {
+    margin-right: 24px;
+  }
+  
+  a {
+    display: inline-block;
+    padding: 4px 0px;
+    color: $color-text;
+    border-bottom: 2px $color-background solid;
+    
+    &:hover, &:focus {
+      border-bottom-color: $color-text;
+    }
+    
+    &.active {
+      color: $color-accent;
+      border-bottom-color: $color-accent;
+      
+      &:hover, &:focus {
+        border-bottom-color: $color-accent;
+      }
+    }
+  }
+  
+  img {
+    margin-right: 24px;
+  }
+}
+
+// Footer layout
+footer {
+  padding: 40px 0px 20px;
+  
+  text-align: center;
+  color: gray;
+  font-size: small;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  margin-bottom: 1rem;
+}
+h1, h2 {
+  color: $color-accent;
+}
+
+// Other layout
+div.card {
+  margin-bottom: 1rem;
+}
+img {
+  max-width: 100%;
+}
+
+// Helper classes
+.uppercase {
+  text-transform: uppercase;
+}
+.superbig {
+  font-size: 5rem;
+}
+
+// Media objects (for contact)
+div.media {
+  display: table;
+  
+  // Media image
+  &-image {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 12px;
+    
+    color: $color-accent;
+    
+    &.right {
+      padding-left: 12px;  
+      padding-right: 0px;
+    }
+    
+    & > * {
+      display: block;
+    }
+  }
+  
+  // Media body
+  &-body {
+    display: table-cell;
+    vertical-align: top;
+    
+    &.centered {
+      vertical-align: middle;
+    }
+    
+    :first-child {
+      margin-top: 0px;
+    }
+    
+    h1 {
+      font-weight: 300;
+      margin: 0px 0px 0.5em;
+    }
+    
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
