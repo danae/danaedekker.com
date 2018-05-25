@@ -5,19 +5,26 @@
 .color-accent {
   color: #AA0050 !important; }
 
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
 body {
   font-family: "Lato", sans-serif;
-  background-color: #FCFCFF;
+  background-color: #0A0A0A;
   color: #303030; }
+
+.inner {
+  width: 100%;
+  min-height: calc(100% - 80px);
+  margin: 40px 0px;
+  background-color: #FCFCFF; }
 
 .container {
   max-width: 720px !important; }
-
-.bar {
-  width: 100%;
-  padding: 20px;
-  background-color: #0A0A0A;
-  color: #FCFCFF; }
 
 a {
   color: #AA0050;
@@ -49,7 +56,7 @@ nav {
       color: #AA0050;
       border-bottom-color: #AA0050; }
       nav a.active:hover, nav a.active:focus {
-        border-bottom-color: #AA0050; }
+        border-bottom-color: #AA0050 !important; }
   nav img {
     margin-right: 24px; }
 
