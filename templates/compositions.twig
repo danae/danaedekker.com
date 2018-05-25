@@ -1,12 +1,12 @@
 {% extends "index.twig" %}
 
 {% block main %}
-  <p class="lead">I am <b>Dennis Dekker</b>, a composer and developer based in Utrecht.</p>
-  <p>I specialize in musical storytelling in an often fantastical and magical setting. My musical style is a mix between ambient, orchestral and electronic elements and is inspired by the style of composers and artists such as Thomas Newman, Two Steps From Hell and Safri Duo.</p>
+  <p class="lead">I am <b>Dennis Dekker</b>, a composer and creative system designer based in Utrecht.</p>
+  <p>I specialize in musical storytelling in an often fantastical and magical setting, which I apply in autonomous compositions, games and interactive media. My musical style is a mix between ambient, orchestral and electronic elements and is inspired by the style of composers and artists such as Thomas Newman, Two Steps From Hell and Safri Duo.</p>
 
   <h2>Compositions</h2>
 
-  <p>These are some compositions I made in the recent past. On my <a href="{{ links.soundcloud }}">SoundCloud profile</a> you can listen to more compositions.</p>
+  <p>These are some autonomous compositions I made in the recent past. On the <a href="{{ root }}/{{ pages.projects.name }}">projects</a> page you can see more applied projects I worked on and my <a href="{{ links.soundcloud }}">SoundCloud profile</a> you can listen to more music.</p>
 
   <div class="card">
     <div class="card-body">
@@ -37,14 +37,6 @@
       <h3 class="card-title">Invisible Wings</h3>
       <p>"Always be yourself, except when you can be a faerie."</p>
       {{ soundcloud.oembed('https://soundcloud.com/purplelum/invisible-wings',{'maxheight': 240, 'color': '#aa0050', 'show_comments': false}).html }}
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-body">
-      <h3 class="card-title">Quand Les Fées Dorment</h3>
-      <p><i>Quand Les Fées Dorment</i> tells us about the dreams that faeries will have when they sleep.</p>
-      {{ soundcloud.oembed('https://soundcloud.com/purplelum/quand-les-fees-dorment',{'maxheight': 240, 'color': '#aa0050', 'show_comments': false}).html }}
     </div>
   </div>
 {% endblock %}

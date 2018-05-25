@@ -87,6 +87,11 @@ footer {
   text-align: center;
   color: gray;
   font-size: small;
+  
+  a {
+    color: gray;
+    border-bottom: none;
+  }
 }
 
 // Headings
@@ -107,6 +112,12 @@ img {
 }
 
 // Helper classes
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
 .uppercase {
   text-transform: uppercase;
 }

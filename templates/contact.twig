@@ -3,12 +3,12 @@
 {% block main %}
   <h2>Get in touch</h2>
 
-  <p>For more information about me, my compositions or my projects you can fill in the following form. I will contact you as soon as possible!</p>
+  <p>For more information about me, my compositions or projects you can fill in the following form. I will contact you as soon as possible!</p>
 
   <div class="card">
     <div class="card-body">
       <div id="contactMessages"></div>
-      
+
       <form id="contactForm" method="POST" action="{{ root }}/contactform.php">
         <div class="form-group">
           <label for="name">Your name</label>
@@ -35,29 +35,11 @@
 
   <p>Or you can use any of the following manners to follow my projects or send me a message:</p>
 
-  <div class="row">        
-    <div class="col-md-6">
+  <div class="row">
+    <div class="col-md-6 mb-2">
       <div class="media">
         <div class="media-image">
-          <span class="fa-stack fa-2x">
-            <i class="fas fa-square fa-stack-2x"></i>
-            <i class="fab fa-spotify fa-inverse fa-stack-1x"></i>
-          </span>
-        </div>
-        <div class="media-body centered">
-          Spotify<br>
-          <a class="uppercase" href="{{ links.spotify }}">Purple Lum</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="media">
-        <div class="media-image">
-          <span class="fa-stack fa-2x">
-            <i class="fas fa-square fa-stack-2x"></i>
-            <i class="fab fa-soundcloud fa-inverse fa-stack-1x"></i>
-          </span>
+          <i class="fab fa-soundcloud fa-4x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
         </div>
         <div class="media-body centered">
           SoundCloud<br>
@@ -66,13 +48,10 @@
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 mb-2">
       <div class="media">
         <div class="media-image">
-          <span class="fa-stack fa-2x">
-            <i class="fas fa-square fa-stack-2x"></i>
-            <i class="fab fa-github fa-inverse fa-stack-1x"></i>
-          </span>
+          <i class="fab fa-github fa-4x"></i>
         </div>
         <div class="media-body centered">
           GitHub<br>
@@ -81,12 +60,10 @@
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 mb-2">
       <div class="media">
         <div class="media-image">
-          <span class="fa-stack fa-2x">
-            <i class="fab fa-facebook-square fa-stack-2x"></i>
-          </span>
+          <i class="fab fa-facebook-f fa-4x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
         </div>
         <div class="media-body centered">
           Facebook<br>
@@ -94,4 +71,5 @@
         </div>
       </div>
     </div>
-  {% endblock %}
+  </div>
+{% endblock %}

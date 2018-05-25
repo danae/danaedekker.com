@@ -4,8 +4,8 @@
     {% block head %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="I am Dennis Dekker, a composer and developer based in Utrecht. I specialize in musical storytelling in an often fantastical and magical setting. My musical style is a mix between ambient, orchestral and electronic elements and is inspired by the style of composers and artists such as Thomas Newman, Two Steps From Hell and Safri Duo.">
-      <meta name="keywords" content="dennis, dekker, composer, developer, music, storytelling, fantasy, magic, ambient, orchestral, electronic">
+      <meta name="description" content="I am Dennis Dekker, a composer and creative system designer based in Utrecht. I specialize in musical storytelling in an often fantastical and magical setting, which I apply in autonomous compositions, games and interactive media.">
+      <meta name="keywords" content="dennis, dekker, composer, creative system designer, music, storytelling, fantasy, magic, ambient, orchestral, electronic, games, interactive, media">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="{{ assets }}/css/styles.css">
@@ -25,7 +25,7 @@
     <div class="inner">
       <nav class="container">
         {% block nav %}
-          <img src="{{ assets }}/images/logo.png" width="80" height="80">
+          <img src="{{ assets }}/images/logo.svg" width="80" height="80">
           {% for p in pages %}
             <a {{ p == page ? 'class="active"' : '' }} href="{{ root }}/{{ p.name }}">{{ p.title }}</a>
           {% endfor %}
@@ -40,6 +40,19 @@
       <footer class="container">
         {% block footer %}
           <p>Copyright &copy; Dennis Dekker, 2017-2018</p>
+          <p>
+            <a href="{{ links.soundcloud }}">
+              <i class="fab fa-soundcloud fa-3x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
+            </a>
+            &nbsp;
+            <a href="{{ links.github }}">
+              <i class="fab fa-github fa-3x"></i>
+            </a>
+            &nbsp;
+            <a href="{{ links.facebook }}">
+              <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+            </a>
+          </p>
         {% endblock %}
       </footer>
     </div>
