@@ -10,7 +10,7 @@ use Soundcloud\Soundcloud;
 $soundcloud = new Soundcloud($soundcloudId,$soundcloudSecret);
 
 // Create the context
-$feather = new Feather('assets/templates');
+$feather = new Feather('templates');
 
 // Add pages
 $feather->addPage(new Page('compositions'));
