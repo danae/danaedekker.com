@@ -3,29 +3,29 @@ require("vendor/autoload.php");
 require("settings.php");
 
 use Feather\Feather;
-use Feather\Page;
+use Feather\Backend\FilesystemBackend;
+use Feather\Pages\Page;
 use Soundcloud\Soundcloud;
 
-// Create a SoundCloud wrapper
-$soundcloud = new Soundcloud($soundcloudId,$soundcloudSecret);
-
 // Create the context
-$feather = new Feather('templates');
+$feather = new Feather();
 
 // Add pages
-$feather->addPage(new Page('compositions'));
-$feather->addPage(new Page('projects'));
-$feather->addPage(new Page('about'));
-$feather->addPage(new Page('contact'));
+$feather->add('compositions', ['default' => true]);
+$feather->add('projects');
+$feather->add('about');
+$feather->add('contact');
 
-// Set the error pages
-$feather->setErrorPage(new Page('500'));
-$feather->setNotFoundPage(new Page('404'));
+// Add error pages
+$feather->errorPage('500');
+$feather->notFoundPage('404');
 
-// Run!
-$feather->run([
-  'root' => Feather::rootPath(),
-  'assets' => Feather::rootPath() . '/assets',
+// Create a SoundCloud wrapper
+$soundcloud = new Soundcloud($soundcloudId, $soundcloudSecret);
+
+// Create links
+$feather['context'] = [
+  'assets' => $feather['document_root'] . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
     'email' => 'mailto:info@dennisdekker.art',
@@ -36,10 +36,13 @@ $feather->run([
   ],
   'projects' => [
     'our_little_planet' => 'http://perspectiveworks.nl/OLP/public/',
-    'blue_moon' => [    
+    'blue_moon' => [
       'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
       'deezer' => 'https://www.deezer.com/nl/album/59655342',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]
   ]
-]);
+];
+
+// Run!
+$feather->run();

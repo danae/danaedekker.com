@@ -2,11 +2,11 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "~7.0",
-    "dengsn/feather": "^0.1",
+    "php": "^7.2",
+    "dengsn/feather": "^0.2",
     "dengsn/soundcloud": "^1.9",
     "swiftmailer/swiftmailer": "^6.0",
-    "symfony/http-kernel": "^3.4",
+    "symfony/http-kernel": "^4.0",
     "google/recaptcha": "^1.1"
   }
 }

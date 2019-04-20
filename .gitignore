@@ -2,8 +2,5 @@
 /vendor/
 composer.phar
 
-# NetBeans project folder
-/nbproject/
-
 # Settings
 settings.php
