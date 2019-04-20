@@ -10,7 +10,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-119873369-1');
       </script>
-      
+
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="I am Dennis Dekker, a composer and creative system designer based in Utrecht. I specialize in musical storytelling in an often fantastical and magical setting, which I apply in autonomous compositions, games and interactive media.">
@@ -36,7 +36,7 @@
         {% block nav %}
           <img src="{{ assets }}/images/logo.svg" width="80" height="80">
           {% for p in pages %}
-            <a {{ p == page ? 'class="active"' : '' }} href="{{ root }}/{{ p.name }}">{{ p.title }}</a>
+            <a {{ p == page ? 'class="active"' : '' }} href="{{ document_root }}/{{ p.path }}">{{ p.title }}</a>
           {% endfor %}
         {% endblock %}
       </nav>
@@ -48,7 +48,7 @@
 
       <footer class="container">
         {% block footer %}
-          <p>Copyright &copy; Dennis Dekker, 2017-2018</p>
+          <p>Copyright &copy; Dennis Dekker, 2017-2019</p>
           <p>
             <a href="{{ links.soundcloud }}">
               <i class="fab fa-soundcloud fa-3x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
