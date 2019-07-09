@@ -1,30 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700|Fresca");
 .color-text {
-  color: #303030 !important; }
+  color: #303030 !important;
+}
 
 .color-accent {
-  color: #AA0050 !important; }
+  color: #AA0050 !important;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   font-family: "Lato", sans-serif;
   background-color: #0A0A0A;
-  color: #303030; }
+  color: #303030;
+}
 
 .inner {
   width: 100%;
   min-height: calc(100% - 80px);
   margin: 40px 0px;
-  background-color: #FCFCFF; }
+  background-color: #FCFCFF;
+}
 
-.container {
-  max-width: 720px !important; }
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px !important;
+  }
+}
+
+.zoom {
+  overflow: hidden;
+}
 
 a {
   color: #AA0050;
@@ -32,91 +45,142 @@ a {
   transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
   -webkit-transition: 0.1s ease-in-out;
-  -o-transition: 0.1s ease-in-out; }
-  a:hover, a:focus {
-    color: #0A0A0A;
-    border-bottom-color: #0A0A0A !important;
-    text-decoration: none; }
+  -o-transition: 0.1s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: #0A0A0A;
+  border-bottom-color: #0A0A0A !important;
+  text-decoration: none;
+}
+
+a.icon {
+  border-bottom: none;
+}
 
 nav {
   padding: 20px 0px 40px;
   font-weight: 700;
   font-size: large;
-  text-transform: uppercase; }
-  nav > * {
-    margin-right: 24px; }
-  nav a {
-    display: inline-block;
-    padding: 4px 0px;
-    color: #303030;
-    border-bottom: 2px #FCFCFF solid; }
-    nav a:hover, nav a:focus {
-      border-bottom-color: #303030; }
-    nav a.active {
-      color: #AA0050;
-      border-bottom-color: #AA0050; }
-      nav a.active:hover, nav a.active:focus {
-        border-bottom-color: #AA0050 !important; }
-  nav img {
-    margin-right: 24px; }
+  text-transform: uppercase;
+}
+
+nav > * {
+  margin-right: 24px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 4px 0px;
+  color: #303030;
+  border-bottom: 2px #FCFCFF solid;
+}
+
+nav a:hover, nav a:focus {
+  border-bottom-color: #303030;
+}
+
+nav a.active {
+  color: #AA0050;
+  border-bottom-color: #AA0050;
+}
+
+nav a.active:hover, nav a.active:focus {
+  border-bottom-color: #AA0050 !important;
+}
 
 footer {
   padding: 40px 0px 20px;
   text-align: center;
   color: gray;
-  font-size: small; }
-  footer a {
-    color: gray;
-    border-bottom: none; }
+  font-size: small;
+}
+
+footer a {
+  color: gray;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fresca", sans-serif;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 h1, h2 {
-  color: #AA0050; }
+  color: #AA0050;
+}
 
-div.card {
-  margin-bottom: 1rem; }
+img.artwork {
+  width: 50%;
+}
 
-img {
-  max-width: 100%; }
+@media (min-width: 768px) {
+  img.artwork {
+    width: 25%;
+  }
+}
+
+.content > *:last-child {
+  margin-bottom: 0;
+}
+
+.accent {
+  color: #AA0050;
+}
 
 .full-width {
-  width: 100%; }
+  width: 100%;
+}
 
 .full-height {
-  height: 100%; }
+  height: 100%;
+}
 
 .uppercase {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .superbig {
-  font-size: 5rem; }
+  font-size: 5rem;
+}
 
 div.media {
-  display: table; }
-  div.media-image {
-    display: table-cell;
-    vertical-align: top;
-    padding-right: 12px;
-    color: #AA0050; }
-    div.media-image.right {
-      padding-left: 12px;
-      padding-right: 0px; }
-    div.media-image > * {
-      display: block; }
-  div.media-body {
-    display: table-cell;
-    vertical-align: top; }
-    div.media-body.centered {
-      vertical-align: middle; }
-    div.media-body :first-child {
-      margin-top: 0px; }
-    div.media-body h1 {
-      font-weight: 300;
-      margin: 0px 0px 0.5em; }
-    div.media-body p {
-      margin-bottom: 0; }
+  display: table;
+}
 
-/*# sourceMappingURL=styles.css.map */
+div.media-image {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 12px;
+  color: #AA0050;
+}
+
+div.media-image.right {
+  padding-left: 12px;
+  padding-right: 0px;
+}
+
+div.media-image > * {
+  display: block;
+}
+
+div.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+div.media-body.centered {
+  vertical-align: middle;
+}
+
+div.media-body :first-child {
+  margin-top: 0px;
+}
+
+div.media-body h1 {
+  font-weight: 300;
+  margin: 0px 0px 0.5em;
+}
+
+div.media-body p {
+  margin-bottom: 0;
+}

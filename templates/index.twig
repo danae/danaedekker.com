@@ -16,7 +16,7 @@
       <meta name="description" content="I am Dennis Dekker, a composer and creative system designer based in Utrecht. I specialize in musical storytelling in an often fantastical and magical setting, which I apply in autonomous compositions, games and interactive media.">
       <meta name="keywords" content="dennis, dekker, composer, creative system designer, music, storytelling, fantasy, magic, ambient, orchestral, electronic, games, interactive, media">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="{{ assets }}/css/styles.css">
 
       <link rel="shortcut icon"  type="image/x-icon" href="{{ assets }}/images/favicon.ico">
@@ -50,31 +50,32 @@
         {% block footer %}
           <p>Copyright &copy; Danae Dekker, 2017-2019</p>
           <p>
-            <a href="{{ links.spotify }}">
+            <a class="icon" href="{{ links.linkedin }}">
+              <i class="fab fa-linkedin-in fa-3x" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
+            </a>
+            &nbsp;
+            <a class="icon" href="{{ links.facebook }}">
+              <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+            </a>
+            &nbsp;
+            <a class="icon" href="{{ links.spotify }}">
               <i class="fab fa-spotify fa-3x"></i>
             </a>
             &nbsp;
-            <a href="{{ links.soundcloud }}">
-              <i class="fab fa-soundcloud fa-3x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
-            </a>
-            &nbsp;
-            <a href="{{ links.github }}">
+            <a class="icon" href="{{ links.github }}">
               <i class="fab fa-github fa-3x"></i>
-            </a>
-            &nbsp;
-            <a href="{{ links.facebook }}">
-              <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
             </a>
           </p>
         {% endblock %}
       </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="{{ assets }}/js/index.js"></script>
     <script src="{{ assets }}/js/contactform.js"></script>
   </body>
 </html>

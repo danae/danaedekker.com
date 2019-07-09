@@ -3,84 +3,74 @@
 {% block main %}
   <h2>Get in touch</h2>
 
-  <p>For more information about me, my compositions or projects you can fill in the following form. I will contact you as soon as possible!</p>
+  <p>If you have any questions about me or the projects I'm working on or you just want to send me a message, you can fill in the following form. I will contact you as soon as possible!</p>
 
-  <div class="card">
-    <div class="card-body">
-      <div id="contactMessages"></div>
+  <div class="p-3 mb-3 border rounded">
+    <div id="contactMessages"></div>
 
-      <form id="contactForm" method="POST" action="{{ root }}/contactform.php">
-        <div class="form-group">
-          <label for="name">Your name</label>
-          <input required type="text" class="form-control" name="name" id="name" placeholder="John Doe">
-        </div>
-        <div class="form-group">
-          <label for="email">Your email address</label>
-          <input required type="email" class="form-control" name="email" id="email" placeholder="john.doe@example.com">
-        </div>
-        <div class="form-group">
-          <label for="message">Your message</label>
-          <textarea required class="form-control" name="message" id="message" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-          <label>Prove that you're human</label>
-          <div class="g-recaptcha" data-sitekey="6Lcd21EUAAAAAChv_129fP8AL_wSZhbG5dUBCBMV"></div>
-        </div>
-        <div class="form-group mb-0">
-          <button type="submit" class="btn btn-outline-dark">Send message</button>
-        </div>
-      </form>
-    </div>
+    <form id="contactForm" method="POST" action="{{ root }}/contactform.php">
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input required type="text" class="form-control" name="name" id="name" placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="email">Your email address</label>
+        <input required type="email" class="form-control" name="email" id="email" placeholder="john.doe@example.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Your message</label>
+        <textarea required class="form-control" name="message" id="message" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Prove that you're human</label>
+        <div class="g-recaptcha" data-sitekey="6Lcd21EUAAAAAChv_129fP8AL_wSZhbG5dUBCBMV"></div>
+      </div>
+      <div class="form-group mb-0">
+        <button type="submit" class="btn btn-outline-dark">Send message</button>
+      </div>
+    </form>
   </div>
 
-  <p>Or you can use any of the following manners to follow my projects or send me a message:</p>
+  <p>Or you can use any of the following social media links to get to know me or send me a message:</p>
 
-  <div class="row">
-    <div class="col-md-6 mb-2">
-      <div class="media">
-        <div class="media-image">
-          <i class="fab fa-spotify fa-4x"></i>
-        </div>
-        <div class="media-body centered">
-          Spotify<br>
-          <a class="uppercase" href="{{ links.spotify }}">Purple Lum</a>
-        </div>
+  <div class="d-flex flex-colum flex-md-row flex-wrap align-items-start">
+    <div class="d-flex flex-row align-items-center align-self-center w-50 mb-2">
+      <i class="fab fa-linkedin-in fa-4x accent mr-3" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
+      <div>
+        LinkedIn<br>
+        <a class="uppercase" href="{{ links.linkedin }}">Danae Dekker</a>
       </div>
     </div>
 
-    <div class="col-md-6 mb-2">
-      <div class="media">
-        <div class="media-image">
-          <i class="fab fa-soundcloud fa-4x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
-        </div>
-        <div class="media-body centered">
-          SoundCloud<br>
-          <a class="uppercase" href="{{ links.soundcloud }}">purplelum</a>
-        </div>
+    <div class="d-flex flex-row align-items-center align-self-center w-50 mb-2">
+      <i class="fab fa-facebook-f fa-4x accent mr-3" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+      <div>
+        Facebook<br>
+        <a class="uppercase" href="{{ links.facebook }}">purplelum</a>
       </div>
     </div>
 
-    <div class="col-md-6 mb-2">
-      <div class="media">
-        <div class="media-image">
-          <i class="fab fa-github fa-4x"></i>
-        </div>
-        <div class="media-body centered">
-          GitHub<br>
-          <a class="uppercase" href="{{ links.github }}">dengsn</a>
-        </div>
+    <div class="d-flex flex-row align-items-center align-self-center w-50 mb-2">
+      <i class="fab fa-spotify fa-4x accent mr-3"></i>
+      <div>
+        Spotify<br>
+        <a class="uppercase" href="{{ links.spotify }}">Purple Lum</a>
       </div>
     </div>
 
-    <div class="col-md-6 mb-2">
-      <div class="media">
-        <div class="media-image">
-          <i class="fab fa-facebook-f fa-4x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
-        </div>
-        <div class="media-body centered">
-          Facebook<br>
-          <a class="uppercase" href="{{ links.facebook }}">purplelum</a>
-        </div>
+    <div class="d-flex flex-row align-items-center align-self-center w-50 mb-2">
+      <i class="fab fa-github fa-4x accent mr-3"></i>
+      <div>
+        GitHub<br>
+        <a class="uppercase" href="{{ links.github }}">dengsn</a>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center align-self-center w-50 mb-2">
+      <i class="fab fa-soundcloud fa-4x accent mr-3" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
+      <div>
+        SoundCloud<br>
+        <a class="uppercase" href="{{ links.soundcloud }}">Purple Lum</a>
       </div>
     </div>
   </div>
