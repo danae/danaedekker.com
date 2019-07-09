@@ -3,8 +3,6 @@ require("vendor/autoload.php");
 require("settings.php");
 
 use Feather\Feather;
-use Feather\Backend\FilesystemBackend;
-use Feather\Pages\Page;
 use Soundcloud\Soundcloud;
 
 // Create the context
@@ -28,7 +26,7 @@ $feather['context'] = [
   'assets' => $feather['document_root'] . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
-    'resume' => $feather['document_root'] . 'publications/Dennis_Dekker_CV_2018.pdf',
+    'resume' => $feather['document_root'] . '/publications/Dennis_Dekker_CV_2018.pdf',
     'linkedin' => 'https://linkedin.com/in/danae-dekker-b3b902189/',
     'facebook' => 'https://www.facebook.com/purplelum',
     'spotify' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt?si=mp5rMhmAR5qQ11ypBLJevw',
