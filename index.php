@@ -37,11 +37,11 @@ $feather['context'] = [
     'colors_of_the_night' => [
       'image' => $feather['document_root'] . '/assets/images/projects/colors_of_the_night_cover_1024x1024.png',
       'upc' => '5057917496902',
-      'spotify' => '#',
+      'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=hc_okt74TuaHvOrb7D-niA',
       'deezer' => '#',
       'napster' => '#',
-      'google' => '#',
-      'soundcloud' => '#'
+      'google' => 'https://play.google.com/store/music/album/Purple_Lum_Colors_of_the_Night?id=Bxd5htrwefg5z6wav7ntudxlzt4',
+      'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
     ],
     'exodus_burned' => [
       'image' => $feather['document_root'] . '/assets/images/projects/exodus_burned.png',
@@ -66,6 +66,7 @@ $feather['context'] = [
       'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
       'deezer' => 'https://www.deezer.com/nl/album/59655342',
       'napster' => 'https://napster.com/artist/purple-lum/album/blue-moon-305523881',
+      'google' => 'https://play.google.com/store/music/album/Purple_Lum_Blue_Moon?id=Bzv3vvd7cbp24dpugxg5odcrta4',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]
   ]
