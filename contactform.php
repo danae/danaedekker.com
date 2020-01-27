@@ -66,7 +66,7 @@ try
 
   // Fill the message
   $message->setFrom([$formEmail => "{$formName} via contact form"]);
-  $message->setTo(['info@dennisdekker.art' => 'Dennis Dekker']);
+  $message->setTo(['info@danaedekker.com' => 'Danae Dekker']);
   $message->setReplyTo([$formEmail => $formName]);
   $message->setSubject('Message via contact form');
   $message->setBody($body,'text/html');
