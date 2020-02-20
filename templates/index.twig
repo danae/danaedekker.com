@@ -36,7 +36,7 @@
         {% block nav %}
           <img src="{{ assets }}/images/logo.svg" width="80" height="80">
           {% for p in pages %}
-            <a {{ p == page ? 'class="active"' : '' }} href="{{ document_root }}/{{ p.path }}">{{ p.title }}</a>
+            <a {{ page.path starts with p.path ? 'class="active"' : '' }} href="{{ base_path_for(p) }}">{{ p.title }}</a>
           {% endfor %}
         {% endblock %}
       </nav>

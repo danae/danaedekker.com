@@ -9,24 +9,21 @@ use Soundcloud\Soundcloud;
 $feather = new Feather();
 
 // Add pages
-$feather->add('compositions', ['default' => true]);
-$feather->add('projects');
-$feather->add('about');
-$feather->add('contact');
+$feather->pages->add('compositions', ['default' => true]);
+$feather->pages->add('projects');
+$feather->pages->add('about');
+$feather->pages->add('contact');
 
 // Add error pages
-$feather->errorPage('500');
-$feather->notFoundPage('404');
+$feather->pages->addErrorPage(['template' => 'errors/500']);
+$feather->pages->addNotFoundPage(['template' => 'errors/404']);
 
-// Create a SoundCloud wrapper
-$soundcloud = new Soundcloud($soundcloudId, $soundcloudSecret);
-
-// Create links
-$feather['context'] = [
-  'assets' => $feather['document_root'] . '/assets',
-  'soundcloud' => $soundcloud,
+// Create context
+$feather->context = [
+  'assets' => $feather->base_path . '/assets',
+  'soundcloud' => new Soundcloud($soundcloudId, $soundcloudSecret),
   'links' => [
-    'resume' => $feather['document_root'] . '/publications/Danae_Dekker_CV_2019.pdf',
+    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2019.pdf',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
     'facebook' => 'https://www.facebook.com/purplelum',
     'spotify' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt?si=mp5rMhmAR5qQ11ypBLJevw',
@@ -35,7 +32,7 @@ $feather['context'] = [
   ],
   'projects' => [
     'colors_of_the_night' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/colors_of_the_night_cover_1024x1024.png',
+      'image' => $feather->base_path . '/assets/images/projects/colors_of_the_night_cover_1024x1024.png',
       'upc' => '5057917496902',
       'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=hc_okt74TuaHvOrb7D-niA',
       'deezer' => '#',
@@ -44,24 +41,24 @@ $feather['context'] = [
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
     ],
     'exodus_burned' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/exodus_burned.png',
+      'image' => $feather->base_path . '/assets/images/projects/exodus_burned.png',
       'link' => 'http://www.exodusburned.com/'
     ],
     'paper' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/paper.png',
-      'link' => $feather['document_root'] . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
+      'image' => $feather->base_path . '/assets/images/projects/paper.png',
+      'link' => $feather->base_path . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
     ],
     'stackgriculture' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/stackgriculture.png',
+      'image' => $feather->base_path . '/assets/images/projects/stackgriculture.png',
     ],
     'room_of_doom' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/room_of_doom.png'
+      'image' => $feather->base_path . '/assets/images/projects/room_of_doom.png'
     ],
     'our_little_planet' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/our_little_planet.png'
+      'image' => $feather->base_path . '/assets/images/projects/our_little_planet.png'
     ],
     'blue_moon' => [
-      'image' => $feather['document_root'] . '/assets/images/projects/blue_moon_cover_1024x1024.png',
+      'image' => $feather->base_path . '/assets/images/projects/blue_moon_cover_1024x1024.png',
       'upc' => '5057728398730',
       'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
       'deezer' => 'https://www.deezer.com/nl/album/59655342',
