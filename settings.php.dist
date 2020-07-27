@@ -2,6 +2,8 @@
 // Soundcloud API credentials
 $soundcloudId = '<client_id>';
 $soundcloudSecret = '<client_secret>';
+$soundcloudUsername = '<username>';
+$soundcloudPassword = '<password>';
 
 // ReCaptcha API credentials
 $recaptchaSecret = '<client_secret>';
