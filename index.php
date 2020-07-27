@@ -2,8 +2,8 @@
 require("vendor/autoload.php");
 require("settings.php");
 
-use Feather\Feather;
-use Soundcloud\Soundcloud;
+use Danae\Feather\Feather;
+use Danae\Soundcloud\Soundcloud;
 
 // Create the context
 $feather = new Feather();
@@ -18,10 +18,18 @@ $feather->pages->add('contact');
 $feather->pages->addErrorPage(['template' => 'errors/500']);
 $feather->pages->addNotFoundPage(['template' => 'errors/404']);
 
+// Create the SoundCloud client
+$soundcloud = new Soundcloud([
+  'client_id' => $soundcloudId,
+  'client_secret' => $soundcloudSecret,
+  'username' => $soundcloudUsername,
+  'password' => $soundcloudPassword
+]);
+
 // Create context
 $feather->context = [
   'assets' => $feather->base_path . '/assets',
-  'soundcloud' => new Soundcloud($soundcloudId, $soundcloudSecret),
+  'soundcloud' => $soundcloud,
   'links' => [
     'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2019.pdf',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',

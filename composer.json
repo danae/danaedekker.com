@@ -9,10 +9,9 @@
   ],
   "require": {
     "php": "^7.2",
-    "danae/feather": "^0.3",
-    "dengsn/soundcloud": "^1.9",
+    "danae/feather": "^0.5",
+    "danae/soundcloud-php": "^2.0",
     "swiftmailer/swiftmailer": "^6.0",
-    "symfony/http-kernel": "^4.0",
     "google/recaptcha": "^1.1"
   },
   "minimum-stability": "dev",
