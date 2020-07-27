@@ -4,19 +4,16 @@
 {% endblock %}
 
 {% block main %}
-  <h1 class="text-center superbig">500.</h1>
+  <section class="section">
+    <h1><i class="fas fa-exclamation-triangle mr-2"></i> Internal error</h1>
 
-  <p class="text-center lead">
-    Something went terribly wrong behind the scenes. Probably one of the services our site relies on stopped working correctly.
-  </p>
+    <p>Something went terribly wrong behind the scenes. Probably one of the services this site relies on stopped working correctly.</p>
 
-  {% if error %}
-    <p class="text-center lead">
-      {{ error }}
-    </p>
-  {% endif %}
+    {% if error %}
+      <p>If you stumble upon the site administrator, please show them the following message:</p>
+      <pre class="has-text-danger-dark has-background-danger-light">{{ error }}</pre>
+    {% endif %}
 
-  <p class="text-center lead">
-    <b><a href="{{ base_path() }}">Return to the home page</a></b>
-  </p>
+    <p class="has-text-weight-bold"><a href="{{ base_path() }}">Return to the home page</a></p>
+  </section>
 {% endblock %}

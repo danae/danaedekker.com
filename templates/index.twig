@@ -11,14 +11,16 @@
         gtag('config', 'UA-119873369-1');
       </script>
 
+      <!-- Meta-tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="I am Danae Dekker, a composer and and technical audio designer for games and interactive media. I specialize in musical storytelling in an often fantastical and magical setting, which I apply in autonomous compositions, games and interactive media.">
       <meta name="keywords" content="danae, dekker, composer, technical audio design, audio design, games, interactive, media, music, storytelling, fantasy, magic, ambient, orchestral, electronic">
 
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <!-- Stylesheet -->
       <link rel="stylesheet" href="{{ assets }}/css/styles.css">
 
+      <!-- Shortcut icon -->
       <link rel="shortcut icon"  type="image/x-icon" href="{{ assets }}/images/favicon.ico">
       <link rel="icon" type="image/png" href="{{ assets }}/images/16px-logo.png" sizes="16x16">
       <link rel="icon" type="image/png" href="{{ assets }}/images/32px-logo.png" sizes="32x32">
@@ -26,56 +28,97 @@
       <link rel="icon" type="image/png" href="{{ assets }}/images/160px-logo.png" sizes="160x160">
       <link rel="icon" type="image/png" href="{{ assets }}/images/196px-logo.png" sizes="196x196">
 
+      <!-- Title -->
       <title>{{ page.title }} / Danae Dekker</title>
     {% endblock %}
   </head>
 
   <body>
+    <!-- Black bar -->
+    <div class="bar"></div>
+
+    <!-- Content -->
     <div class="inner">
-      <nav class="container">
-        {% block nav %}
-          <img src="{{ assets }}/images/logo.svg" width="80" height="80">
-          {% for p in pages %}
-            <a {{ page.path starts with p.path ? 'class="active"' : '' }} href="{{ base_path_for(p) }}">{{ p.title }}</a>
-          {% endfor %}
-        {% endblock %}
-      </nav>
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths-tablet is-three-fifths-widescreen">
+            {% block nav %}
+              <!-- Navbar -->
+              <nav class="navbar is-transparent">
+                <div class="navbar-brand">
+                  <img class="navbar-item navbar-logo" src="{{ assets }}/images/logo.svg" width="80" height="80">
 
-      <main class="container">
-        {% block main %}
-        {% endblock %}
-      </main>
+                  <a role="button" class="navbar-burger burger" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
 
-      <footer class="container">
-        {% block footer %}
-          <p>
-            Copyright &copy; Danae Dekker, 2017-2020<br>
-            Icons by <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-          </p>
-          <p>
-            <a class="icon" href="{{ links.linkedin }}">
-              <i class="fab fa-linkedin-in fa-3x" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
-            </a>
-            &nbsp;
-            <a class="icon" href="{{ links.facebook }}">
-              <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
-            </a>
-            &nbsp;
-            <a class="icon" href="{{ links.spotify }}">
-              <i class="fab fa-spotify fa-3x"></i>
-            </a>
-            &nbsp;
-            <a class="icon" href="{{ links.github }}">
-              <i class="fab fa-github fa-3x"></i>
-            </a>
-          </p>
-        {% endblock %}
-      </footer>
+                <div class="navbar-menu">
+                  <div class="navbar-start">
+                    {% for p in pages %}
+                      <div class="navbar-item">
+                        {% if page.path starts with p.path %}
+                          <a class="active" href="{{ base_path_for(p) }}">{{ p.title }}</a>
+                        {% else %}
+                          <a href="{{ base_path_for(p) }}">{{ p.title }}</a>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </nav>
+            {% endblock %}
+
+            <!-- Main content -->
+            <main class="main">
+              {% block main %}
+              {% endblock %}
+            </main>
+
+            {% block footer %}
+              <!-- Footer -->
+              <footer class="footer">
+                <div class="level">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <p class="has-text-left-tablet">
+                        Copyright &copy; Danae Dekker, 2017-2020<br>
+                        Created using <a href="https://bulma.io/" target="_blank">Bulma</a> and <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="level-right">
+                    <div class="level-item">
+                      <a class="icon" href="{{ links.linkedin }}">
+                        <i class="fab fa-linkedin-in fa-3x" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
+                      </a>
+                      <a class="icon" href="{{ links.facebook }}">
+                        <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+                      </a>
+                      <a class="icon" href="{{ links.spotify }}">
+                        <i class="fab fa-spotify fa-3x"></i>
+                      </a>
+                      <a class="icon" href="{{ links.github }}">
+                        <i class="fab fa-github fa-3x"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- Black bar -->
+    <div class="bar"></div>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="{{ assets }}/js/index.js"></script>

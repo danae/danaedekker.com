@@ -1,42 +1,48 @@
+// Import custom variables
 @import 'variables';
 
-* {
-  box-sizing: border-box;
-}
+// Import the Bulma framework
+@import 'bulma';
 
-// Body layout
-html, body {
-  width: 100%;
-  height: 100%;
-}
-body {
-  font-family: $font-text;
 
-  background-color: $color-dark;
-  color: $color-text;
-}
-.inner {
-  width: 100%;
-  min-height: calc(100% - 80px);
-  margin: 40px 0px;
-
-  background-color: $color-background;
-}
-
-@media(min-width: 992px) {
+// Limit the container width
+/*@media(min-width: 720px) {
   .container {
     max-width: 720px !important;
   }
+}*/
+
+// Html layout
+html {
+  overflow-y: auto;
 }
 
-// Links
-.zoom {
-  overflow: hidden;
+// Body layout
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  // Black bar layout
+  & > .bar {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    width: 100%;
+    height: 40px;
+    background: $dark;
+  }
+
+  // Inner layout
+  & > .inner {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
 }
 
+// Link styling
 a {
-  color: $color-accent;
-  border-bottom: 1px $color-accent dotted;
+  border-bottom: 1px $link dotted;
 
   transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
@@ -44,9 +50,7 @@ a {
   -o-transition: 0.1s ease-in-out;
 
   &:hover, &:focus {
-    color: $color-dark;
-    border-bottom-color: $color-dark !important;
-    text-decoration: none;
+    border-bottom-color: $link-hover;
   }
 
   &.icon {
@@ -54,91 +58,143 @@ a {
   }
 }
 
-// Navigation layout
-nav {
-  padding: 20px 0px 40px;
+// Navbar styling
+.navbar {
+  @extend .mt-5;
+  @extend .mb-6;
 
-  font-weight: 700;
-  font-size: large;
-  text-transform: uppercase;
+  .navbar-item {
+    @extend .is-size-6;
+    @extend .is-uppercase;
+    @extend .has-text-weight-bold;
 
-  & > * {
-    margin-right: 24px;
-  }
-
-  a {
-    display: inline-block;
-    padding: 4px 0px;
-    color: $color-text;
-    border-bottom: 2px $color-background solid;
-
-    &:hover, &:focus {
-      border-bottom-color: $color-text;
-    }
-
-    &.active {
-      color: $color-accent;
-      border-bottom-color: $color-accent;
+    a {
+      padding: 4px 0px;
+      color: $text;
+      border-bottom: 2px $background solid;
 
       &:hover, &:focus {
-        border-bottom-color: $color-accent !important;
+        border-bottom-color: $text;
+      }
+
+      &.active {
+        color: $link;
+        border-bottom-color: $link;
       }
     }
   }
-}
 
-// Footer layout
-footer {
-  padding: 40px 0px 20px;
+  .navbar-logo {
+    @extend .mx-3;
+    @extend .px-0;
+    @extend .py-0;
+  }
 
-  text-align: center;
-  color: gray;
-  font-size: small;
+  .navbar-burger {
+    @extend .mr-3;
 
-  a {
-    color: gray;
-    border-bottom-color: gray;
+    border-bottom: none;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
-// Headings
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-heading;
-  margin-bottom: 1rem;
+// Main styling
+.main {
+  @extend .content;
+  @extend .my-6;
 }
-h1, h2 {
-  color: $color-accent;
+
+// Footer styling
+.footer {
+  @extend .content;
+
+  @extend .mt-6;
+  @extend .mb-5;
+  @extend .py-0;
+
+  background: none;
+
+  @extend .is-size-8;
+  @extend .has-text-grey;
+  @extend .has-text-centered;
+
+  a {
+    color: $grey;
+    border-bottom-color: $grey;
+
+    &:hover, &:focus {
+      color: $link-hover;
+      border-bottom-color: $link-hover;
+    }
+  }
+
+  .level-item {
+    @extend .mx-0;
+  }
+
+  .icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+// Content styling
+.content {
+  // Bolder text
+  b, strong {
+    font-weight: bolder;
+  }
+
+  // Headings
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @extend .is-family-secondary;
+      @extend .has-text-weight-normal;
+      @if $i <= 2 {
+        @extend .has-text-primary;
+      }
+    }
+  }
+
+  // Sections
+  .section {
+    &:first-child {
+      @extend .pt-0;
+    }
+    &:last-child {
+      @extend .pb-0;
+    }
+  }
+
+  // Lead text
+  .lead {
+    @extend .is-size-5;
+    @extend .has-text-weight-light;
+  }
+
+  // Social
+  .social {
+    .column {
+      @extend .py-1;
+    }
+    .media {
+      align-items: center;
+    }
+  }
 }
 
 // Other layout
+.project {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
 img.artwork {
-  width: 50%;
-
-  @media (min-width: 768px) {
-    & {
-      width: 25%;
-    }
-  }
+  width: 6rem;
 }
 .content {
   & > *:last-child {
     margin-bottom: 0;
   }
-}
-
-// Helper classes
-.accent {
-  color: $color-accent;
-}
-.full-width {
-  width: 100%;
-}
-.full-height {
-  height: 100%;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.superbig {
-  font-size: 5rem;
 }
