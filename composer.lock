@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "danae/feather",
-            "version": "0.5",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/danae/feather.git",
-                "reference": "7b7add86ec1fb48dac9da0f10a0c182dddd56261"
+                "reference": "d2b51ba0e22a68003b3d08dd3af42052f9c33cda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danae/feather/zipball/7b7add86ec1fb48dac9da0f10a0c182dddd56261",
-                "reference": "7b7add86ec1fb48dac9da0f10a0c182dddd56261",
+                "url": "https://api.github.com/repos/danae/feather/zipball/d2b51ba0e22a68003b3d08dd3af42052f9c33cda",
+                "reference": "d2b51ba0e22a68003b3d08dd3af42052f9c33cda",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "kernel",
                 "twig"
             ],
-            "time": "2020-07-20T17:09:41+00:00"
+            "time": "2020-07-27T14:16:04+00:00"
         },
         {
             "name": "danae/soundcloud-php",

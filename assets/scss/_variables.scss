@@ -1,7 +1,8 @@
-// Import the Google fonts
+// Import the initial variables and fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700|Fresca');
+@import "../bulma/sass/utilities/initial-variables.sass";
 
-//Custom fonts
+// Custom fonts
 $family-primary: 'Lato', sans-serif;
 $family-secondary: 'Fresca', sans-serif;
 
@@ -10,10 +11,8 @@ $primary: #AA0050;
 $light: #FCFCFF;
 $dark: #0A0A0A;
 
-// layout color variables
-//$text: #303030;
+// Custom layout colors
 $background: $light;
-
 $link: $primary;
 $link-hover: $dark;
 $link-visited: $primary;
@@ -24,12 +23,15 @@ $size-2: 2.5rem;
 $size-3: 2rem;
 $size-4: 1.5rem;
 $size-5: 1.25rem;
-$size-6: 1.125rem;
-$size-7: 1rem;
-$size-8: 0.8125rem;
-$size-9: 0.75rem;
+$size-5-sm: 1.125rem;
+$size-6: 1rem;
+$size-6-sm: 0.8125rem;
+$size-7: 0.75rem;
 
-$sizes: Ssize-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 $size-9;
+$sizes: Ssize-1 $size-2 $size-3 $size-4 $size-5 $size-5-sm $size-6 $size-6-sm $size-7;
 
 // Custom section padding
-$section-padding: 2rem 1.5rem;
+$section-padding: 1.5rem 1.5rem;
+
+// Custom navbar breakpoint
+$navbar-breakpoint: $tablet;

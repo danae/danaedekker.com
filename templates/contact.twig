@@ -2,114 +2,53 @@
 
 {% block main %}
   <section class="section">
-    <h2>Get in touch</h2>
+    <div class="content">
+      <h2>Get in touch</h2>
 
-    <p>If you have any questions about me or the projects I'm working on or you just want to send me a message, you can fill in the following form. I will contact you as soon as possible!</p>
+      <p>If you have any remarks or questions about the projects I've worked on, or perhaps have an interesting collaboration opportunity, you can shoot me a message using the contact form below. I'll try to answer you as soon as possible.</p>
+      <p>You can also use one of the social media links in the footer to follow me and my projects or to send me a message!</p>
 
-    <div class="box">
-      <div id="contactMessages"></div>
+      <div class="card">
+        <div class="card-content">
+          <div id="contactMessages"></div>
 
-      <form id="contactForm" method="POST" action="{{ root }}/contactform.php">
-        <div class="field">
-          <label class="label is-small" for="name">Your name</label>
-          <div class="control has-icons-left">
-            <input class="input is-small " type="text" name="name" id="name" placeholder="John Doe" required>
-            <div class="icon is-small is-left">
-              <i class="fas fa-user"></i>
+          <form id="contactForm" method="POST" action="{{ base_path() }}/contact.php">
+            <div class="field">
+              <label class="label" for="name">Your name</label>
+              <div class="control has-icons-left">
+                <input class="input " type="text" name="name" id="name" placeholder="John Doe">
+                <div class="icon is-left">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="field">
-          <label class="label is-small" for="email">Your email address</label>
-          <div class="control has-icons-left">
-            <input class="input is-small" type="email" name="email" id="email" placeholder="john.doe@example.com" required>
-            <div class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
+            <div class="field">
+              <label class="label" for="email">Your email address</label>
+              <div class="control has-icons-left">
+                <input class="input" type="email" name="email" id="email" placeholder="john.doe@example.com">
+                <div class="icon is-left">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="field">
-          <label class="label is-small" for="message">Your message</label>
-          <div class="control is-small">
-            <textarea class="textarea is-small" name="message" id="message" rows="6" required></textarea>
-          </div>
-        </div>
+            <div class="field">
+              <label class="label" for="message">Your message</label>
+              <div class="control">
+                <textarea class="textarea" name="message" id="message" rows="4"></textarea>
+              </div>
+            </div>
 
-        <div class="field">
-          <label class="label is-small">Prove that you're human</label>
-          <div class="g-recaptcha" data-sitekey="6Lcd21EUAAAAAChv_129fP8AL_wSZhbG5dUBCBMV"></div>
-        </div>
+            <div class="field">
+              <label class="label">Prove that you're human</label>
+              <div class="g-recaptcha" data-sitekey="6Lcd21EUAAAAAChv_129fP8AL_wSZhbG5dUBCBMV"></div>
+            </div>
 
-        <div class="field is-grouped">
-          <button class="button is-small is-link" type="submit">Send message</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section class="section">
-    <p>Or you can use any of the following social media links to get to know me or send me a message:</p>
-
-    <div class="social columns is-multiline is-mobile mt-0">
-      <div class="column is-6">
-        <div class="media">
-          <div class="media-left">
-            <i class="fab fa-linkedin-in fa-4x has-text-primary" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
-          </div>
-          <div class="media-content">
-            LinkedIn<br>
-            <a class="is-uppercase" href="{{ links.linkedin }}">Danae Dekker</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-6">
-        <div class="media">
-          <div class="media-left">
-            <i class="fab fa-facebook-f fa-4x has-text-primary" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
-          </div>
-          <div class="media-content">
-            Facebook<br>
-            <a class="is-uppercase" href="{{ links.facebook }}">purplelum</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-6">
-        <div class="media">
-          <div class="media-left">
-            <i class="fab fa-spotify fa-4x has-text-primary"></i>
-          </div>
-          <div class="media-content">
-            Spotify<br>
-            <a class="is-uppercase" href="{{ links.spotify }}">Purple Lum</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-6">
-        <div class="media">
-          <div class="media-left">
-            <i class="fab fa-github fa-4x has-text-primary"></i>
-          </div>
-          <div class="media-content">
-            GitHub<br>
-            <a class="is-uppercase" href="{{ links.github }}">danae</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-6">
-        <div class="media">
-          <div class="media-left">
-            <i class="fab fa-soundcloud fa-4x has-text-primary" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
-          </div>
-          <div class="media-content">
-            SoundCloud<br>
-            <a class="is-uppercase" href="{{ links.soundcloud }}">Purple Lum</a>
-          </div>
+            <div class="field is-grouped">
+              <button class="button is-link" type="submit">Send message</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

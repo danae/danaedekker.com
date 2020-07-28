@@ -11,6 +11,7 @@ $feather = new Feather();
 // Add pages
 $feather->pages->add('compositions', ['default' => true]);
 $feather->pages->add('projects');
+$feather->pages->add('projects/colors-of-the-night', ['title' => 'Colors of the Night', 'visible' => false]);
 $feather->pages->add('about');
 $feather->pages->add('contact');
 
@@ -39,38 +40,42 @@ $feather->context = [
     'soundcloud' => 'https://soundcloud.com/purplelum',
   ],
   'projects' => [
+    'invisible_wings' => [
+      'embed' => 'https://www.youtube.com/embed/UB10AQidnxM',
+      'link' => 'https://invisiblewingsgame.com/'
+    ],
+    'ocarime' => [
+      'image' => $feather->base_path . '/assets/images/splash_ocarime.png',
+      'link' => 'https://ocarime.com/'
+    ],
+    'ocarime_the_game' => [
+      'embed' => 'https://www.youtube.com/embed/9VKsWIVDf7M',
+      'link' => 'https://beta.ocarime.com/'
+    ],
+    'thesis' => [
+      'read' => $feather->base_path . '/publications/Nonlinear_music_design_in_narrative_games.pdf'
+    ],
     'colors_of_the_night' => [
-      'image' => $feather->base_path . '/assets/images/projects/colors_of_the_night_cover_1024x1024.png',
+      'image' => $feather->base_path . '/assets/images/splash_colors_of_the_night.png',
       'upc' => '5057917496902',
       'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=hc_okt74TuaHvOrb7D-niA',
-      'deezer' => '#',
-      'napster' => '#',
       'google' => 'https://play.google.com/store/music/album/Purple_Lum_Colors_of_the_Night?id=Bxd5htrwefg5z6wav7ntudxlzt4',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
     ],
     'exodus_burned' => [
-      'image' => $feather->base_path . '/assets/images/projects/exodus_burned.png',
+      'embed' => 'https://www.youtube.com/embed/alquMRfFrSY',
       'link' => 'http://www.exodusburned.com/'
     ],
     'paper' => [
-      'image' => $feather->base_path . '/assets/images/projects/paper.png',
-      'link' => $feather->base_path . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
-    ],
-    'stackgriculture' => [
-      'image' => $feather->base_path . '/assets/images/projects/stackgriculture.png',
+      'read' => $feather->base_path . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
     ],
     'room_of_doom' => [
-      'image' => $feather->base_path . '/assets/images/projects/room_of_doom.png'
-    ],
-    'our_little_planet' => [
-      'image' => $feather->base_path . '/assets/images/projects/our_little_planet.png'
+      'embed' => 'https://www.youtube.com/embed/2XK3Vkecf1A'
     ],
     'blue_moon' => [
-      'image' => $feather->base_path . '/assets/images/projects/blue_moon_cover_1024x1024.png',
+      'image' => $feather->base_path . '/assets/images/splash_blue_moon.png',
       'upc' => '5057728398730',
       'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
-      'deezer' => 'https://www.deezer.com/nl/album/59655342',
-      'napster' => 'https://napster.com/artist/purple-lum/album/blue-moon-305523881',
       'google' => 'https://play.google.com/store/music/album/Purple_Lum_Blue_Moon?id=Bzv3vvd7cbp24dpugxg5odcrta4',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]

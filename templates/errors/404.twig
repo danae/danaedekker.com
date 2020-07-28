@@ -5,11 +5,13 @@
 
 {% block main %}
   <section class="section">
-    <h1><i class="fas fa-exclamation-triangle mr-2"></i> Page not found</h1>
+    <div class="content">
+      <h1><i class="fas fa-exclamation-triangle mr-2"></i> Page not found</h1>
 
-    <p>We could not find the page you requested. Are you sure you typed the address correctly?<br>
-      If you bumped into a broken link, <a href="{{ base_path() }}/{{ pages.contact.path }}">please let us know</a>!</p>
+      <p>We could not find the page you requested. Are you sure you typed the address correctly?<br>
+        If you bumped into a broken link, <a href="{{ base_path() }}/{{ pages.contact.path }}">please let us know</a>!</p>
 
-    <p class="has-text-weight-bold"><a href="{{ base_path() }}">Return to the home page</a></p>
+      <p class="has-text-weight-bold"><a href="{{ base_path() }}">Return to the home page</a></p>
+    </div>
   </section>
 {% endblock %}

@@ -40,77 +40,76 @@
     <!-- Content -->
     <div class="inner">
       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths-tablet is-three-fifths-widescreen">
-            {% block nav %}
-              <!-- Navbar -->
-              <nav class="navbar is-transparent">
-                <div class="navbar-brand">
-                  <img class="navbar-item navbar-logo" src="{{ assets }}/images/logo.svg" width="80" height="80">
+        {% block nav %}
+          <!-- Navbar -->
+          <nav class="navbar is-transparent">
+            <div class="navbar-brand">
+              <img class="navbar-item navbar-logo" src="{{ assets }}/images/logo.svg" width="80" height="80">
 
-                  <a role="button" class="navbar-burger burger" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+              <a role="button" class="navbar-burger burger" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div class="navbar-menu is-shadowless">
+              <div class="navbar-start">
+                {% for p in pages %}
+                  <div class="navbar-item">
+                    {% if page.path starts with p.path %}
+                      <a class="active" href="{{ base_path_for(p) }}">{{ p.title }}</a>
+                    {% else %}
+                      <a href="{{ base_path_for(p) }}">{{ p.title }}</a>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </nav>
+        {% endblock %}
+
+        <!-- Main content -->
+        <main class="main">
+          {% block main %}
+          {% endblock %}
+        </main>
+
+        {% block footer %}
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="level">
+              <div class="level-left">
+                <div class="level-item">
+                  <p class="has-text-left-tablet">
+                    Copyright &copy; Danae Dekker, 2017-2020<br>
+                    Created using <a href="https://bulma.io/" target="_blank">Bulma</a> and <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="level-right">
+                <div class="level-item">
+                  <a class="icon" href="{{ links.linkedin }}">
+                    <i class="fab fa-linkedin-in fa-3x" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
+                  </a>
+                  <a class="icon" href="{{ links.facebook }}">
+                    <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+                  </a>
+                  <a class="icon" href="{{ links.spotify }}">
+                    <i class="fab fa-spotify fa-3x"></i>
+                  </a>
+                  <a class="icon" href="{{ links.github }}">
+                    <i class="fab fa-github fa-3x"></i>
+                  </a>
+                  <a class="icon" href="{{ links.soundcloud }}">
+                    <i class="fab fa-soundcloud fa-3x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
                   </a>
                 </div>
-
-                <div class="navbar-menu">
-                  <div class="navbar-start">
-                    {% for p in pages %}
-                      <div class="navbar-item">
-                        {% if page.path starts with p.path %}
-                          <a class="active" href="{{ base_path_for(p) }}">{{ p.title }}</a>
-                        {% else %}
-                          <a href="{{ base_path_for(p) }}">{{ p.title }}</a>
-                        {% endif %}
-                      </div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </nav>
-            {% endblock %}
-
-            <!-- Main content -->
-            <main class="main">
-              {% block main %}
-              {% endblock %}
-            </main>
-
-            {% block footer %}
-              <!-- Footer -->
-              <footer class="footer">
-                <div class="level">
-                  <div class="level-left">
-                    <div class="level-item">
-                      <p class="has-text-left-tablet">
-                        Copyright &copy; Danae Dekker, 2017-2020<br>
-                        Created using <a href="https://bulma.io/" target="_blank">Bulma</a> and <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="level-right">
-                    <div class="level-item">
-                      <a class="icon" href="{{ links.linkedin }}">
-                        <i class="fab fa-linkedin-in fa-3x" data-fa-transform="shrink-6 down-0.5" data-fa-mask="fas fa-circle"></i>
-                      </a>
-                      <a class="icon" href="{{ links.facebook }}">
-                        <i class="fab fa-facebook-f fa-3x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
-                      </a>
-                      <a class="icon" href="{{ links.spotify }}">
-                        <i class="fab fa-spotify fa-3x"></i>
-                      </a>
-                      <a class="icon" href="{{ links.github }}">
-                        <i class="fab fa-github fa-3x"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            {% endblock %}
-          </div>
-        </div>
+              </div>
+            </div>
+          </footer>
+        {% endblock %}
       </div>
     </div>
 
@@ -122,6 +121,6 @@
     <script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="{{ assets }}/js/index.js"></script>
-    <script src="{{ assets }}/js/contactform.js"></script>
+    <script src="{{ assets }}/js/contact.js"></script>
   </body>
 </html>
