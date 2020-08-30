@@ -32,7 +32,7 @@ $feather->context = [
   'assets' => $feather->base_path . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
-    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2019.pdf',
+    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2020.pdf',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
     'facebook' => 'https://www.facebook.com/purplelum',
     'spotify' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt?si=mp5rMhmAR5qQ11ypBLJevw',
