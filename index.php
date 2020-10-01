@@ -34,7 +34,7 @@ $feather->context = [
   'links' => [
     'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2020.pdf',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
-    'facebook' => 'https://www.facebook.com/purplelum',
+    'facebook' => 'https://www.facebook.com/danaedekkergameaudio',
     'twitter' => 'https://twitter.com/da___nae',
     'spotify' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt?si=mp5rMhmAR5qQ11ypBLJevw',
     'github' => 'https://github.com/danae',
