@@ -28,9 +28,16 @@ $(function() {
 
         // Check if the collapse should be visible
         if (tag === "*" || tags.includes(tag))
+        {
           collapse.removeClass('is-hidden');
+          collapse.fadeIn(250);
+        }
         else
-          collapse.addClass('is-hidden');
+        {
+          collapse.fadeOut(250, function() {
+            collapse.addClass('is-hidden');
+          });
+        }
       }
 
       // Set the parent of this anchor as active
