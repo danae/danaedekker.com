@@ -47,6 +47,11 @@ $feather->context = [
       'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings/',
       'itch' => 'https://audune.itch.io/invisiblewings',
     ],
+    'hope_remember' => [
+      'image' => $feather->base_path . '/assets/images/splash_hope_remember.png',
+      'link' => 'https://arzi.itch.io/hoperemember',
+      'soundcloud' => 'https://soundcloud.com/purplelum/hope-remember'
+    ],
     'ocarime' => [
       'image' => $feather->base_path . '/assets/images/splash_ocarime.png',
       'link' => 'https://ocarime.com/'
@@ -73,7 +78,8 @@ $feather->context = [
       'read' => $feather->base_path . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
     ],
     'room_of_doom' => [
-      'embed' => 'https://www.youtube.com/embed/2XK3Vkecf1A'
+      'embed' => 'https://www.youtube.com/embed/2XK3Vkecf1A',
+      'soundcloud' => 'https://soundcloud.com/purplelum/room-of-doom'
     ],
     'blue_moon' => [
       'image' => $feather->base_path . '/assets/images/splash_blue_moon.png',
