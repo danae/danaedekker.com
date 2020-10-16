@@ -14,4 +14,7 @@ $smtpPort = 25;
 $smtpEncryption = 'tls';
 $smtpUsername = '<username>';
 $smtpPassword = '<password>';
-$smtpRecipients = ['<recipient_email>' => '<recipient_name>'];
+
+// Contact form mail settings
+$mailSender = '<sender_email>';
+$mailRecipients = ['<recipient_email>' => '<recipient_name>'];
