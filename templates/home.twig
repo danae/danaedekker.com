@@ -1,71 +1,70 @@
 {% extends "index.twig" %}
 
 {% block main %}
-  <section class="section">
-    <div class="content">
-      <p class="lead">I am <b>Danae Dekker</b>, a composer and technical audio designer for games and interactive media.</p>
-      <p>I'm fascinated by musical storytelling in a fantastical and whimsical setting, which I apply in autonomous compositions, games and interactive media. Moreover I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
-      <p>Together with five amazing people who work in the field of game audio I form <a href="https://ocarime.com/">Ocarime</a>, a network of composers, sound designers and software developers.</p>
-    </div>
+  <section class="section content">
+    <p class="lead">I am <b>Danae Dekker</b>, a composer and technical audio designer for games and interactive media.</p>
+    <p>I'm fascinated by musical storytelling in a fantastical and whimsical setting, which I apply in autonomous compositions, games and interactive media. Moreover, I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
+    <p>Guided by my own drive for telling stories and sharing them with the world, I also founded my very own game studio, <a href="https://audune.com/">Audune Games</a>, where I'm currently working as creative director and audio designer.</p>
+    <p>I'm currently available for freelance composition and technical audio design work! I'm open for <a href="{{ base_path_for(pages.commissions) }}">personal music commissions</a> as well.
   </section>
 
-  <section class="section">
+  <section class="section content">
     <div class="content">
       <h2>Compositions</h2>
 
       <p>Below you can listen to some autonomous compositions I made. To view more applied projects I worked on, please see the <a href="{{ base_path_for(pages.projects) }}">projects</a> page.</p>
 
-      <div class="card has-background-primary has-text-light">
+      <div class="card inverted">
         <div class="card-image">
           {{ soundcloud.oembed('https://soundcloud.com/purplelum/entanglement', {'maxheight': 240, 'color': '#aa0050'}).html }}
         </div>
 
         <div class="card-content">
-          <h3 class="has-text-light">Entanglement</h3>
+          <h3>Entanglement</h3>
           <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
         </div>
       </div>
 
-      <div class="card has-background-primary has-text-light">
+      <div class="card inverted">
         <div class="card-image">
           {{ soundcloud.oembed('https://soundcloud.com/purplelum/ocean-of-stars', {'maxheight': 240, 'color': '#aa0050'}).html }}
         </div>
 
         <div class="card-content">
-          <h3 class="has-text-light">Ocean Of Stars</h3>
+          <h3>Ocean Of Stars</h3>
           <p>This piece is inspired by Maricu Mana's DTIYS challenge going on at her Twitter. Her art tells the story of Lynx, who loves to sneak away from their royal duties and spend time in their secret observatory, drifting away in the ocean of stars.</p>
         </div>
       </div>
 
-      <div class="card has-background-primary has-text-light">
+      <div class="card inverted">
         <div class="card-image">
           {{ soundcloud.oembed('https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered', {'maxheight': 240, 'color': '#aa0050'}).html }}
         </div>
 
         <div class="card-content">
-          <h3 class="has-text-light">Once In A Blue Moon</h3>
+          <h3>Once In A Blue Moon</h3>
           <p>If you ever had the chance to escape from reality, where would you go? <i>Once In A Blue Moon</i> tells about a magical world filled with fantasy that you can only visit once in a blue moon.</p>
         </div>
       </div>
 
-      <div class="card has-background-primary has-text-light">
+      <div class="card inverted">
         <div class="card-image">
           {{ soundcloud.oembed('https://soundcloud.com/purplelum/dwaallicht', {'maxheight': 240, 'color': '#aa0050'}).html }}
         </div>
 
         <div class="card-content">
-          <h3 class="has-text-light">Dwaallicht</h3>
+          <h3>Dwaallicht</h3>
           <p><i>Dwaallicht</i> tells a nighttime story told in beautiful music.</p>
         </div>
       </div>
 
-      <div class="card has-background-primary has-text-light">
+      <div class="card inverted">
         <div class="card-image">
           {{ soundcloud.oembed('https://soundcloud.com/purplelum/we-in-heaven-2020-remix', {'maxheight': 240, 'color': '#aa0050'}).html }}
         </div>
 
         <div class="card-content">
-          <h3 class="has-text-light">We In Heaven</h3>
+          <h3>We In Heaven</h3>
           <p>This is the newest remix of my 2012 track <i>We In Heaven</i>, which I still consider one of the most influential tracks for my current style.</p>
         </div>
       </div>

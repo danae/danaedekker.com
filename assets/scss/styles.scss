@@ -180,12 +180,24 @@ a {
 
   // Card
   .card {
-
     &:not(:first-child) {
       margin-top: 1.5rem;
     }
     &:not(:last-child) {
       margin-bottom: 1.5rem;
+    }
+
+    // Add styles to a colored card
+    &.inverted {
+      @extend .has-background-primary;
+      @extend .has-text-light;
+
+      // Headings
+      @for $i from 1 through 6 {
+        h#{$i} {
+          @extend .has-text-light;
+        }
+      }
     }
   }
 

@@ -8852,11 +8852,11 @@ a.has-text-black:hover, a.has-text-black:focus {
   background-color: #0a0a0a !important;
 }
 
-.has-text-light {
+.has-text-light, .content .card.inverted, .footer .card.inverted, .content .card.inverted h1, .footer .card.inverted h1, .content .card.inverted h2, .footer .card.inverted h2, .content .card.inverted h3, .footer .card.inverted h3, .content .card.inverted h4, .footer .card.inverted h4, .content .card.inverted h5, .footer .card.inverted h5, .content .card.inverted h6, .footer .card.inverted h6 {
   color: #FCFCFF !important;
 }
 
-a.has-text-light:hover, a.has-text-light:focus {
+a.has-text-light:hover, .content a.card.inverted:hover, .footer a.card.inverted:hover, a.has-text-light:focus, .content a.card.inverted:focus, .footer a.card.inverted:focus {
   color: #c9c9ff !important;
 }
 
@@ -8884,7 +8884,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   color: #770038 !important;
 }
 
-.has-background-primary {
+.has-background-primary, .content .card.inverted, .footer .card.inverted {
   background-color: #AA0050 !important;
 }
 

@@ -9,9 +9,9 @@ use Danae\Soundcloud\Soundcloud;
 $feather = new Feather();
 
 // Add pages
-$feather->pages->add('compositions', ['default' => true]);
+$feather->pages->add('home', ['default' => true]);
 $feather->pages->add('projects');
-$feather->pages->add('projects/colors-of-the-night', ['title' => 'Colors of the Night', 'visible' => false]);
+$feather->pages->add('commissions');
 $feather->pages->add('about');
 $feather->pages->add('contact');
 
@@ -33,6 +33,8 @@ $feather->context = [
   'soundcloud' => $soundcloud,
   'links' => [
     'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2020.pdf',
+    'commissions_tos' => $feather->base_path . '/publications/Personal_Music_Comissions_TOS.pdf',
+    'dutch_tax_exemptions' => 'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/vrijstellingen/vrijstelling_voor_componisten_schrijvers_cartoonisten_en_journalisten',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
     'facebook' => 'https://www.facebook.com/danaedekkergameaudio',
     'twitter' => 'https://twitter.com/da___nae',
