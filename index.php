@@ -44,7 +44,7 @@ $feather->context = [
   ],
   'projects' => [
     'invisible_wings' => [
-      'embed' => 'https://www.youtube.com/embed/UB10AQidnxM',
+      'embed' => 'https://www.youtube.com/embed/JCrAeKzTidU',
       'link' => 'https://invisiblewingsgame.com/',
       'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings/',
       'itch' => 'https://audune.itch.io/invisiblewings',
