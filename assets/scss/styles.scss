@@ -60,7 +60,7 @@ a {
     border-bottom-color: $link-hover;
   }
 
-  &.icon {
+  &.icon, &.is-overlay {
     border-bottom: none;
   }
 }
@@ -208,6 +208,44 @@ a {
   }
 }
 
+// Grid styling
+.grid {
+  @extend .columns;
+  @extend .is-mobile;
+  @extend .is-multiline;
+  @extend .content;
+
+  // An item in the grid
+  .grid-item {
+    // column is-half-mobile is-one-third-tablet
+    @extend .column;
+    @extend .is-half-mobile;
+    @extend .is-one-third-tablet;
+
+    // A box in a grid item
+    .grid-box {
+      @extend .box;
+      @extend .is-relative;
+      @extend .is-radiusless;
+      @extend .has-background-white;
+      @extend .px-2;
+      @extend .py-2;
+    }
+
+    // An active box in a grid item
+    &.is-active .grid-box {
+      @extend .has-background-primary;
+      @extend .has-text-light;
+    }
+  }
+
+  // A modal in the grid
+  .grid-modal {
+    @extend .column;
+    @extend .is-full;
+  }
+}
+
 // Clear spacing for first and last sections
 .section {
   &:first-child {
@@ -221,9 +259,4 @@ a {
 // Remove line height in card images
 .card-image {
   line-height: 0;
-}
-
-// Vertically center flex items
-.is-vertically-centered {
-  align-items: center;
 }

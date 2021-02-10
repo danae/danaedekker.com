@@ -40,54 +40,61 @@ $feather->context = [
     'twitter' => 'https://twitter.com/da___nae',
     'spotify' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt?si=mp5rMhmAR5qQ11ypBLJevw',
     'github' => 'https://github.com/danae',
-    'soundcloud' => 'https://soundcloud.com/purplelum',
+    'soundcloud' => 'https://soundcloud.com/purplelum'
   ],
   'projects' => [
     'invisible_wings' => [
+      'square' => $feather->base_path . '/assets/images/square_invisible_wings.png',
       'embed' => 'https://www.youtube.com/embed/JCrAeKzTidU',
       'link' => 'https://invisiblewingsgame.com/',
       'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings/',
-      'itch' => 'https://audune.itch.io/invisiblewings',
+      'itch' => 'https://audune.itch.io/invisiblewings'
+    ],
+    'fairy_lost' => [
+      'square' => $feather->base_path . '/assets/images/square_fairy_lost.png',
+      'embed' => 'https://www.youtube.com/embed/Y21QE7zzHJg',
+      'itch' => 'https://coolcast.itch.io/fairy-lost',
+      'soundcloud' => 'https://soundcloud.com/purplelum/fairy-lost-ost'
     ],
     'hope_remember' => [
+      'square' => $feather->base_path . '/assets/images/square_hope_remember.png',
       'image' => $feather->base_path . '/assets/images/splash_hope_remember.png',
-      'link' => 'https://arzi.itch.io/hoperemember',
+      'itch' => 'https://arzi.itch.io/hoperemember',
       'soundcloud' => 'https://soundcloud.com/purplelum/hope-remember'
     ],
     'ocarime' => [
+      'square' => $feather->base_path . '/assets/images/square_ocarime.png',
       'image' => $feather->base_path . '/assets/images/splash_ocarime.png',
       'link' => 'https://ocarime.com/'
     ],
     'ocarime_the_game' => [
+      'square' => $feather->base_path . '/assets/images/square_ocarime_the_game.png',
       'embed' => 'https://www.youtube.com/embed/9VKsWIVDf7M',
       'link' => 'https://beta.ocarime.com/'
     ],
-    'thesis' => [
-      'read' => $feather->base_path . '/publications/Nonlinear_music_design_in_narrative_games.pdf'
-    ],
     'colors_of_the_night' => [
+      'square' => $feather->base_path . '/assets/images/square_colors_of_the_night.png',
       'image' => $feather->base_path . '/assets/images/splash_colors_of_the_night.png',
-      'upc' => '5057917496902',
       'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=hc_okt74TuaHvOrb7D-niA',
-      'google' => 'https://play.google.com/store/music/album/Purple_Lum_Colors_of_the_Night?id=Bxd5htrwefg5z6wav7ntudxlzt4',
+      'google' => 'https://music.youtube.com/playlist?list=OLAK5uy_k77U0wmpl2kGL3gHaKDSfaTA_KJodE-1c',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
     ],
     'exodus_burned' => [
+      'square' => $feather->base_path . '/assets/images/square_exodus_burned.png',
       'embed' => 'https://www.youtube.com/embed/alquMRfFrSY',
       'link' => 'http://www.exodusburned.com/'
     ],
-    'paper' => [
-      'read' => $feather->base_path . '/publications/Implementatie_van_game_audio_in_Unity.pdf'
-    ],
     'room_of_doom' => [
+      'square' => $feather->base_path . '/assets/images/square_room_of_doom.png',
       'embed' => 'https://www.youtube.com/embed/2XK3Vkecf1A',
       'soundcloud' => 'https://soundcloud.com/purplelum/room-of-doom'
     ],
     'blue_moon' => [
+      'square' => $feather->base_path . '/assets/images/square_blue_moon.png',
       'image' => $feather->base_path . '/assets/images/splash_blue_moon.png',
       'upc' => '5057728398730',
       'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
-      'google' => 'https://play.google.com/store/music/album/Purple_Lum_Blue_Moon?id=Bzv3vvd7cbp24dpugxg5odcrta4',
+      'google' => 'https://music.youtube.com/playlist?list=OLAK5uy_nuVhWZ0eLB_pLiHnvgAOiQlOZLIto_Vxw',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]
   ]

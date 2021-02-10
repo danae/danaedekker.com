@@ -37,7 +37,7 @@
   width: 0.625em;
 }
 
-.box:not(:last-child), .content:not(:last-child), .footer:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child),
+.box:not(:last-child), .grid .grid-item .grid-box:not(:last-child), .content:not(:last-child), .footer:not(:last-child), .grid:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child),
 .subtitle:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -437,7 +437,7 @@ table th {
   color: #363636;
 }
 
-.box {
+.box, .grid .grid-item .grid-box {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
@@ -446,11 +446,11 @@ table th {
   padding: 1.25rem;
 }
 
-a.box:hover, a.box:focus {
+a.box:hover, .grid .grid-item a.grid-box:hover, a.box:focus, .grid .grid-item a.grid-box:focus {
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #AA0050;
 }
 
-a.box:active {
+a.box:active, .grid .grid-item a.grid-box:active {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #AA0050;
 }
 
@@ -1884,168 +1884,184 @@ fieldset[disabled] .button {
   }
 }
 
-.content li + li, .footer li + li {
+.content li + li, .footer li + li, .grid li + li {
   margin-top: 0.25em;
 }
 
-.content p:not(:last-child), .footer p:not(:last-child),
+.content p:not(:last-child), .footer p:not(:last-child), .grid p:not(:last-child),
 .content dl:not(:last-child),
 .footer dl:not(:last-child),
+.grid dl:not(:last-child),
 .content ol:not(:last-child),
 .footer ol:not(:last-child),
+.grid ol:not(:last-child),
 .content ul:not(:last-child),
 .footer ul:not(:last-child),
+.grid ul:not(:last-child),
 .content blockquote:not(:last-child),
 .footer blockquote:not(:last-child),
+.grid blockquote:not(:last-child),
 .content pre:not(:last-child),
 .footer pre:not(:last-child),
+.grid pre:not(:last-child),
 .content table:not(:last-child),
-.footer table:not(:last-child) {
+.footer table:not(:last-child),
+.grid table:not(:last-child) {
   margin-bottom: 1em;
 }
 
-.content h1, .footer h1,
+.content h1, .footer h1, .grid h1,
 .content h2,
 .footer h2,
+.grid h2,
 .content h3,
 .footer h3,
+.grid h3,
 .content h4,
 .footer h4,
+.grid h4,
 .content h5,
 .footer h5,
+.grid h5,
 .content h6,
-.footer h6 {
+.footer h6,
+.grid h6 {
   color: #363636;
   font-weight: 600;
   line-height: 1.125;
 }
 
-.content h1, .footer h1 {
+.content h1, .footer h1, .grid h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
 
-.content h1:not(:first-child), .footer h1:not(:first-child) {
+.content h1:not(:first-child), .footer h1:not(:first-child), .grid h1:not(:first-child) {
   margin-top: 1em;
 }
 
 
 .content h2,
-.footer h2 {
+.footer h2,
+.grid h2 {
   font-size: 1.75em;
   margin-bottom: 0.5714em;
 }
 
-.content h2:not(:first-child), .footer h2:not(:first-child) {
+.content h2:not(:first-child), .footer h2:not(:first-child), .grid h2:not(:first-child) {
   margin-top: 1.1428em;
 }
 
 
 .content h3,
-.footer h3 {
+.footer h3,
+.grid h3 {
   font-size: 1.5em;
   margin-bottom: 0.6666em;
 }
 
-.content h3:not(:first-child), .footer h3:not(:first-child) {
+.content h3:not(:first-child), .footer h3:not(:first-child), .grid h3:not(:first-child) {
   margin-top: 1.3333em;
 }
 
 
 .content h4,
-.footer h4 {
+.footer h4,
+.grid h4 {
   font-size: 1.25em;
   margin-bottom: 0.8em;
 }
 
 
 .content h5,
-.footer h5 {
+.footer h5,
+.grid h5 {
   font-size: 1.125em;
   margin-bottom: 0.8888em;
 }
 
 
 .content h6,
-.footer h6 {
+.footer h6,
+.grid h6 {
   font-size: 1em;
   margin-bottom: 1em;
 }
 
-.content blockquote, .footer blockquote {
+.content blockquote, .footer blockquote, .grid blockquote {
   background-color: #FCFCFF;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em;
 }
 
-.content ol, .footer ol {
+.content ol, .footer ol, .grid ol {
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
 }
 
-.content ol:not([type]), .footer ol:not([type]) {
+.content ol:not([type]), .footer ol:not([type]), .grid ol:not([type]) {
   list-style-type: decimal;
 }
 
-.content ol:not([type]).is-lower-alpha, .footer ol:not([type]).is-lower-alpha {
+.content ol:not([type]).is-lower-alpha, .footer ol:not([type]).is-lower-alpha, .grid ol:not([type]).is-lower-alpha {
   list-style-type: lower-alpha;
 }
 
-.content ol:not([type]).is-lower-roman, .footer ol:not([type]).is-lower-roman {
+.content ol:not([type]).is-lower-roman, .footer ol:not([type]).is-lower-roman, .grid ol:not([type]).is-lower-roman {
   list-style-type: lower-roman;
 }
 
-.content ol:not([type]).is-upper-alpha, .footer ol:not([type]).is-upper-alpha {
+.content ol:not([type]).is-upper-alpha, .footer ol:not([type]).is-upper-alpha, .grid ol:not([type]).is-upper-alpha {
   list-style-type: upper-alpha;
 }
 
-.content ol:not([type]).is-upper-roman, .footer ol:not([type]).is-upper-roman {
+.content ol:not([type]).is-upper-roman, .footer ol:not([type]).is-upper-roman, .grid ol:not([type]).is-upper-roman {
   list-style-type: upper-roman;
 }
 
-.content ul, .footer ul {
+.content ul, .footer ul, .grid ul {
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
 }
 
-.content ul ul, .footer ul ul {
+.content ul ul, .footer ul ul, .grid ul ul {
   list-style-type: circle;
   margin-top: 0.5em;
 }
 
-.content ul ul ul, .footer ul ul ul {
+.content ul ul ul, .footer ul ul ul, .grid ul ul ul {
   list-style-type: square;
 }
 
-.content dd, .footer dd {
+.content dd, .footer dd, .grid dd {
   margin-left: 2em;
 }
 
-.content figure, .footer figure {
+.content figure, .footer figure, .grid figure {
   margin-left: 2em;
   margin-right: 2em;
   text-align: center;
 }
 
-.content figure:not(:first-child), .footer figure:not(:first-child) {
+.content figure:not(:first-child), .footer figure:not(:first-child), .grid figure:not(:first-child) {
   margin-top: 2em;
 }
 
-.content figure:not(:last-child), .footer figure:not(:last-child) {
+.content figure:not(:last-child), .footer figure:not(:last-child), .grid figure:not(:last-child) {
   margin-bottom: 2em;
 }
 
-.content figure img, .footer figure img {
+.content figure img, .footer figure img, .grid figure img {
   display: inline-block;
 }
 
-.content figure figcaption, .footer figure figcaption {
+.content figure figcaption, .footer figure figcaption, .grid figure figcaption {
   font-style: italic;
 }
 
-.content pre, .footer pre {
+.content pre, .footer pre, .grid pre {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   padding: 1.25em 1.5em;
@@ -2053,19 +2069,21 @@ fieldset[disabled] .button {
   word-wrap: normal;
 }
 
-.content sup, .footer sup,
+.content sup, .footer sup, .grid sup,
 .content sub,
-.footer sub {
+.footer sub,
+.grid sub {
   font-size: 75%;
 }
 
-.content table, .footer table {
+.content table, .footer table, .grid table {
   width: 100%;
 }
 
-.content table td, .footer table td,
+.content table td, .footer table td, .grid table td,
 .content table th,
-.footer table th {
+.footer table th,
+.grid table th {
   border: 1px solid #dbdbdb;
   border-width: 0 0 1px;
   padding: 0.5em 0.75em;
@@ -2074,47 +2092,51 @@ fieldset[disabled] .button {
 
 
 .content table th,
-.footer table th {
+.footer table th,
+.grid table th {
   color: #363636;
 }
 
-.content table th:not([align]), .footer table th:not([align]) {
+.content table th:not([align]), .footer table th:not([align]), .grid table th:not([align]) {
   text-align: inherit;
 }
 
-.content table thead td, .footer table thead td,
+.content table thead td, .footer table thead td, .grid table thead td,
 .content table thead th,
-.footer table thead th {
+.footer table thead th,
+.grid table thead th {
   border-width: 0 0 2px;
   color: #363636;
 }
 
-.content table tfoot td, .footer table tfoot td,
+.content table tfoot td, .footer table tfoot td, .grid table tfoot td,
 .content table tfoot th,
-.footer table tfoot th {
+.footer table tfoot th,
+.grid table tfoot th {
   border-width: 2px 0 0;
   color: #363636;
 }
 
-.content table tbody tr:last-child td, .footer table tbody tr:last-child td,
+.content table tbody tr:last-child td, .footer table tbody tr:last-child td, .grid table tbody tr:last-child td,
 .content table tbody tr:last-child th,
-.footer table tbody tr:last-child th {
+.footer table tbody tr:last-child th,
+.grid table tbody tr:last-child th {
   border-bottom-width: 0;
 }
 
-.content .tabs li + li, .footer .tabs li + li {
+.content .tabs li + li, .footer .tabs li + li, .grid .tabs li + li {
   margin-top: 0;
 }
 
-.content.is-small, .is-small.footer {
+.content.is-small, .is-small.footer, .is-small.grid {
   font-size: 0.75rem;
 }
 
-.content.is-medium, .is-medium.footer {
+.content.is-medium, .is-medium.footer, .is-medium.grid {
   font-size: 1.25rem;
 }
 
-.content.is-large, .is-large.footer {
+.content.is-large, .is-large.footer, .is-large.grid {
   font-size: 1.5rem;
 }
 
@@ -2310,7 +2332,8 @@ fieldset[disabled] .button {
 .notification .title,
 .notification .subtitle,
 .notification .content,
-.notification .footer {
+.notification .footer,
+.notification .grid {
   color: currentColor;
 }
 
@@ -4769,25 +4792,26 @@ button.dropdown-item.is-active {
   vertical-align: top;
 }
 
-.level.is-mobile {
+.level.is-mobile, .level.grid {
   display: flex;
 }
 
-.level.is-mobile .level-left,
-.level.is-mobile .level-right {
+.level.is-mobile .level-left, .level.grid .level-left,
+.level.is-mobile .level-right,
+.level.grid .level-right {
   display: flex;
 }
 
-.level.is-mobile .level-left + .level-right {
+.level.is-mobile .level-left + .level-right, .level.grid .level-left + .level-right {
   margin-top: 0;
 }
 
-.level.is-mobile .level-item:not(:last-child) {
+.level.is-mobile .level-item:not(:last-child), .level.grid .level-item:not(:last-child) {
   margin-bottom: 0;
   margin-right: 0.75rem;
 }
 
-.level.is-mobile .level-item:not(.is-narrow) {
+.level.is-mobile .level-item:not(.is-narrow), .level.grid .level-item:not(.is-narrow) {
   flex-grow: 1;
 }
 
@@ -4873,7 +4897,7 @@ button.dropdown-item.is-active {
   text-align: inherit;
 }
 
-.media .content:not(:last-child), .media .footer:not(:last-child) {
+.media .content:not(:last-child), .media .footer:not(:last-child), .media .grid:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
@@ -4883,7 +4907,7 @@ button.dropdown-item.is-active {
   padding-top: 0.75rem;
 }
 
-.media .media .content:not(:last-child), .media .media .footer:not(:last-child),
+.media .media .content:not(:last-child), .media .media .footer:not(:last-child), .media .media .grid:not(:last-child),
 .media .media .control:not(:last-child) {
   margin-bottom: 0.5rem;
 }
@@ -6942,7 +6966,7 @@ label.panel-block:hover {
   font-size: 1.5rem;
 }
 
-.column {
+.column, .grid .grid-item, .grid .grid-modal {
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -6950,1787 +6974,1787 @@ label.panel-block:hover {
   padding: 0.75rem;
 }
 
-.columns.is-mobile > .column.is-narrow {
+.columns.is-mobile > .column.is-narrow, .grid > .column.is-narrow, .grid .columns.is-mobile > .is-narrow.grid-item, .grid > .is-narrow.grid-item, .grid .columns.is-mobile > .is-narrow.grid-modal, .grid > .is-narrow.grid-modal {
   flex: none;
 }
 
-.columns.is-mobile > .column.is-full {
+.columns.is-mobile > .column.is-full, .grid > .column.is-full, .grid .columns.is-mobile > .is-full.grid-item, .grid > .is-full.grid-item, .grid .columns.is-mobile > .grid-modal, .grid > .grid-modal {
   flex: none;
   width: 100%;
 }
 
-.columns.is-mobile > .column.is-three-quarters {
+.columns.is-mobile > .column.is-three-quarters, .grid > .column.is-three-quarters, .grid .columns.is-mobile > .is-three-quarters.grid-item, .grid > .is-three-quarters.grid-item, .grid .columns.is-mobile > .is-three-quarters.grid-modal, .grid > .is-three-quarters.grid-modal {
   flex: none;
   width: 75%;
 }
 
-.columns.is-mobile > .column.is-two-thirds {
+.columns.is-mobile > .column.is-two-thirds, .grid > .column.is-two-thirds, .grid .columns.is-mobile > .is-two-thirds.grid-item, .grid > .is-two-thirds.grid-item, .grid .columns.is-mobile > .is-two-thirds.grid-modal, .grid > .is-two-thirds.grid-modal {
   flex: none;
   width: 66.6666%;
 }
 
-.columns.is-mobile > .column.is-half {
+.columns.is-mobile > .column.is-half, .grid > .column.is-half, .grid .columns.is-mobile > .is-half.grid-item, .grid > .is-half.grid-item, .grid .columns.is-mobile > .is-half.grid-modal, .grid > .is-half.grid-modal {
   flex: none;
   width: 50%;
 }
 
-.columns.is-mobile > .column.is-one-third {
+.columns.is-mobile > .column.is-one-third, .grid > .column.is-one-third, .grid .columns.is-mobile > .is-one-third.grid-item, .grid > .is-one-third.grid-item, .grid .columns.is-mobile > .is-one-third.grid-modal, .grid > .is-one-third.grid-modal {
   flex: none;
   width: 33.3333%;
 }
 
-.columns.is-mobile > .column.is-one-quarter {
+.columns.is-mobile > .column.is-one-quarter, .grid > .column.is-one-quarter, .grid .columns.is-mobile > .is-one-quarter.grid-item, .grid > .is-one-quarter.grid-item, .grid .columns.is-mobile > .is-one-quarter.grid-modal, .grid > .is-one-quarter.grid-modal {
   flex: none;
   width: 25%;
 }
 
-.columns.is-mobile > .column.is-one-fifth {
+.columns.is-mobile > .column.is-one-fifth, .grid > .column.is-one-fifth, .grid .columns.is-mobile > .is-one-fifth.grid-item, .grid > .is-one-fifth.grid-item, .grid .columns.is-mobile > .is-one-fifth.grid-modal, .grid > .is-one-fifth.grid-modal {
   flex: none;
   width: 20%;
 }
 
-.columns.is-mobile > .column.is-two-fifths {
+.columns.is-mobile > .column.is-two-fifths, .grid > .column.is-two-fifths, .grid .columns.is-mobile > .is-two-fifths.grid-item, .grid > .is-two-fifths.grid-item, .grid .columns.is-mobile > .is-two-fifths.grid-modal, .grid > .is-two-fifths.grid-modal {
   flex: none;
   width: 40%;
 }
 
-.columns.is-mobile > .column.is-three-fifths {
+.columns.is-mobile > .column.is-three-fifths, .grid > .column.is-three-fifths, .grid .columns.is-mobile > .is-three-fifths.grid-item, .grid > .is-three-fifths.grid-item, .grid .columns.is-mobile > .is-three-fifths.grid-modal, .grid > .is-three-fifths.grid-modal {
   flex: none;
   width: 60%;
 }
 
-.columns.is-mobile > .column.is-four-fifths {
+.columns.is-mobile > .column.is-four-fifths, .grid > .column.is-four-fifths, .grid .columns.is-mobile > .is-four-fifths.grid-item, .grid > .is-four-fifths.grid-item, .grid .columns.is-mobile > .is-four-fifths.grid-modal, .grid > .is-four-fifths.grid-modal {
   flex: none;
   width: 80%;
 }
 
-.columns.is-mobile > .column.is-offset-three-quarters {
+.columns.is-mobile > .column.is-offset-three-quarters, .grid > .column.is-offset-three-quarters, .grid .columns.is-mobile > .is-offset-three-quarters.grid-item, .grid > .is-offset-three-quarters.grid-item, .grid .columns.is-mobile > .is-offset-three-quarters.grid-modal, .grid > .is-offset-three-quarters.grid-modal {
   margin-left: 75%;
 }
 
-.columns.is-mobile > .column.is-offset-two-thirds {
+.columns.is-mobile > .column.is-offset-two-thirds, .grid > .column.is-offset-two-thirds, .grid .columns.is-mobile > .is-offset-two-thirds.grid-item, .grid > .is-offset-two-thirds.grid-item, .grid .columns.is-mobile > .is-offset-two-thirds.grid-modal, .grid > .is-offset-two-thirds.grid-modal {
   margin-left: 66.6666%;
 }
 
-.columns.is-mobile > .column.is-offset-half {
+.columns.is-mobile > .column.is-offset-half, .grid > .column.is-offset-half, .grid .columns.is-mobile > .is-offset-half.grid-item, .grid > .is-offset-half.grid-item, .grid .columns.is-mobile > .is-offset-half.grid-modal, .grid > .is-offset-half.grid-modal {
   margin-left: 50%;
 }
 
-.columns.is-mobile > .column.is-offset-one-third {
+.columns.is-mobile > .column.is-offset-one-third, .grid > .column.is-offset-one-third, .grid .columns.is-mobile > .is-offset-one-third.grid-item, .grid > .is-offset-one-third.grid-item, .grid .columns.is-mobile > .is-offset-one-third.grid-modal, .grid > .is-offset-one-third.grid-modal {
   margin-left: 33.3333%;
 }
 
-.columns.is-mobile > .column.is-offset-one-quarter {
+.columns.is-mobile > .column.is-offset-one-quarter, .grid > .column.is-offset-one-quarter, .grid .columns.is-mobile > .is-offset-one-quarter.grid-item, .grid > .is-offset-one-quarter.grid-item, .grid .columns.is-mobile > .is-offset-one-quarter.grid-modal, .grid > .is-offset-one-quarter.grid-modal {
   margin-left: 25%;
 }
 
-.columns.is-mobile > .column.is-offset-one-fifth {
+.columns.is-mobile > .column.is-offset-one-fifth, .grid > .column.is-offset-one-fifth, .grid .columns.is-mobile > .is-offset-one-fifth.grid-item, .grid > .is-offset-one-fifth.grid-item, .grid .columns.is-mobile > .is-offset-one-fifth.grid-modal, .grid > .is-offset-one-fifth.grid-modal {
   margin-left: 20%;
 }
 
-.columns.is-mobile > .column.is-offset-two-fifths {
+.columns.is-mobile > .column.is-offset-two-fifths, .grid > .column.is-offset-two-fifths, .grid .columns.is-mobile > .is-offset-two-fifths.grid-item, .grid > .is-offset-two-fifths.grid-item, .grid .columns.is-mobile > .is-offset-two-fifths.grid-modal, .grid > .is-offset-two-fifths.grid-modal {
   margin-left: 40%;
 }
 
-.columns.is-mobile > .column.is-offset-three-fifths {
+.columns.is-mobile > .column.is-offset-three-fifths, .grid > .column.is-offset-three-fifths, .grid .columns.is-mobile > .is-offset-three-fifths.grid-item, .grid > .is-offset-three-fifths.grid-item, .grid .columns.is-mobile > .is-offset-three-fifths.grid-modal, .grid > .is-offset-three-fifths.grid-modal {
   margin-left: 60%;
 }
 
-.columns.is-mobile > .column.is-offset-four-fifths {
+.columns.is-mobile > .column.is-offset-four-fifths, .grid > .column.is-offset-four-fifths, .grid .columns.is-mobile > .is-offset-four-fifths.grid-item, .grid > .is-offset-four-fifths.grid-item, .grid .columns.is-mobile > .is-offset-four-fifths.grid-modal, .grid > .is-offset-four-fifths.grid-modal {
   margin-left: 80%;
 }
 
-.columns.is-mobile > .column.is-0 {
+.columns.is-mobile > .column.is-0, .grid > .column.is-0, .grid .columns.is-mobile > .is-0.grid-item, .grid > .is-0.grid-item, .grid .columns.is-mobile > .is-0.grid-modal, .grid > .is-0.grid-modal {
   flex: none;
   width: 0%;
 }
 
-.columns.is-mobile > .column.is-offset-0 {
+.columns.is-mobile > .column.is-offset-0, .grid > .column.is-offset-0, .grid .columns.is-mobile > .is-offset-0.grid-item, .grid > .is-offset-0.grid-item, .grid .columns.is-mobile > .is-offset-0.grid-modal, .grid > .is-offset-0.grid-modal {
   margin-left: 0%;
 }
 
-.columns.is-mobile > .column.is-1 {
+.columns.is-mobile > .column.is-1, .grid > .column.is-1, .grid .columns.is-mobile > .is-1.grid-item, .grid > .is-1.grid-item, .grid .columns.is-mobile > .is-1.grid-modal, .grid > .is-1.grid-modal {
   flex: none;
   width: 8.33333%;
 }
 
-.columns.is-mobile > .column.is-offset-1 {
+.columns.is-mobile > .column.is-offset-1, .grid > .column.is-offset-1, .grid .columns.is-mobile > .is-offset-1.grid-item, .grid > .is-offset-1.grid-item, .grid .columns.is-mobile > .is-offset-1.grid-modal, .grid > .is-offset-1.grid-modal {
   margin-left: 8.33333%;
 }
 
-.columns.is-mobile > .column.is-2 {
+.columns.is-mobile > .column.is-2, .grid > .column.is-2, .grid .columns.is-mobile > .is-2.grid-item, .grid > .is-2.grid-item, .grid .columns.is-mobile > .is-2.grid-modal, .grid > .is-2.grid-modal {
   flex: none;
   width: 16.66667%;
 }
 
-.columns.is-mobile > .column.is-offset-2 {
+.columns.is-mobile > .column.is-offset-2, .grid > .column.is-offset-2, .grid .columns.is-mobile > .is-offset-2.grid-item, .grid > .is-offset-2.grid-item, .grid .columns.is-mobile > .is-offset-2.grid-modal, .grid > .is-offset-2.grid-modal {
   margin-left: 16.66667%;
 }
 
-.columns.is-mobile > .column.is-3 {
+.columns.is-mobile > .column.is-3, .grid > .column.is-3, .grid .columns.is-mobile > .is-3.grid-item, .grid > .is-3.grid-item, .grid .columns.is-mobile > .is-3.grid-modal, .grid > .is-3.grid-modal {
   flex: none;
   width: 25%;
 }
 
-.columns.is-mobile > .column.is-offset-3 {
+.columns.is-mobile > .column.is-offset-3, .grid > .column.is-offset-3, .grid .columns.is-mobile > .is-offset-3.grid-item, .grid > .is-offset-3.grid-item, .grid .columns.is-mobile > .is-offset-3.grid-modal, .grid > .is-offset-3.grid-modal {
   margin-left: 25%;
 }
 
-.columns.is-mobile > .column.is-4 {
+.columns.is-mobile > .column.is-4, .grid > .column.is-4, .grid .columns.is-mobile > .is-4.grid-item, .grid > .is-4.grid-item, .grid .columns.is-mobile > .is-4.grid-modal, .grid > .is-4.grid-modal {
   flex: none;
   width: 33.33333%;
 }
 
-.columns.is-mobile > .column.is-offset-4 {
+.columns.is-mobile > .column.is-offset-4, .grid > .column.is-offset-4, .grid .columns.is-mobile > .is-offset-4.grid-item, .grid > .is-offset-4.grid-item, .grid .columns.is-mobile > .is-offset-4.grid-modal, .grid > .is-offset-4.grid-modal {
   margin-left: 33.33333%;
 }
 
-.columns.is-mobile > .column.is-5 {
+.columns.is-mobile > .column.is-5, .grid > .column.is-5, .grid .columns.is-mobile > .is-5.grid-item, .grid > .is-5.grid-item, .grid .columns.is-mobile > .is-5.grid-modal, .grid > .is-5.grid-modal {
   flex: none;
   width: 41.66667%;
 }
 
-.columns.is-mobile > .column.is-offset-5 {
+.columns.is-mobile > .column.is-offset-5, .grid > .column.is-offset-5, .grid .columns.is-mobile > .is-offset-5.grid-item, .grid > .is-offset-5.grid-item, .grid .columns.is-mobile > .is-offset-5.grid-modal, .grid > .is-offset-5.grid-modal {
   margin-left: 41.66667%;
 }
 
-.columns.is-mobile > .column.is-6 {
+.columns.is-mobile > .column.is-6, .grid > .column.is-6, .grid .columns.is-mobile > .is-6.grid-item, .grid > .is-6.grid-item, .grid .columns.is-mobile > .is-6.grid-modal, .grid > .is-6.grid-modal {
   flex: none;
   width: 50%;
 }
 
-.columns.is-mobile > .column.is-offset-6 {
+.columns.is-mobile > .column.is-offset-6, .grid > .column.is-offset-6, .grid .columns.is-mobile > .is-offset-6.grid-item, .grid > .is-offset-6.grid-item, .grid .columns.is-mobile > .is-offset-6.grid-modal, .grid > .is-offset-6.grid-modal {
   margin-left: 50%;
 }
 
-.columns.is-mobile > .column.is-7 {
+.columns.is-mobile > .column.is-7, .grid > .column.is-7, .grid .columns.is-mobile > .is-7.grid-item, .grid > .is-7.grid-item, .grid .columns.is-mobile > .is-7.grid-modal, .grid > .is-7.grid-modal {
   flex: none;
   width: 58.33333%;
 }
 
-.columns.is-mobile > .column.is-offset-7 {
+.columns.is-mobile > .column.is-offset-7, .grid > .column.is-offset-7, .grid .columns.is-mobile > .is-offset-7.grid-item, .grid > .is-offset-7.grid-item, .grid .columns.is-mobile > .is-offset-7.grid-modal, .grid > .is-offset-7.grid-modal {
   margin-left: 58.33333%;
 }
 
-.columns.is-mobile > .column.is-8 {
+.columns.is-mobile > .column.is-8, .grid > .column.is-8, .grid .columns.is-mobile > .is-8.grid-item, .grid > .is-8.grid-item, .grid .columns.is-mobile > .is-8.grid-modal, .grid > .is-8.grid-modal {
   flex: none;
   width: 66.66667%;
 }
 
-.columns.is-mobile > .column.is-offset-8 {
+.columns.is-mobile > .column.is-offset-8, .grid > .column.is-offset-8, .grid .columns.is-mobile > .is-offset-8.grid-item, .grid > .is-offset-8.grid-item, .grid .columns.is-mobile > .is-offset-8.grid-modal, .grid > .is-offset-8.grid-modal {
   margin-left: 66.66667%;
 }
 
-.columns.is-mobile > .column.is-9 {
+.columns.is-mobile > .column.is-9, .grid > .column.is-9, .grid .columns.is-mobile > .is-9.grid-item, .grid > .is-9.grid-item, .grid .columns.is-mobile > .is-9.grid-modal, .grid > .is-9.grid-modal {
   flex: none;
   width: 75%;
 }
 
-.columns.is-mobile > .column.is-offset-9 {
+.columns.is-mobile > .column.is-offset-9, .grid > .column.is-offset-9, .grid .columns.is-mobile > .is-offset-9.grid-item, .grid > .is-offset-9.grid-item, .grid .columns.is-mobile > .is-offset-9.grid-modal, .grid > .is-offset-9.grid-modal {
   margin-left: 75%;
 }
 
-.columns.is-mobile > .column.is-10 {
+.columns.is-mobile > .column.is-10, .grid > .column.is-10, .grid .columns.is-mobile > .is-10.grid-item, .grid > .is-10.grid-item, .grid .columns.is-mobile > .is-10.grid-modal, .grid > .is-10.grid-modal {
   flex: none;
   width: 83.33333%;
 }
 
-.columns.is-mobile > .column.is-offset-10 {
+.columns.is-mobile > .column.is-offset-10, .grid > .column.is-offset-10, .grid .columns.is-mobile > .is-offset-10.grid-item, .grid > .is-offset-10.grid-item, .grid .columns.is-mobile > .is-offset-10.grid-modal, .grid > .is-offset-10.grid-modal {
   margin-left: 83.33333%;
 }
 
-.columns.is-mobile > .column.is-11 {
+.columns.is-mobile > .column.is-11, .grid > .column.is-11, .grid .columns.is-mobile > .is-11.grid-item, .grid > .is-11.grid-item, .grid .columns.is-mobile > .is-11.grid-modal, .grid > .is-11.grid-modal {
   flex: none;
   width: 91.66667%;
 }
 
-.columns.is-mobile > .column.is-offset-11 {
+.columns.is-mobile > .column.is-offset-11, .grid > .column.is-offset-11, .grid .columns.is-mobile > .is-offset-11.grid-item, .grid > .is-offset-11.grid-item, .grid .columns.is-mobile > .is-offset-11.grid-modal, .grid > .is-offset-11.grid-modal {
   margin-left: 91.66667%;
 }
 
-.columns.is-mobile > .column.is-12 {
+.columns.is-mobile > .column.is-12, .grid > .column.is-12, .grid .columns.is-mobile > .is-12.grid-item, .grid > .is-12.grid-item, .grid .columns.is-mobile > .is-12.grid-modal, .grid > .is-12.grid-modal {
   flex: none;
   width: 100%;
 }
 
-.columns.is-mobile > .column.is-offset-12 {
+.columns.is-mobile > .column.is-offset-12, .grid > .column.is-offset-12, .grid .columns.is-mobile > .is-offset-12.grid-item, .grid > .is-offset-12.grid-item, .grid .columns.is-mobile > .is-offset-12.grid-modal, .grid > .is-offset-12.grid-modal {
   margin-left: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .column.is-narrow-mobile {
+  .column.is-narrow-mobile, .grid .is-narrow-mobile.grid-item, .grid .is-narrow-mobile.grid-modal {
     flex: none;
   }
-  .column.is-full-mobile {
+  .column.is-full-mobile, .grid .is-full-mobile.grid-item, .grid .is-full-mobile.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters-mobile {
+  .column.is-three-quarters-mobile, .grid .is-three-quarters-mobile.grid-item, .grid .is-three-quarters-mobile.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds-mobile {
+  .column.is-two-thirds-mobile, .grid .is-two-thirds-mobile.grid-item, .grid .is-two-thirds-mobile.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half-mobile {
+  .column.is-half-mobile, .grid .grid-item, .grid .is-half-mobile.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third-mobile {
+  .column.is-one-third-mobile, .grid .is-one-third-mobile.grid-item, .grid .is-one-third-mobile.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter-mobile {
+  .column.is-one-quarter-mobile, .grid .is-one-quarter-mobile.grid-item, .grid .is-one-quarter-mobile.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth-mobile {
+  .column.is-one-fifth-mobile, .grid .is-one-fifth-mobile.grid-item, .grid .is-one-fifth-mobile.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths-mobile {
+  .column.is-two-fifths-mobile, .grid .is-two-fifths-mobile.grid-item, .grid .is-two-fifths-mobile.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths-mobile {
+  .column.is-three-fifths-mobile, .grid .is-three-fifths-mobile.grid-item, .grid .is-three-fifths-mobile.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths-mobile {
+  .column.is-four-fifths-mobile, .grid .is-four-fifths-mobile.grid-item, .grid .is-four-fifths-mobile.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters-mobile {
+  .column.is-offset-three-quarters-mobile, .grid .is-offset-three-quarters-mobile.grid-item, .grid .is-offset-three-quarters-mobile.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds-mobile {
+  .column.is-offset-two-thirds-mobile, .grid .is-offset-two-thirds-mobile.grid-item, .grid .is-offset-two-thirds-mobile.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half-mobile {
+  .column.is-offset-half-mobile, .grid .is-offset-half-mobile.grid-item, .grid .is-offset-half-mobile.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third-mobile {
+  .column.is-offset-one-third-mobile, .grid .is-offset-one-third-mobile.grid-item, .grid .is-offset-one-third-mobile.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter-mobile {
+  .column.is-offset-one-quarter-mobile, .grid .is-offset-one-quarter-mobile.grid-item, .grid .is-offset-one-quarter-mobile.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth-mobile {
+  .column.is-offset-one-fifth-mobile, .grid .is-offset-one-fifth-mobile.grid-item, .grid .is-offset-one-fifth-mobile.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths-mobile {
+  .column.is-offset-two-fifths-mobile, .grid .is-offset-two-fifths-mobile.grid-item, .grid .is-offset-two-fifths-mobile.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths-mobile {
+  .column.is-offset-three-fifths-mobile, .grid .is-offset-three-fifths-mobile.grid-item, .grid .is-offset-three-fifths-mobile.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths-mobile {
+  .column.is-offset-four-fifths-mobile, .grid .is-offset-four-fifths-mobile.grid-item, .grid .is-offset-four-fifths-mobile.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0-mobile {
+  .column.is-0-mobile, .grid .is-0-mobile.grid-item, .grid .is-0-mobile.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0-mobile {
+  .column.is-offset-0-mobile, .grid .is-offset-0-mobile.grid-item, .grid .is-offset-0-mobile.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1-mobile {
+  .column.is-1-mobile, .grid .is-1-mobile.grid-item, .grid .is-1-mobile.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1-mobile {
+  .column.is-offset-1-mobile, .grid .is-offset-1-mobile.grid-item, .grid .is-offset-1-mobile.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2-mobile {
+  .column.is-2-mobile, .grid .is-2-mobile.grid-item, .grid .is-2-mobile.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2-mobile {
+  .column.is-offset-2-mobile, .grid .is-offset-2-mobile.grid-item, .grid .is-offset-2-mobile.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3-mobile {
+  .column.is-3-mobile, .grid .is-3-mobile.grid-item, .grid .is-3-mobile.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3-mobile {
+  .column.is-offset-3-mobile, .grid .is-offset-3-mobile.grid-item, .grid .is-offset-3-mobile.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4-mobile {
+  .column.is-4-mobile, .grid .is-4-mobile.grid-item, .grid .is-4-mobile.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4-mobile {
+  .column.is-offset-4-mobile, .grid .is-offset-4-mobile.grid-item, .grid .is-offset-4-mobile.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5-mobile {
+  .column.is-5-mobile, .grid .is-5-mobile.grid-item, .grid .is-5-mobile.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5-mobile {
+  .column.is-offset-5-mobile, .grid .is-offset-5-mobile.grid-item, .grid .is-offset-5-mobile.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6-mobile {
+  .column.is-6-mobile, .grid .is-6-mobile.grid-item, .grid .is-6-mobile.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6-mobile {
+  .column.is-offset-6-mobile, .grid .is-offset-6-mobile.grid-item, .grid .is-offset-6-mobile.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7-mobile {
+  .column.is-7-mobile, .grid .is-7-mobile.grid-item, .grid .is-7-mobile.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7-mobile {
+  .column.is-offset-7-mobile, .grid .is-offset-7-mobile.grid-item, .grid .is-offset-7-mobile.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8-mobile {
+  .column.is-8-mobile, .grid .is-8-mobile.grid-item, .grid .is-8-mobile.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8-mobile {
+  .column.is-offset-8-mobile, .grid .is-offset-8-mobile.grid-item, .grid .is-offset-8-mobile.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9-mobile {
+  .column.is-9-mobile, .grid .is-9-mobile.grid-item, .grid .is-9-mobile.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9-mobile {
+  .column.is-offset-9-mobile, .grid .is-offset-9-mobile.grid-item, .grid .is-offset-9-mobile.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10-mobile {
+  .column.is-10-mobile, .grid .is-10-mobile.grid-item, .grid .is-10-mobile.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10-mobile {
+  .column.is-offset-10-mobile, .grid .is-offset-10-mobile.grid-item, .grid .is-offset-10-mobile.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11-mobile {
+  .column.is-11-mobile, .grid .is-11-mobile.grid-item, .grid .is-11-mobile.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11-mobile {
+  .column.is-offset-11-mobile, .grid .is-offset-11-mobile.grid-item, .grid .is-offset-11-mobile.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12-mobile {
+  .column.is-12-mobile, .grid .is-12-mobile.grid-item, .grid .is-12-mobile.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12-mobile {
+  .column.is-offset-12-mobile, .grid .is-offset-12-mobile.grid-item, .grid .is-offset-12-mobile.grid-modal {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .column.is-narrow, .column.is-narrow-tablet {
+  .column.is-narrow, .grid .is-narrow.grid-item, .grid .is-narrow.grid-modal, .column.is-narrow-tablet, .grid .is-narrow-tablet.grid-item, .grid .is-narrow-tablet.grid-modal {
     flex: none;
   }
-  .column.is-full, .column.is-full-tablet {
+  .column.is-full, .grid .is-full.grid-item, .grid .grid-modal, .column.is-full-tablet, .grid .is-full-tablet.grid-item, .grid .is-full-tablet.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters, .column.is-three-quarters-tablet {
+  .column.is-three-quarters, .grid .is-three-quarters.grid-item, .grid .is-three-quarters.grid-modal, .column.is-three-quarters-tablet, .grid .is-three-quarters-tablet.grid-item, .grid .is-three-quarters-tablet.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds, .column.is-two-thirds-tablet {
+  .column.is-two-thirds, .grid .is-two-thirds.grid-item, .grid .is-two-thirds.grid-modal, .column.is-two-thirds-tablet, .grid .is-two-thirds-tablet.grid-item, .grid .is-two-thirds-tablet.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half, .column.is-half-tablet {
+  .column.is-half, .grid .is-half.grid-item, .grid .is-half.grid-modal, .column.is-half-tablet, .grid .is-half-tablet.grid-item, .grid .is-half-tablet.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third, .column.is-one-third-tablet {
+  .column.is-one-third, .grid .is-one-third.grid-item, .grid .is-one-third.grid-modal, .column.is-one-third-tablet, .grid .grid-item, .grid .is-one-third-tablet.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter, .column.is-one-quarter-tablet {
+  .column.is-one-quarter, .grid .is-one-quarter.grid-item, .grid .is-one-quarter.grid-modal, .column.is-one-quarter-tablet, .grid .is-one-quarter-tablet.grid-item, .grid .is-one-quarter-tablet.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth, .column.is-one-fifth-tablet {
+  .column.is-one-fifth, .grid .is-one-fifth.grid-item, .grid .is-one-fifth.grid-modal, .column.is-one-fifth-tablet, .grid .is-one-fifth-tablet.grid-item, .grid .is-one-fifth-tablet.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths, .column.is-two-fifths-tablet {
+  .column.is-two-fifths, .grid .is-two-fifths.grid-item, .grid .is-two-fifths.grid-modal, .column.is-two-fifths-tablet, .grid .is-two-fifths-tablet.grid-item, .grid .is-two-fifths-tablet.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths, .column.is-three-fifths-tablet {
+  .column.is-three-fifths, .grid .is-three-fifths.grid-item, .grid .is-three-fifths.grid-modal, .column.is-three-fifths-tablet, .grid .is-three-fifths-tablet.grid-item, .grid .is-three-fifths-tablet.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths, .column.is-four-fifths-tablet {
+  .column.is-four-fifths, .grid .is-four-fifths.grid-item, .grid .is-four-fifths.grid-modal, .column.is-four-fifths-tablet, .grid .is-four-fifths-tablet.grid-item, .grid .is-four-fifths-tablet.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters, .column.is-offset-three-quarters-tablet {
+  .column.is-offset-three-quarters, .grid .is-offset-three-quarters.grid-item, .grid .is-offset-three-quarters.grid-modal, .column.is-offset-three-quarters-tablet, .grid .is-offset-three-quarters-tablet.grid-item, .grid .is-offset-three-quarters-tablet.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds, .column.is-offset-two-thirds-tablet {
+  .column.is-offset-two-thirds, .grid .is-offset-two-thirds.grid-item, .grid .is-offset-two-thirds.grid-modal, .column.is-offset-two-thirds-tablet, .grid .is-offset-two-thirds-tablet.grid-item, .grid .is-offset-two-thirds-tablet.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half, .column.is-offset-half-tablet {
+  .column.is-offset-half, .grid .is-offset-half.grid-item, .grid .is-offset-half.grid-modal, .column.is-offset-half-tablet, .grid .is-offset-half-tablet.grid-item, .grid .is-offset-half-tablet.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third, .column.is-offset-one-third-tablet {
+  .column.is-offset-one-third, .grid .is-offset-one-third.grid-item, .grid .is-offset-one-third.grid-modal, .column.is-offset-one-third-tablet, .grid .is-offset-one-third-tablet.grid-item, .grid .is-offset-one-third-tablet.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter, .column.is-offset-one-quarter-tablet {
+  .column.is-offset-one-quarter, .grid .is-offset-one-quarter.grid-item, .grid .is-offset-one-quarter.grid-modal, .column.is-offset-one-quarter-tablet, .grid .is-offset-one-quarter-tablet.grid-item, .grid .is-offset-one-quarter-tablet.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth, .column.is-offset-one-fifth-tablet {
+  .column.is-offset-one-fifth, .grid .is-offset-one-fifth.grid-item, .grid .is-offset-one-fifth.grid-modal, .column.is-offset-one-fifth-tablet, .grid .is-offset-one-fifth-tablet.grid-item, .grid .is-offset-one-fifth-tablet.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths, .column.is-offset-two-fifths-tablet {
+  .column.is-offset-two-fifths, .grid .is-offset-two-fifths.grid-item, .grid .is-offset-two-fifths.grid-modal, .column.is-offset-two-fifths-tablet, .grid .is-offset-two-fifths-tablet.grid-item, .grid .is-offset-two-fifths-tablet.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths, .column.is-offset-three-fifths-tablet {
+  .column.is-offset-three-fifths, .grid .is-offset-three-fifths.grid-item, .grid .is-offset-three-fifths.grid-modal, .column.is-offset-three-fifths-tablet, .grid .is-offset-three-fifths-tablet.grid-item, .grid .is-offset-three-fifths-tablet.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths, .column.is-offset-four-fifths-tablet {
+  .column.is-offset-four-fifths, .grid .is-offset-four-fifths.grid-item, .grid .is-offset-four-fifths.grid-modal, .column.is-offset-four-fifths-tablet, .grid .is-offset-four-fifths-tablet.grid-item, .grid .is-offset-four-fifths-tablet.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0, .column.is-0-tablet {
+  .column.is-0, .grid .is-0.grid-item, .grid .is-0.grid-modal, .column.is-0-tablet, .grid .is-0-tablet.grid-item, .grid .is-0-tablet.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0, .column.is-offset-0-tablet {
+  .column.is-offset-0, .grid .is-offset-0.grid-item, .grid .is-offset-0.grid-modal, .column.is-offset-0-tablet, .grid .is-offset-0-tablet.grid-item, .grid .is-offset-0-tablet.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1, .column.is-1-tablet {
+  .column.is-1, .grid .is-1.grid-item, .grid .is-1.grid-modal, .column.is-1-tablet, .grid .is-1-tablet.grid-item, .grid .is-1-tablet.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1, .column.is-offset-1-tablet {
+  .column.is-offset-1, .grid .is-offset-1.grid-item, .grid .is-offset-1.grid-modal, .column.is-offset-1-tablet, .grid .is-offset-1-tablet.grid-item, .grid .is-offset-1-tablet.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2, .column.is-2-tablet {
+  .column.is-2, .grid .is-2.grid-item, .grid .is-2.grid-modal, .column.is-2-tablet, .grid .is-2-tablet.grid-item, .grid .is-2-tablet.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2, .column.is-offset-2-tablet {
+  .column.is-offset-2, .grid .is-offset-2.grid-item, .grid .is-offset-2.grid-modal, .column.is-offset-2-tablet, .grid .is-offset-2-tablet.grid-item, .grid .is-offset-2-tablet.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3, .column.is-3-tablet {
+  .column.is-3, .grid .is-3.grid-item, .grid .is-3.grid-modal, .column.is-3-tablet, .grid .is-3-tablet.grid-item, .grid .is-3-tablet.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3, .column.is-offset-3-tablet {
+  .column.is-offset-3, .grid .is-offset-3.grid-item, .grid .is-offset-3.grid-modal, .column.is-offset-3-tablet, .grid .is-offset-3-tablet.grid-item, .grid .is-offset-3-tablet.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4, .column.is-4-tablet {
+  .column.is-4, .grid .is-4.grid-item, .grid .is-4.grid-modal, .column.is-4-tablet, .grid .is-4-tablet.grid-item, .grid .is-4-tablet.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4, .column.is-offset-4-tablet {
+  .column.is-offset-4, .grid .is-offset-4.grid-item, .grid .is-offset-4.grid-modal, .column.is-offset-4-tablet, .grid .is-offset-4-tablet.grid-item, .grid .is-offset-4-tablet.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5, .column.is-5-tablet {
+  .column.is-5, .grid .is-5.grid-item, .grid .is-5.grid-modal, .column.is-5-tablet, .grid .is-5-tablet.grid-item, .grid .is-5-tablet.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5, .column.is-offset-5-tablet {
+  .column.is-offset-5, .grid .is-offset-5.grid-item, .grid .is-offset-5.grid-modal, .column.is-offset-5-tablet, .grid .is-offset-5-tablet.grid-item, .grid .is-offset-5-tablet.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6, .column.is-6-tablet {
+  .column.is-6, .grid .is-6.grid-item, .grid .is-6.grid-modal, .column.is-6-tablet, .grid .is-6-tablet.grid-item, .grid .is-6-tablet.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6, .column.is-offset-6-tablet {
+  .column.is-offset-6, .grid .is-offset-6.grid-item, .grid .is-offset-6.grid-modal, .column.is-offset-6-tablet, .grid .is-offset-6-tablet.grid-item, .grid .is-offset-6-tablet.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7, .column.is-7-tablet {
+  .column.is-7, .grid .is-7.grid-item, .grid .is-7.grid-modal, .column.is-7-tablet, .grid .is-7-tablet.grid-item, .grid .is-7-tablet.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7, .column.is-offset-7-tablet {
+  .column.is-offset-7, .grid .is-offset-7.grid-item, .grid .is-offset-7.grid-modal, .column.is-offset-7-tablet, .grid .is-offset-7-tablet.grid-item, .grid .is-offset-7-tablet.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8, .column.is-8-tablet {
+  .column.is-8, .grid .is-8.grid-item, .grid .is-8.grid-modal, .column.is-8-tablet, .grid .is-8-tablet.grid-item, .grid .is-8-tablet.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8, .column.is-offset-8-tablet {
+  .column.is-offset-8, .grid .is-offset-8.grid-item, .grid .is-offset-8.grid-modal, .column.is-offset-8-tablet, .grid .is-offset-8-tablet.grid-item, .grid .is-offset-8-tablet.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9, .column.is-9-tablet {
+  .column.is-9, .grid .is-9.grid-item, .grid .is-9.grid-modal, .column.is-9-tablet, .grid .is-9-tablet.grid-item, .grid .is-9-tablet.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9, .column.is-offset-9-tablet {
+  .column.is-offset-9, .grid .is-offset-9.grid-item, .grid .is-offset-9.grid-modal, .column.is-offset-9-tablet, .grid .is-offset-9-tablet.grid-item, .grid .is-offset-9-tablet.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10, .column.is-10-tablet {
+  .column.is-10, .grid .is-10.grid-item, .grid .is-10.grid-modal, .column.is-10-tablet, .grid .is-10-tablet.grid-item, .grid .is-10-tablet.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10, .column.is-offset-10-tablet {
+  .column.is-offset-10, .grid .is-offset-10.grid-item, .grid .is-offset-10.grid-modal, .column.is-offset-10-tablet, .grid .is-offset-10-tablet.grid-item, .grid .is-offset-10-tablet.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11, .column.is-11-tablet {
+  .column.is-11, .grid .is-11.grid-item, .grid .is-11.grid-modal, .column.is-11-tablet, .grid .is-11-tablet.grid-item, .grid .is-11-tablet.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11, .column.is-offset-11-tablet {
+  .column.is-offset-11, .grid .is-offset-11.grid-item, .grid .is-offset-11.grid-modal, .column.is-offset-11-tablet, .grid .is-offset-11-tablet.grid-item, .grid .is-offset-11-tablet.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12, .column.is-12-tablet {
+  .column.is-12, .grid .is-12.grid-item, .grid .is-12.grid-modal, .column.is-12-tablet, .grid .is-12-tablet.grid-item, .grid .is-12-tablet.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12, .column.is-offset-12-tablet {
+  .column.is-offset-12, .grid .is-offset-12.grid-item, .grid .is-offset-12.grid-modal, .column.is-offset-12-tablet, .grid .is-offset-12-tablet.grid-item, .grid .is-offset-12-tablet.grid-modal {
     margin-left: 100%;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .column.is-narrow-touch {
+  .column.is-narrow-touch, .grid .is-narrow-touch.grid-item, .grid .is-narrow-touch.grid-modal {
     flex: none;
   }
-  .column.is-full-touch {
+  .column.is-full-touch, .grid .is-full-touch.grid-item, .grid .is-full-touch.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters-touch {
+  .column.is-three-quarters-touch, .grid .is-three-quarters-touch.grid-item, .grid .is-three-quarters-touch.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds-touch {
+  .column.is-two-thirds-touch, .grid .is-two-thirds-touch.grid-item, .grid .is-two-thirds-touch.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half-touch {
+  .column.is-half-touch, .grid .is-half-touch.grid-item, .grid .is-half-touch.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third-touch {
+  .column.is-one-third-touch, .grid .is-one-third-touch.grid-item, .grid .is-one-third-touch.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter-touch {
+  .column.is-one-quarter-touch, .grid .is-one-quarter-touch.grid-item, .grid .is-one-quarter-touch.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth-touch {
+  .column.is-one-fifth-touch, .grid .is-one-fifth-touch.grid-item, .grid .is-one-fifth-touch.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths-touch {
+  .column.is-two-fifths-touch, .grid .is-two-fifths-touch.grid-item, .grid .is-two-fifths-touch.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths-touch {
+  .column.is-three-fifths-touch, .grid .is-three-fifths-touch.grid-item, .grid .is-three-fifths-touch.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths-touch {
+  .column.is-four-fifths-touch, .grid .is-four-fifths-touch.grid-item, .grid .is-four-fifths-touch.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters-touch {
+  .column.is-offset-three-quarters-touch, .grid .is-offset-three-quarters-touch.grid-item, .grid .is-offset-three-quarters-touch.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds-touch {
+  .column.is-offset-two-thirds-touch, .grid .is-offset-two-thirds-touch.grid-item, .grid .is-offset-two-thirds-touch.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half-touch {
+  .column.is-offset-half-touch, .grid .is-offset-half-touch.grid-item, .grid .is-offset-half-touch.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third-touch {
+  .column.is-offset-one-third-touch, .grid .is-offset-one-third-touch.grid-item, .grid .is-offset-one-third-touch.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter-touch {
+  .column.is-offset-one-quarter-touch, .grid .is-offset-one-quarter-touch.grid-item, .grid .is-offset-one-quarter-touch.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth-touch {
+  .column.is-offset-one-fifth-touch, .grid .is-offset-one-fifth-touch.grid-item, .grid .is-offset-one-fifth-touch.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths-touch {
+  .column.is-offset-two-fifths-touch, .grid .is-offset-two-fifths-touch.grid-item, .grid .is-offset-two-fifths-touch.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths-touch {
+  .column.is-offset-three-fifths-touch, .grid .is-offset-three-fifths-touch.grid-item, .grid .is-offset-three-fifths-touch.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths-touch {
+  .column.is-offset-four-fifths-touch, .grid .is-offset-four-fifths-touch.grid-item, .grid .is-offset-four-fifths-touch.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0-touch {
+  .column.is-0-touch, .grid .is-0-touch.grid-item, .grid .is-0-touch.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0-touch {
+  .column.is-offset-0-touch, .grid .is-offset-0-touch.grid-item, .grid .is-offset-0-touch.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1-touch {
+  .column.is-1-touch, .grid .is-1-touch.grid-item, .grid .is-1-touch.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1-touch {
+  .column.is-offset-1-touch, .grid .is-offset-1-touch.grid-item, .grid .is-offset-1-touch.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2-touch {
+  .column.is-2-touch, .grid .is-2-touch.grid-item, .grid .is-2-touch.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2-touch {
+  .column.is-offset-2-touch, .grid .is-offset-2-touch.grid-item, .grid .is-offset-2-touch.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3-touch {
+  .column.is-3-touch, .grid .is-3-touch.grid-item, .grid .is-3-touch.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3-touch {
+  .column.is-offset-3-touch, .grid .is-offset-3-touch.grid-item, .grid .is-offset-3-touch.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4-touch {
+  .column.is-4-touch, .grid .is-4-touch.grid-item, .grid .is-4-touch.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4-touch {
+  .column.is-offset-4-touch, .grid .is-offset-4-touch.grid-item, .grid .is-offset-4-touch.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5-touch {
+  .column.is-5-touch, .grid .is-5-touch.grid-item, .grid .is-5-touch.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5-touch {
+  .column.is-offset-5-touch, .grid .is-offset-5-touch.grid-item, .grid .is-offset-5-touch.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6-touch {
+  .column.is-6-touch, .grid .is-6-touch.grid-item, .grid .is-6-touch.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6-touch {
+  .column.is-offset-6-touch, .grid .is-offset-6-touch.grid-item, .grid .is-offset-6-touch.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7-touch {
+  .column.is-7-touch, .grid .is-7-touch.grid-item, .grid .is-7-touch.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7-touch {
+  .column.is-offset-7-touch, .grid .is-offset-7-touch.grid-item, .grid .is-offset-7-touch.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8-touch {
+  .column.is-8-touch, .grid .is-8-touch.grid-item, .grid .is-8-touch.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8-touch {
+  .column.is-offset-8-touch, .grid .is-offset-8-touch.grid-item, .grid .is-offset-8-touch.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9-touch {
+  .column.is-9-touch, .grid .is-9-touch.grid-item, .grid .is-9-touch.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9-touch {
+  .column.is-offset-9-touch, .grid .is-offset-9-touch.grid-item, .grid .is-offset-9-touch.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10-touch {
+  .column.is-10-touch, .grid .is-10-touch.grid-item, .grid .is-10-touch.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10-touch {
+  .column.is-offset-10-touch, .grid .is-offset-10-touch.grid-item, .grid .is-offset-10-touch.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11-touch {
+  .column.is-11-touch, .grid .is-11-touch.grid-item, .grid .is-11-touch.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11-touch {
+  .column.is-offset-11-touch, .grid .is-offset-11-touch.grid-item, .grid .is-offset-11-touch.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12-touch {
+  .column.is-12-touch, .grid .is-12-touch.grid-item, .grid .is-12-touch.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12-touch {
+  .column.is-offset-12-touch, .grid .is-offset-12-touch.grid-item, .grid .is-offset-12-touch.grid-modal {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .column.is-narrow-desktop {
+  .column.is-narrow-desktop, .grid .is-narrow-desktop.grid-item, .grid .is-narrow-desktop.grid-modal {
     flex: none;
   }
-  .column.is-full-desktop {
+  .column.is-full-desktop, .grid .is-full-desktop.grid-item, .grid .is-full-desktop.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters-desktop {
+  .column.is-three-quarters-desktop, .grid .is-three-quarters-desktop.grid-item, .grid .is-three-quarters-desktop.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds-desktop {
+  .column.is-two-thirds-desktop, .grid .is-two-thirds-desktop.grid-item, .grid .is-two-thirds-desktop.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half-desktop {
+  .column.is-half-desktop, .grid .is-half-desktop.grid-item, .grid .is-half-desktop.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third-desktop {
+  .column.is-one-third-desktop, .grid .is-one-third-desktop.grid-item, .grid .is-one-third-desktop.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter-desktop {
+  .column.is-one-quarter-desktop, .grid .is-one-quarter-desktop.grid-item, .grid .is-one-quarter-desktop.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth-desktop {
+  .column.is-one-fifth-desktop, .grid .is-one-fifth-desktop.grid-item, .grid .is-one-fifth-desktop.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths-desktop {
+  .column.is-two-fifths-desktop, .grid .is-two-fifths-desktop.grid-item, .grid .is-two-fifths-desktop.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths-desktop {
+  .column.is-three-fifths-desktop, .grid .is-three-fifths-desktop.grid-item, .grid .is-three-fifths-desktop.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths-desktop {
+  .column.is-four-fifths-desktop, .grid .is-four-fifths-desktop.grid-item, .grid .is-four-fifths-desktop.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters-desktop {
+  .column.is-offset-three-quarters-desktop, .grid .is-offset-three-quarters-desktop.grid-item, .grid .is-offset-three-quarters-desktop.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds-desktop {
+  .column.is-offset-two-thirds-desktop, .grid .is-offset-two-thirds-desktop.grid-item, .grid .is-offset-two-thirds-desktop.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half-desktop {
+  .column.is-offset-half-desktop, .grid .is-offset-half-desktop.grid-item, .grid .is-offset-half-desktop.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third-desktop {
+  .column.is-offset-one-third-desktop, .grid .is-offset-one-third-desktop.grid-item, .grid .is-offset-one-third-desktop.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter-desktop {
+  .column.is-offset-one-quarter-desktop, .grid .is-offset-one-quarter-desktop.grid-item, .grid .is-offset-one-quarter-desktop.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth-desktop {
+  .column.is-offset-one-fifth-desktop, .grid .is-offset-one-fifth-desktop.grid-item, .grid .is-offset-one-fifth-desktop.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths-desktop {
+  .column.is-offset-two-fifths-desktop, .grid .is-offset-two-fifths-desktop.grid-item, .grid .is-offset-two-fifths-desktop.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths-desktop {
+  .column.is-offset-three-fifths-desktop, .grid .is-offset-three-fifths-desktop.grid-item, .grid .is-offset-three-fifths-desktop.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths-desktop {
+  .column.is-offset-four-fifths-desktop, .grid .is-offset-four-fifths-desktop.grid-item, .grid .is-offset-four-fifths-desktop.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0-desktop {
+  .column.is-0-desktop, .grid .is-0-desktop.grid-item, .grid .is-0-desktop.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0-desktop {
+  .column.is-offset-0-desktop, .grid .is-offset-0-desktop.grid-item, .grid .is-offset-0-desktop.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1-desktop {
+  .column.is-1-desktop, .grid .is-1-desktop.grid-item, .grid .is-1-desktop.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1-desktop {
+  .column.is-offset-1-desktop, .grid .is-offset-1-desktop.grid-item, .grid .is-offset-1-desktop.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2-desktop {
+  .column.is-2-desktop, .grid .is-2-desktop.grid-item, .grid .is-2-desktop.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2-desktop {
+  .column.is-offset-2-desktop, .grid .is-offset-2-desktop.grid-item, .grid .is-offset-2-desktop.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3-desktop {
+  .column.is-3-desktop, .grid .is-3-desktop.grid-item, .grid .is-3-desktop.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3-desktop {
+  .column.is-offset-3-desktop, .grid .is-offset-3-desktop.grid-item, .grid .is-offset-3-desktop.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4-desktop {
+  .column.is-4-desktop, .grid .is-4-desktop.grid-item, .grid .is-4-desktop.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4-desktop {
+  .column.is-offset-4-desktop, .grid .is-offset-4-desktop.grid-item, .grid .is-offset-4-desktop.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5-desktop {
+  .column.is-5-desktop, .grid .is-5-desktop.grid-item, .grid .is-5-desktop.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5-desktop {
+  .column.is-offset-5-desktop, .grid .is-offset-5-desktop.grid-item, .grid .is-offset-5-desktop.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6-desktop {
+  .column.is-6-desktop, .grid .is-6-desktop.grid-item, .grid .is-6-desktop.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6-desktop {
+  .column.is-offset-6-desktop, .grid .is-offset-6-desktop.grid-item, .grid .is-offset-6-desktop.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7-desktop {
+  .column.is-7-desktop, .grid .is-7-desktop.grid-item, .grid .is-7-desktop.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7-desktop {
+  .column.is-offset-7-desktop, .grid .is-offset-7-desktop.grid-item, .grid .is-offset-7-desktop.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8-desktop {
+  .column.is-8-desktop, .grid .is-8-desktop.grid-item, .grid .is-8-desktop.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8-desktop {
+  .column.is-offset-8-desktop, .grid .is-offset-8-desktop.grid-item, .grid .is-offset-8-desktop.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9-desktop {
+  .column.is-9-desktop, .grid .is-9-desktop.grid-item, .grid .is-9-desktop.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9-desktop {
+  .column.is-offset-9-desktop, .grid .is-offset-9-desktop.grid-item, .grid .is-offset-9-desktop.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10-desktop {
+  .column.is-10-desktop, .grid .is-10-desktop.grid-item, .grid .is-10-desktop.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10-desktop {
+  .column.is-offset-10-desktop, .grid .is-offset-10-desktop.grid-item, .grid .is-offset-10-desktop.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11-desktop {
+  .column.is-11-desktop, .grid .is-11-desktop.grid-item, .grid .is-11-desktop.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11-desktop {
+  .column.is-offset-11-desktop, .grid .is-offset-11-desktop.grid-item, .grid .is-offset-11-desktop.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12-desktop {
+  .column.is-12-desktop, .grid .is-12-desktop.grid-item, .grid .is-12-desktop.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12-desktop {
+  .column.is-offset-12-desktop, .grid .is-offset-12-desktop.grid-item, .grid .is-offset-12-desktop.grid-modal {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .column.is-narrow-widescreen {
+  .column.is-narrow-widescreen, .grid .is-narrow-widescreen.grid-item, .grid .is-narrow-widescreen.grid-modal {
     flex: none;
   }
-  .column.is-full-widescreen {
+  .column.is-full-widescreen, .grid .is-full-widescreen.grid-item, .grid .is-full-widescreen.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters-widescreen {
+  .column.is-three-quarters-widescreen, .grid .is-three-quarters-widescreen.grid-item, .grid .is-three-quarters-widescreen.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds-widescreen {
+  .column.is-two-thirds-widescreen, .grid .is-two-thirds-widescreen.grid-item, .grid .is-two-thirds-widescreen.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half-widescreen {
+  .column.is-half-widescreen, .grid .is-half-widescreen.grid-item, .grid .is-half-widescreen.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third-widescreen {
+  .column.is-one-third-widescreen, .grid .is-one-third-widescreen.grid-item, .grid .is-one-third-widescreen.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter-widescreen {
+  .column.is-one-quarter-widescreen, .grid .is-one-quarter-widescreen.grid-item, .grid .is-one-quarter-widescreen.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth-widescreen {
+  .column.is-one-fifth-widescreen, .grid .is-one-fifth-widescreen.grid-item, .grid .is-one-fifth-widescreen.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths-widescreen {
+  .column.is-two-fifths-widescreen, .grid .is-two-fifths-widescreen.grid-item, .grid .is-two-fifths-widescreen.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths-widescreen {
+  .column.is-three-fifths-widescreen, .grid .is-three-fifths-widescreen.grid-item, .grid .is-three-fifths-widescreen.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths-widescreen {
+  .column.is-four-fifths-widescreen, .grid .is-four-fifths-widescreen.grid-item, .grid .is-four-fifths-widescreen.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters-widescreen {
+  .column.is-offset-three-quarters-widescreen, .grid .is-offset-three-quarters-widescreen.grid-item, .grid .is-offset-three-quarters-widescreen.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds-widescreen {
+  .column.is-offset-two-thirds-widescreen, .grid .is-offset-two-thirds-widescreen.grid-item, .grid .is-offset-two-thirds-widescreen.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half-widescreen {
+  .column.is-offset-half-widescreen, .grid .is-offset-half-widescreen.grid-item, .grid .is-offset-half-widescreen.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third-widescreen {
+  .column.is-offset-one-third-widescreen, .grid .is-offset-one-third-widescreen.grid-item, .grid .is-offset-one-third-widescreen.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter-widescreen {
+  .column.is-offset-one-quarter-widescreen, .grid .is-offset-one-quarter-widescreen.grid-item, .grid .is-offset-one-quarter-widescreen.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth-widescreen {
+  .column.is-offset-one-fifth-widescreen, .grid .is-offset-one-fifth-widescreen.grid-item, .grid .is-offset-one-fifth-widescreen.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths-widescreen {
+  .column.is-offset-two-fifths-widescreen, .grid .is-offset-two-fifths-widescreen.grid-item, .grid .is-offset-two-fifths-widescreen.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths-widescreen {
+  .column.is-offset-three-fifths-widescreen, .grid .is-offset-three-fifths-widescreen.grid-item, .grid .is-offset-three-fifths-widescreen.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths-widescreen {
+  .column.is-offset-four-fifths-widescreen, .grid .is-offset-four-fifths-widescreen.grid-item, .grid .is-offset-four-fifths-widescreen.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0-widescreen {
+  .column.is-0-widescreen, .grid .is-0-widescreen.grid-item, .grid .is-0-widescreen.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0-widescreen {
+  .column.is-offset-0-widescreen, .grid .is-offset-0-widescreen.grid-item, .grid .is-offset-0-widescreen.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1-widescreen {
+  .column.is-1-widescreen, .grid .is-1-widescreen.grid-item, .grid .is-1-widescreen.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1-widescreen {
+  .column.is-offset-1-widescreen, .grid .is-offset-1-widescreen.grid-item, .grid .is-offset-1-widescreen.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2-widescreen {
+  .column.is-2-widescreen, .grid .is-2-widescreen.grid-item, .grid .is-2-widescreen.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2-widescreen {
+  .column.is-offset-2-widescreen, .grid .is-offset-2-widescreen.grid-item, .grid .is-offset-2-widescreen.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3-widescreen {
+  .column.is-3-widescreen, .grid .is-3-widescreen.grid-item, .grid .is-3-widescreen.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3-widescreen {
+  .column.is-offset-3-widescreen, .grid .is-offset-3-widescreen.grid-item, .grid .is-offset-3-widescreen.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4-widescreen {
+  .column.is-4-widescreen, .grid .is-4-widescreen.grid-item, .grid .is-4-widescreen.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4-widescreen {
+  .column.is-offset-4-widescreen, .grid .is-offset-4-widescreen.grid-item, .grid .is-offset-4-widescreen.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5-widescreen {
+  .column.is-5-widescreen, .grid .is-5-widescreen.grid-item, .grid .is-5-widescreen.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5-widescreen {
+  .column.is-offset-5-widescreen, .grid .is-offset-5-widescreen.grid-item, .grid .is-offset-5-widescreen.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6-widescreen {
+  .column.is-6-widescreen, .grid .is-6-widescreen.grid-item, .grid .is-6-widescreen.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6-widescreen {
+  .column.is-offset-6-widescreen, .grid .is-offset-6-widescreen.grid-item, .grid .is-offset-6-widescreen.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7-widescreen {
+  .column.is-7-widescreen, .grid .is-7-widescreen.grid-item, .grid .is-7-widescreen.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7-widescreen {
+  .column.is-offset-7-widescreen, .grid .is-offset-7-widescreen.grid-item, .grid .is-offset-7-widescreen.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8-widescreen {
+  .column.is-8-widescreen, .grid .is-8-widescreen.grid-item, .grid .is-8-widescreen.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8-widescreen {
+  .column.is-offset-8-widescreen, .grid .is-offset-8-widescreen.grid-item, .grid .is-offset-8-widescreen.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9-widescreen {
+  .column.is-9-widescreen, .grid .is-9-widescreen.grid-item, .grid .is-9-widescreen.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9-widescreen {
+  .column.is-offset-9-widescreen, .grid .is-offset-9-widescreen.grid-item, .grid .is-offset-9-widescreen.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10-widescreen {
+  .column.is-10-widescreen, .grid .is-10-widescreen.grid-item, .grid .is-10-widescreen.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10-widescreen {
+  .column.is-offset-10-widescreen, .grid .is-offset-10-widescreen.grid-item, .grid .is-offset-10-widescreen.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11-widescreen {
+  .column.is-11-widescreen, .grid .is-11-widescreen.grid-item, .grid .is-11-widescreen.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11-widescreen {
+  .column.is-offset-11-widescreen, .grid .is-offset-11-widescreen.grid-item, .grid .is-offset-11-widescreen.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12-widescreen {
+  .column.is-12-widescreen, .grid .is-12-widescreen.grid-item, .grid .is-12-widescreen.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12-widescreen {
+  .column.is-offset-12-widescreen, .grid .is-offset-12-widescreen.grid-item, .grid .is-offset-12-widescreen.grid-modal {
     margin-left: 100%;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .column.is-narrow-fullhd {
+  .column.is-narrow-fullhd, .grid .is-narrow-fullhd.grid-item, .grid .is-narrow-fullhd.grid-modal {
     flex: none;
   }
-  .column.is-full-fullhd {
+  .column.is-full-fullhd, .grid .is-full-fullhd.grid-item, .grid .is-full-fullhd.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-three-quarters-fullhd {
+  .column.is-three-quarters-fullhd, .grid .is-three-quarters-fullhd.grid-item, .grid .is-three-quarters-fullhd.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-two-thirds-fullhd {
+  .column.is-two-thirds-fullhd, .grid .is-two-thirds-fullhd.grid-item, .grid .is-two-thirds-fullhd.grid-modal {
     flex: none;
     width: 66.6666%;
   }
-  .column.is-half-fullhd {
+  .column.is-half-fullhd, .grid .is-half-fullhd.grid-item, .grid .is-half-fullhd.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-one-third-fullhd {
+  .column.is-one-third-fullhd, .grid .is-one-third-fullhd.grid-item, .grid .is-one-third-fullhd.grid-modal {
     flex: none;
     width: 33.3333%;
   }
-  .column.is-one-quarter-fullhd {
+  .column.is-one-quarter-fullhd, .grid .is-one-quarter-fullhd.grid-item, .grid .is-one-quarter-fullhd.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-one-fifth-fullhd {
+  .column.is-one-fifth-fullhd, .grid .is-one-fifth-fullhd.grid-item, .grid .is-one-fifth-fullhd.grid-modal {
     flex: none;
     width: 20%;
   }
-  .column.is-two-fifths-fullhd {
+  .column.is-two-fifths-fullhd, .grid .is-two-fifths-fullhd.grid-item, .grid .is-two-fifths-fullhd.grid-modal {
     flex: none;
     width: 40%;
   }
-  .column.is-three-fifths-fullhd {
+  .column.is-three-fifths-fullhd, .grid .is-three-fifths-fullhd.grid-item, .grid .is-three-fifths-fullhd.grid-modal {
     flex: none;
     width: 60%;
   }
-  .column.is-four-fifths-fullhd {
+  .column.is-four-fifths-fullhd, .grid .is-four-fifths-fullhd.grid-item, .grid .is-four-fifths-fullhd.grid-modal {
     flex: none;
     width: 80%;
   }
-  .column.is-offset-three-quarters-fullhd {
+  .column.is-offset-three-quarters-fullhd, .grid .is-offset-three-quarters-fullhd.grid-item, .grid .is-offset-three-quarters-fullhd.grid-modal {
     margin-left: 75%;
   }
-  .column.is-offset-two-thirds-fullhd {
+  .column.is-offset-two-thirds-fullhd, .grid .is-offset-two-thirds-fullhd.grid-item, .grid .is-offset-two-thirds-fullhd.grid-modal {
     margin-left: 66.6666%;
   }
-  .column.is-offset-half-fullhd {
+  .column.is-offset-half-fullhd, .grid .is-offset-half-fullhd.grid-item, .grid .is-offset-half-fullhd.grid-modal {
     margin-left: 50%;
   }
-  .column.is-offset-one-third-fullhd {
+  .column.is-offset-one-third-fullhd, .grid .is-offset-one-third-fullhd.grid-item, .grid .is-offset-one-third-fullhd.grid-modal {
     margin-left: 33.3333%;
   }
-  .column.is-offset-one-quarter-fullhd {
+  .column.is-offset-one-quarter-fullhd, .grid .is-offset-one-quarter-fullhd.grid-item, .grid .is-offset-one-quarter-fullhd.grid-modal {
     margin-left: 25%;
   }
-  .column.is-offset-one-fifth-fullhd {
+  .column.is-offset-one-fifth-fullhd, .grid .is-offset-one-fifth-fullhd.grid-item, .grid .is-offset-one-fifth-fullhd.grid-modal {
     margin-left: 20%;
   }
-  .column.is-offset-two-fifths-fullhd {
+  .column.is-offset-two-fifths-fullhd, .grid .is-offset-two-fifths-fullhd.grid-item, .grid .is-offset-two-fifths-fullhd.grid-modal {
     margin-left: 40%;
   }
-  .column.is-offset-three-fifths-fullhd {
+  .column.is-offset-three-fifths-fullhd, .grid .is-offset-three-fifths-fullhd.grid-item, .grid .is-offset-three-fifths-fullhd.grid-modal {
     margin-left: 60%;
   }
-  .column.is-offset-four-fifths-fullhd {
+  .column.is-offset-four-fifths-fullhd, .grid .is-offset-four-fifths-fullhd.grid-item, .grid .is-offset-four-fifths-fullhd.grid-modal {
     margin-left: 80%;
   }
-  .column.is-0-fullhd {
+  .column.is-0-fullhd, .grid .is-0-fullhd.grid-item, .grid .is-0-fullhd.grid-modal {
     flex: none;
     width: 0%;
   }
-  .column.is-offset-0-fullhd {
+  .column.is-offset-0-fullhd, .grid .is-offset-0-fullhd.grid-item, .grid .is-offset-0-fullhd.grid-modal {
     margin-left: 0%;
   }
-  .column.is-1-fullhd {
+  .column.is-1-fullhd, .grid .is-1-fullhd.grid-item, .grid .is-1-fullhd.grid-modal {
     flex: none;
     width: 8.33333%;
   }
-  .column.is-offset-1-fullhd {
+  .column.is-offset-1-fullhd, .grid .is-offset-1-fullhd.grid-item, .grid .is-offset-1-fullhd.grid-modal {
     margin-left: 8.33333%;
   }
-  .column.is-2-fullhd {
+  .column.is-2-fullhd, .grid .is-2-fullhd.grid-item, .grid .is-2-fullhd.grid-modal {
     flex: none;
     width: 16.66667%;
   }
-  .column.is-offset-2-fullhd {
+  .column.is-offset-2-fullhd, .grid .is-offset-2-fullhd.grid-item, .grid .is-offset-2-fullhd.grid-modal {
     margin-left: 16.66667%;
   }
-  .column.is-3-fullhd {
+  .column.is-3-fullhd, .grid .is-3-fullhd.grid-item, .grid .is-3-fullhd.grid-modal {
     flex: none;
     width: 25%;
   }
-  .column.is-offset-3-fullhd {
+  .column.is-offset-3-fullhd, .grid .is-offset-3-fullhd.grid-item, .grid .is-offset-3-fullhd.grid-modal {
     margin-left: 25%;
   }
-  .column.is-4-fullhd {
+  .column.is-4-fullhd, .grid .is-4-fullhd.grid-item, .grid .is-4-fullhd.grid-modal {
     flex: none;
     width: 33.33333%;
   }
-  .column.is-offset-4-fullhd {
+  .column.is-offset-4-fullhd, .grid .is-offset-4-fullhd.grid-item, .grid .is-offset-4-fullhd.grid-modal {
     margin-left: 33.33333%;
   }
-  .column.is-5-fullhd {
+  .column.is-5-fullhd, .grid .is-5-fullhd.grid-item, .grid .is-5-fullhd.grid-modal {
     flex: none;
     width: 41.66667%;
   }
-  .column.is-offset-5-fullhd {
+  .column.is-offset-5-fullhd, .grid .is-offset-5-fullhd.grid-item, .grid .is-offset-5-fullhd.grid-modal {
     margin-left: 41.66667%;
   }
-  .column.is-6-fullhd {
+  .column.is-6-fullhd, .grid .is-6-fullhd.grid-item, .grid .is-6-fullhd.grid-modal {
     flex: none;
     width: 50%;
   }
-  .column.is-offset-6-fullhd {
+  .column.is-offset-6-fullhd, .grid .is-offset-6-fullhd.grid-item, .grid .is-offset-6-fullhd.grid-modal {
     margin-left: 50%;
   }
-  .column.is-7-fullhd {
+  .column.is-7-fullhd, .grid .is-7-fullhd.grid-item, .grid .is-7-fullhd.grid-modal {
     flex: none;
     width: 58.33333%;
   }
-  .column.is-offset-7-fullhd {
+  .column.is-offset-7-fullhd, .grid .is-offset-7-fullhd.grid-item, .grid .is-offset-7-fullhd.grid-modal {
     margin-left: 58.33333%;
   }
-  .column.is-8-fullhd {
+  .column.is-8-fullhd, .grid .is-8-fullhd.grid-item, .grid .is-8-fullhd.grid-modal {
     flex: none;
     width: 66.66667%;
   }
-  .column.is-offset-8-fullhd {
+  .column.is-offset-8-fullhd, .grid .is-offset-8-fullhd.grid-item, .grid .is-offset-8-fullhd.grid-modal {
     margin-left: 66.66667%;
   }
-  .column.is-9-fullhd {
+  .column.is-9-fullhd, .grid .is-9-fullhd.grid-item, .grid .is-9-fullhd.grid-modal {
     flex: none;
     width: 75%;
   }
-  .column.is-offset-9-fullhd {
+  .column.is-offset-9-fullhd, .grid .is-offset-9-fullhd.grid-item, .grid .is-offset-9-fullhd.grid-modal {
     margin-left: 75%;
   }
-  .column.is-10-fullhd {
+  .column.is-10-fullhd, .grid .is-10-fullhd.grid-item, .grid .is-10-fullhd.grid-modal {
     flex: none;
     width: 83.33333%;
   }
-  .column.is-offset-10-fullhd {
+  .column.is-offset-10-fullhd, .grid .is-offset-10-fullhd.grid-item, .grid .is-offset-10-fullhd.grid-modal {
     margin-left: 83.33333%;
   }
-  .column.is-11-fullhd {
+  .column.is-11-fullhd, .grid .is-11-fullhd.grid-item, .grid .is-11-fullhd.grid-modal {
     flex: none;
     width: 91.66667%;
   }
-  .column.is-offset-11-fullhd {
+  .column.is-offset-11-fullhd, .grid .is-offset-11-fullhd.grid-item, .grid .is-offset-11-fullhd.grid-modal {
     margin-left: 91.66667%;
   }
-  .column.is-12-fullhd {
+  .column.is-12-fullhd, .grid .is-12-fullhd.grid-item, .grid .is-12-fullhd.grid-modal {
     flex: none;
     width: 100%;
   }
-  .column.is-offset-12-fullhd {
+  .column.is-offset-12-fullhd, .grid .is-offset-12-fullhd.grid-item, .grid .is-offset-12-fullhd.grid-modal {
     margin-left: 100%;
   }
 }
 
-.columns {
+.columns, .grid {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: -0.75rem;
 }
 
-.columns:last-child {
+.columns:last-child, .grid:last-child {
   margin-bottom: -0.75rem;
 }
 
-.columns:not(:last-child) {
+.columns:not(:last-child), .grid:not(:last-child) {
   margin-bottom: calc(1.5rem - 0.75rem);
 }
 
-.columns.is-centered {
+.columns.is-centered, .is-centered.grid {
   justify-content: center;
 }
 
-.columns.is-gapless {
+.columns.is-gapless, .is-gapless.grid {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
 }
 
-.columns.is-gapless > .column {
+.columns.is-gapless > .column, .is-gapless.grid > .column, .grid .columns.is-gapless > .grid-item, .is-gapless.grid > .grid-item, .grid .columns.is-gapless > .grid-modal, .is-gapless.grid > .grid-modal {
   margin: 0;
   padding: 0 !important;
 }
 
-.columns.is-gapless:not(:last-child) {
+.columns.is-gapless:not(:last-child), .is-gapless.grid:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-.columns.is-gapless:last-child {
+.columns.is-gapless:last-child, .is-gapless.grid:last-child {
   margin-bottom: 0;
 }
 
-.columns.is-mobile {
+.columns.is-mobile, .grid {
   display: flex;
 }
 
-.columns.is-multiline {
+.columns.is-multiline, .grid {
   flex-wrap: wrap;
 }
 
-.columns.is-vcentered {
+.columns.is-vcentered, .is-vcentered.grid {
   align-items: center;
 }
 
 @media screen and (min-width: 769px), print {
-  .columns:not(.is-desktop) {
+  .columns:not(.is-desktop), .grid:not(.is-desktop) {
     display: flex;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-desktop {
+  .columns.is-desktop, .is-desktop.grid {
     display: flex;
   }
 }
 
-.columns.is-variable {
+.columns.is-variable, .is-variable.grid {
   --columnGap: 0.75rem;
   margin-left: calc(-1 * var(--columnGap));
   margin-right: calc(-1 * var(--columnGap));
 }
 
-.columns.is-variable .column {
+.columns.is-variable .column, .is-variable.grid .column, .columns.is-variable .grid .grid-item, .grid .columns.is-variable .grid-item, .is-variable.grid .grid-item, .columns.is-variable .grid .grid-modal, .grid .columns.is-variable .grid-modal, .is-variable.grid .grid-modal {
   padding-left: var(--columnGap);
   padding-right: var(--columnGap);
 }
 
-.columns.is-variable.is-0 {
+.columns.is-variable.is-0, .is-variable.is-0.grid {
   --columnGap: 0rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-0-mobile {
+  .columns.is-variable.is-0-mobile, .is-variable.is-0-mobile.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-0-tablet {
+  .columns.is-variable.is-0-tablet, .is-variable.is-0-tablet.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-0-tablet-only {
+  .columns.is-variable.is-0-tablet-only, .is-variable.is-0-tablet-only.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-0-touch {
+  .columns.is-variable.is-0-touch, .is-variable.is-0-touch.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-0-desktop {
+  .columns.is-variable.is-0-desktop, .is-variable.is-0-desktop.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-0-desktop-only {
+  .columns.is-variable.is-0-desktop-only, .is-variable.is-0-desktop-only.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-0-widescreen {
+  .columns.is-variable.is-0-widescreen, .is-variable.is-0-widescreen.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-0-widescreen-only {
+  .columns.is-variable.is-0-widescreen-only, .is-variable.is-0-widescreen-only.grid {
     --columnGap: 0rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-0-fullhd {
+  .columns.is-variable.is-0-fullhd, .is-variable.is-0-fullhd.grid {
     --columnGap: 0rem;
   }
 }
 
-.columns.is-variable.is-1 {
+.columns.is-variable.is-1, .is-variable.is-1.grid {
   --columnGap: 0.25rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-1-mobile {
+  .columns.is-variable.is-1-mobile, .is-variable.is-1-mobile.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-1-tablet {
+  .columns.is-variable.is-1-tablet, .is-variable.is-1-tablet.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-1-tablet-only {
+  .columns.is-variable.is-1-tablet-only, .is-variable.is-1-tablet-only.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-1-touch {
+  .columns.is-variable.is-1-touch, .is-variable.is-1-touch.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-1-desktop {
+  .columns.is-variable.is-1-desktop, .is-variable.is-1-desktop.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-1-desktop-only {
+  .columns.is-variable.is-1-desktop-only, .is-variable.is-1-desktop-only.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-1-widescreen {
+  .columns.is-variable.is-1-widescreen, .is-variable.is-1-widescreen.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-1-widescreen-only {
+  .columns.is-variable.is-1-widescreen-only, .is-variable.is-1-widescreen-only.grid {
     --columnGap: 0.25rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-1-fullhd {
+  .columns.is-variable.is-1-fullhd, .is-variable.is-1-fullhd.grid {
     --columnGap: 0.25rem;
   }
 }
 
-.columns.is-variable.is-2 {
+.columns.is-variable.is-2, .is-variable.is-2.grid {
   --columnGap: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-2-mobile {
+  .columns.is-variable.is-2-mobile, .is-variable.is-2-mobile.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-2-tablet {
+  .columns.is-variable.is-2-tablet, .is-variable.is-2-tablet.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-2-tablet-only {
+  .columns.is-variable.is-2-tablet-only, .is-variable.is-2-tablet-only.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-2-touch {
+  .columns.is-variable.is-2-touch, .is-variable.is-2-touch.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-2-desktop {
+  .columns.is-variable.is-2-desktop, .is-variable.is-2-desktop.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-2-desktop-only {
+  .columns.is-variable.is-2-desktop-only, .is-variable.is-2-desktop-only.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-2-widescreen {
+  .columns.is-variable.is-2-widescreen, .is-variable.is-2-widescreen.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-2-widescreen-only {
+  .columns.is-variable.is-2-widescreen-only, .is-variable.is-2-widescreen-only.grid {
     --columnGap: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-2-fullhd {
+  .columns.is-variable.is-2-fullhd, .is-variable.is-2-fullhd.grid {
     --columnGap: 0.5rem;
   }
 }
 
-.columns.is-variable.is-3 {
+.columns.is-variable.is-3, .is-variable.is-3.grid {
   --columnGap: 0.75rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-3-mobile {
+  .columns.is-variable.is-3-mobile, .is-variable.is-3-mobile.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-3-tablet {
+  .columns.is-variable.is-3-tablet, .is-variable.is-3-tablet.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-3-tablet-only {
+  .columns.is-variable.is-3-tablet-only, .is-variable.is-3-tablet-only.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-3-touch {
+  .columns.is-variable.is-3-touch, .is-variable.is-3-touch.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-3-desktop {
+  .columns.is-variable.is-3-desktop, .is-variable.is-3-desktop.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-3-desktop-only {
+  .columns.is-variable.is-3-desktop-only, .is-variable.is-3-desktop-only.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-3-widescreen {
+  .columns.is-variable.is-3-widescreen, .is-variable.is-3-widescreen.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-3-widescreen-only {
+  .columns.is-variable.is-3-widescreen-only, .is-variable.is-3-widescreen-only.grid {
     --columnGap: 0.75rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-3-fullhd {
+  .columns.is-variable.is-3-fullhd, .is-variable.is-3-fullhd.grid {
     --columnGap: 0.75rem;
   }
 }
 
-.columns.is-variable.is-4 {
+.columns.is-variable.is-4, .is-variable.is-4.grid {
   --columnGap: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-4-mobile {
+  .columns.is-variable.is-4-mobile, .is-variable.is-4-mobile.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-4-tablet {
+  .columns.is-variable.is-4-tablet, .is-variable.is-4-tablet.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-4-tablet-only {
+  .columns.is-variable.is-4-tablet-only, .is-variable.is-4-tablet-only.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-4-touch {
+  .columns.is-variable.is-4-touch, .is-variable.is-4-touch.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-4-desktop {
+  .columns.is-variable.is-4-desktop, .is-variable.is-4-desktop.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-4-desktop-only {
+  .columns.is-variable.is-4-desktop-only, .is-variable.is-4-desktop-only.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-4-widescreen {
+  .columns.is-variable.is-4-widescreen, .is-variable.is-4-widescreen.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-4-widescreen-only {
+  .columns.is-variable.is-4-widescreen-only, .is-variable.is-4-widescreen-only.grid {
     --columnGap: 1rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-4-fullhd {
+  .columns.is-variable.is-4-fullhd, .is-variable.is-4-fullhd.grid {
     --columnGap: 1rem;
   }
 }
 
-.columns.is-variable.is-5 {
+.columns.is-variable.is-5, .is-variable.is-5.grid {
   --columnGap: 1.25rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-5-mobile {
+  .columns.is-variable.is-5-mobile, .is-variable.is-5-mobile.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-5-tablet {
+  .columns.is-variable.is-5-tablet, .is-variable.is-5-tablet.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-5-tablet-only {
+  .columns.is-variable.is-5-tablet-only, .is-variable.is-5-tablet-only.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-5-touch {
+  .columns.is-variable.is-5-touch, .is-variable.is-5-touch.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-5-desktop {
+  .columns.is-variable.is-5-desktop, .is-variable.is-5-desktop.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-5-desktop-only {
+  .columns.is-variable.is-5-desktop-only, .is-variable.is-5-desktop-only.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-5-widescreen {
+  .columns.is-variable.is-5-widescreen, .is-variable.is-5-widescreen.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-5-widescreen-only {
+  .columns.is-variable.is-5-widescreen-only, .is-variable.is-5-widescreen-only.grid {
     --columnGap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-5-fullhd {
+  .columns.is-variable.is-5-fullhd, .is-variable.is-5-fullhd.grid {
     --columnGap: 1.25rem;
   }
 }
 
-.columns.is-variable.is-6 {
+.columns.is-variable.is-6, .is-variable.is-6.grid {
   --columnGap: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-6-mobile {
+  .columns.is-variable.is-6-mobile, .is-variable.is-6-mobile.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-6-tablet {
+  .columns.is-variable.is-6-tablet, .is-variable.is-6-tablet.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-6-tablet-only {
+  .columns.is-variable.is-6-tablet-only, .is-variable.is-6-tablet-only.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-6-touch {
+  .columns.is-variable.is-6-touch, .is-variable.is-6-touch.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-6-desktop {
+  .columns.is-variable.is-6-desktop, .is-variable.is-6-desktop.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-6-desktop-only {
+  .columns.is-variable.is-6-desktop-only, .is-variable.is-6-desktop-only.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-6-widescreen {
+  .columns.is-variable.is-6-widescreen, .is-variable.is-6-widescreen.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-6-widescreen-only {
+  .columns.is-variable.is-6-widescreen-only, .is-variable.is-6-widescreen-only.grid {
     --columnGap: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-6-fullhd {
+  .columns.is-variable.is-6-fullhd, .is-variable.is-6-fullhd.grid {
     --columnGap: 1.5rem;
   }
 }
 
-.columns.is-variable.is-7 {
+.columns.is-variable.is-7, .is-variable.is-7.grid {
   --columnGap: 1.75rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-7-mobile {
+  .columns.is-variable.is-7-mobile, .is-variable.is-7-mobile.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-7-tablet {
+  .columns.is-variable.is-7-tablet, .is-variable.is-7-tablet.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-7-tablet-only {
+  .columns.is-variable.is-7-tablet-only, .is-variable.is-7-tablet-only.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-7-touch {
+  .columns.is-variable.is-7-touch, .is-variable.is-7-touch.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-7-desktop {
+  .columns.is-variable.is-7-desktop, .is-variable.is-7-desktop.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-7-desktop-only {
+  .columns.is-variable.is-7-desktop-only, .is-variable.is-7-desktop-only.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-7-widescreen {
+  .columns.is-variable.is-7-widescreen, .is-variable.is-7-widescreen.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-7-widescreen-only {
+  .columns.is-variable.is-7-widescreen-only, .is-variable.is-7-widescreen-only.grid {
     --columnGap: 1.75rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-7-fullhd {
+  .columns.is-variable.is-7-fullhd, .is-variable.is-7-fullhd.grid {
     --columnGap: 1.75rem;
   }
 }
 
-.columns.is-variable.is-8 {
+.columns.is-variable.is-8, .is-variable.is-8.grid {
   --columnGap: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .columns.is-variable.is-8-mobile {
+  .columns.is-variable.is-8-mobile, .is-variable.is-8-mobile.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 769px), print {
-  .columns.is-variable.is-8-tablet {
+  .columns.is-variable.is-8-tablet, .is-variable.is-8-tablet.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .columns.is-variable.is-8-tablet-only {
+  .columns.is-variable.is-8-tablet-only, .is-variable.is-8-tablet-only.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .columns.is-variable.is-8-touch {
+  .columns.is-variable.is-8-touch, .is-variable.is-8-touch.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .columns.is-variable.is-8-desktop {
+  .columns.is-variable.is-8-desktop, .is-variable.is-8-desktop.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1215px) {
-  .columns.is-variable.is-8-desktop-only {
+  .columns.is-variable.is-8-desktop-only, .is-variable.is-8-desktop-only.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .columns.is-variable.is-8-widescreen {
+  .columns.is-variable.is-8-widescreen, .is-variable.is-8-widescreen.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1407px) {
-  .columns.is-variable.is-8-widescreen-only {
+  .columns.is-variable.is-8-widescreen-only, .is-variable.is-8-widescreen-only.grid {
     --columnGap: 2rem;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .columns.is-variable.is-8-fullhd {
+  .columns.is-variable.is-8-fullhd, .is-variable.is-8-fullhd.grid {
     --columnGap: 2rem;
   }
 }
@@ -8836,7 +8860,7 @@ a.has-text-white:hover, a.has-text-white:focus {
   color: #e6e6e6 !important;
 }
 
-.has-background-white {
+.has-background-white, .grid .grid-item .grid-box {
   background-color: white !important;
 }
 
@@ -8852,11 +8876,11 @@ a.has-text-black:hover, a.has-text-black:focus {
   background-color: #0a0a0a !important;
 }
 
-.has-text-light, .content .card.inverted, .footer .card.inverted, .content .card.inverted h1, .footer .card.inverted h1, .content .card.inverted h2, .footer .card.inverted h2, .content .card.inverted h3, .footer .card.inverted h3, .content .card.inverted h4, .footer .card.inverted h4, .content .card.inverted h5, .footer .card.inverted h5, .content .card.inverted h6, .footer .card.inverted h6 {
+.has-text-light, .content .card.inverted, .footer .card.inverted, .grid .card.inverted, .content .card.inverted h1, .footer .card.inverted h1, .grid .card.inverted h1, .content .card.inverted h2, .footer .card.inverted h2, .grid .card.inverted h2, .content .card.inverted h3, .footer .card.inverted h3, .grid .card.inverted h3, .content .card.inverted h4, .footer .card.inverted h4, .grid .card.inverted h4, .content .card.inverted h5, .footer .card.inverted h5, .grid .card.inverted h5, .content .card.inverted h6, .footer .card.inverted h6, .grid .card.inverted h6, .grid .grid-item.is-active .grid-box {
   color: #FCFCFF !important;
 }
 
-a.has-text-light:hover, .content a.card.inverted:hover, .footer a.card.inverted:hover, a.has-text-light:focus, .content a.card.inverted:focus, .footer a.card.inverted:focus {
+a.has-text-light:hover, .content a.card.inverted:hover, .footer a.card.inverted:hover, .grid a.card.inverted:hover, .grid .grid-item.is-active a.grid-box:hover, a.has-text-light:focus, .content a.card.inverted:focus, .footer a.card.inverted:focus, .grid a.card.inverted:focus, .grid .grid-item.is-active a.grid-box:focus {
   color: #c9c9ff !important;
 }
 
@@ -8876,7 +8900,7 @@ a.has-text-dark:hover, a.has-text-dark:focus {
   background-color: #0A0A0A !important;
 }
 
-.has-text-primary, .content h1, .footer h1, .content h2, .footer h2 {
+.has-text-primary, .content h1, .footer h1, .grid h1, .content h2, .footer h2, .grid h2 {
   color: #AA0050 !important;
 }
 
@@ -8884,7 +8908,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   color: #770038 !important;
 }
 
-.has-background-primary, .content .card.inverted, .footer .card.inverted {
+.has-background-primary, .content .card.inverted, .footer .card.inverted, .grid .card.inverted, .grid .grid-item.is-active .grid-box {
   background-color: #AA0050 !important;
 }
 
@@ -9178,7 +9202,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   float: right !important;
 }
 
-.is-radiusless {
+.is-radiusless, .grid .grid-item .grid-box {
   border-radius: 0 !important;
 }
 
@@ -9190,7 +9214,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   overflow: hidden !important;
 }
 
-.is-relative {
+.is-relative, .grid .grid-item .grid-box {
   position: relative !important;
 }
 
@@ -9452,12 +9476,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding-left: 0.5rem !important;
 }
 
-.px-2 {
+.px-2, .grid .grid-item .grid-box {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
 
-.py-2 {
+.py-2, .grid .grid-item .grid-box {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -9582,7 +9606,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-size: 1.5rem !important;
 }
 
-.is-size-5, .content .lead, .footer .lead {
+.is-size-5, .content .lead, .footer .lead, .grid .lead {
   font-size: 1.25rem !important;
 }
 
@@ -10030,11 +10054,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-style: italic !important;
 }
 
-.has-text-weight-light, .content .lead, .footer .lead {
+.has-text-weight-light, .content .lead, .footer .lead, .grid .lead {
   font-weight: 300 !important;
 }
 
-.has-text-weight-normal, .content h1, .footer h1, .content h2, .footer h2, .content h3, .footer h3, .content h4, .footer h4, .content h5, .footer h5, .content h6, .footer h6 {
+.has-text-weight-normal, .content h1, .footer h1, .grid h1, .content h2, .footer h2, .grid h2, .content h3, .footer h3, .grid h3, .content h4, .footer h4, .grid h4, .content h5, .footer h5, .grid h5, .content h6, .footer h6, .grid h6 {
   font-weight: 400 !important;
 }
 
@@ -10054,7 +10078,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-family: "Lato", sans-serif !important;
 }
 
-.is-family-secondary, .content h1, .footer h1, .content h2, .footer h2, .content h3, .footer h3, .content h4, .footer h4, .content h5, .footer h5, .content h6, .footer h6 {
+.is-family-secondary, .content h1, .footer h1, .grid h1, .content h2, .footer h2, .grid h2, .content h3, .footer h3, .grid h3, .content h4, .footer h4, .grid h4, .content h5, .footer h5, .grid h5, .content h6, .footer h6, .grid h6 {
   font-family: "Fresca", sans-serif !important;
 }
 
@@ -11437,7 +11461,7 @@ a:hover, a:focus {
   border-bottom-color: #0A0A0A;
 }
 
-a.icon {
+a.icon, a.is-overlay {
   border-bottom: none;
 }
 
@@ -11485,36 +11509,32 @@ a.icon {
   height: 1.75rem;
 }
 
-.content b, .footer b, .content strong, .footer strong {
+.content b, .footer b, .grid b, .content strong, .footer strong, .grid strong {
   font-weight: bolder;
 }
 
-.content figure, .footer figure {
+.content figure, .footer figure, .grid figure {
   margin: 0;
 }
 
-.content figure:not(:first-child), .footer figure:not(:first-child) {
+.content figure:not(:first-child), .footer figure:not(:first-child), .grid figure:not(:first-child) {
   margin-top: 1rem;
 }
 
-.content figure:not(:last-child), .footer figure:not(:last-child) {
+.content figure:not(:last-child), .footer figure:not(:last-child), .grid figure:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.content .card:not(:first-child), .footer .card:not(:first-child) {
+.content .card:not(:first-child), .footer .card:not(:first-child), .grid .card:not(:first-child) {
   margin-top: 1.5rem;
 }
 
-.content .card:not(:last-child), .footer .card:not(:last-child) {
+.content .card:not(:last-child), .footer .card:not(:last-child), .grid .card:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
 .card-image {
   line-height: 0;
-}
-
-.is-vertically-centered {
-  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

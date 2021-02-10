@@ -11,60 +11,132 @@
     <div class="content">
       <h2>Compositions</h2>
 
-      <p>Below you can listen to some autonomous compositions I made. To view more applied projects I worked on, please see the <a href="{{ base_path_for(pages.projects) }}">projects</a> page.</p>
+      <p>Below you can listen to some of the recent autonomous compositions I created. Most of these are also available to stream on my <a href="{{ links.spotify }}">Spotify</a> page.</p>
 
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed('https://soundcloud.com/purplelum/ocean-of-stars', {'maxheight': 240, 'color': '#aa0050'}).html }}
+      <div class="grid">
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ soundcloud.resolve('https://soundcloud.com/purplelum/ocean-of-stars').artwork_url | replace({'large': 't500x500'}) }}" alt="Ocean Of Stars">
+            </figure>
+
+            <p class="has-text-centered mb-0">Ocean Of Stars</p>
+
+            <a class="is-overlay" data-project="ocean_of_stars"></a>
+          </div>
         </div>
 
-        <div class="card-content">
-          <h3>Ocean Of Stars</h3>
-          <p>This piece is inspired by Maricu Mana's DTIYS challenge going on at her Twitter. Her art tells the story of Lynx, who loves to sneak away from their royal duties and spend time in their secret observatory, drifting away in the ocean of stars.</p>
-        </div>
-      </div>
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ soundcloud.resolve('https://soundcloud.com/purplelum/entanglement').artwork_url | replace({'large': 't500x500'}) }}" alt="Entanglement">
+            </figure>
 
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed('https://soundcloud.com/purplelum/entanglement', {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
+            <p class="has-text-centered mb-0">Entanglement</p>
 
-        <div class="card-content">
-          <h3>Entanglement</h3>
-          <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed('https://soundcloud.com/purplelum/celestine', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            <a class="is-overlay" data-project="entanglement"></a>
+          </div>
         </div>
 
-        <div class="card-content">
-          <h3>Celestine</h3>
-          <p>This piece was inspired by my own track <i>Celestine II</i>, which I conjured up back in 2013, along with a spoonful of the epic orchestra from Two Steps From Hell and the vibe from big movies and games.</p>
-        </div>
-      </div>
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ soundcloud.resolve('https://soundcloud.com/purplelum/celestine').artwork_url | replace({'large': 't500x500'}) }}" alt="Celestine">
+            </figure>
 
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed('https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered', {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
+            <p class="has-text-centered mb-0">Celestine</p>
 
-        <div class="card-content">
-          <h3>Once In A Blue Moon</h3>
-          <p>If you ever had the chance to escape from reality, where would you go? <i>Once In A Blue Moon</i> tells about a magical world filled with fantasy that you can only visit once in a blue moon.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed('https://soundcloud.com/purplelum/we-in-heaven-2020-remix', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            <a class="is-overlay" data-project="celestine"></a>
+          </div>
         </div>
 
-        <div class="card-content">
-          <h3>We In Heaven</h3>
-          <p>This is the newest remix of my 2012 track <i>We In Heaven</i>, which I still consider one of the most influential tracks for my current style.</p>
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ soundcloud.resolve('https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered').artwork_url | replace({'large': 't500x500'}) }}" alt="Once In A Blue Moon">
+            </figure>
+
+            <p class="has-text-centered mb-0">Once In A Blue Moon</p>
+
+            <a class="is-overlay" data-project="once_in_a_blue_moon"></a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ soundcloud.resolve('https://soundcloud.com/purplelum/we-in-heaven-2020-remix').artwork_url | replace({'large': 't500x500'}) }}" alt="We In Heaven">
+            </figure>
+
+            <p class="has-text-centered mb-0">We In Heaven</p>
+
+            <a class="is-overlay" data-project="we_in_heaven"></a>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="ocean_of_stars">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed('https://soundcloud.com/purplelum/ocean-of-stars', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Ocean Of Stars</h3>
+              <p>This piece is inspired by Maricu Mana's DTIYS challenge going on at her Twitter. Her art tells the story of Lynx, who loves to sneak away from their royal duties and spend time in their secret observatory, drifting away in the ocean of stars.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="entanglement">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed('https://soundcloud.com/purplelum/entanglement', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Entanglement</h3>
+              <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="celestine">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed('https://soundcloud.com/purplelum/celestine', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Celestine</h3>
+              <p>This piece was inspired by my own track <i>Celestine II</i>, which I conjured up back in 2013, along with a spoonful of the epic orchestra from Two Steps From Hell and the vibe from big movies and games.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="once_in_a_blue_moon">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed('https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Once In A Blue Moon</h3>
+              <p>If you ever had the chance to escape from reality, where would you go? <i>Once In A Blue Moon</i> tells about a magical world filled with fantasy that you can only visit once in a blue moon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="we_in_heaven">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed('https://soundcloud.com/purplelum/we-in-heaven-2020-remix', {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>We In Heaven</h3>
+              <p>This is the newest remix of my 2012 track <i>We In Heaven</i>, which I still consider one of the most influential tracks for my current style.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

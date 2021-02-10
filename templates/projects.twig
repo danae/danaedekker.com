@@ -5,7 +5,7 @@
     <div class="content">
       <h2>Projects</h2>
 
-      <p>Below you can find projects I've been working on regarding composition, system design and narrative design. To view my autonomous compositions, please visit the <a href="{{ base_path_for(pages.home) }}">compositions</a> page. Most of my side software projects can be found on my <a href="{{ links.github }}">GitHub</a> profile.</p>
+      <p>Below you can find projects I've been working on regarding composition, audio design and narrative design. Most of my side software projects can be found on my <a href="{{ links.github }}">GitHub</a> profile.</p>
     </div>
   </section>
 
@@ -13,291 +13,373 @@
     <div class="tabs" data-tag-tabs>
       <ul>
         <li class="is-active"><a data-tag="*">All</a></li>
+        <li><a data-tag="games">Games</a></li>
+        <li><a data-tag="media">Media</a></li>
         <li><a data-tag="composition">Composition</a></li>
-        <li><a data-tag="system_design">System design</a></li>
+        <li><a data-tag="audio_design">Audio design</a></li>
         <li><a data-tag="narrative_design">Narrative design</a></li>
-        <li><a data-tag="paper">Papers</a></li>
       </ul>
     </div>
 
-    <div class="content">
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design, narrative_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <iframe class="has-ratio" src="{{ projects.invisible_wings.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="grid">
+      <div class="grid-item" data-tag-collapse="games, composition, audio_design, narrative_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.invisible_wings.square }}" alt="Invisible Wings">
           </figure>
-        </div>
 
-        <div class="card-content">
-          <h3>Invisible Wings</h3>
+          <p class="has-text-centered mb-0">Invisible Wings</p>
+          <p class="has-text-centered is-size-8 mb-0">Narrative Adventure Game &middot; 2021</p>
 
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
-            <span class="tag is-dark">Narrative design</span>
-          </div>
-
-          <p><i>Invisible Wings</i> is an interactive visual novel which takes place in a modern fantasy world, characterized by constant tensions between humans, faeries and their hybrid chlidren. The story follows Dawn, a young hybrid, and her quest for answers to her own identity and self-acceptance.</p>
-          <p>Aside from my work as composer and technical audio designer, I have set up this game from scratch on my own, as the result of my dream of creating a narrative fantasy game. Furthermore I took the lead in the conceptualizing and developing the game, collaborating with a screenwriter, an illustrator and voice actors in the process. Upon finishing the demo, <i>Invisible Wings</i> will be released on Steam and Itch.io.</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.invisible_wings.link }}">
-              <span class="icon is-small"><i class="fas fa-link"></i></span>
-              <span>Visit website</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.invisible_wings.steam }}">
-              <span class="icon is-small"><i class="fab fa-steam"></i></span>
-              <span>Steam</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.invisible_wings.itch }}">
-              <span class="icon is-small"><i class="fab fa-itch-io"></i></span>
-              <span>Itch.io</span>
-            </a>
-          </div>
+          <a class="is-overlay" data-project="invisible_wings"></a>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design, narrative_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <img src="{{ projects.hope_remember.image }}" alt="Hope/Remember">
+      <div class="grid-item" data-tag-collapse="games, composition, audio_design, narrative_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.fairy_lost.square }}" alt="Fairy Lost">
           </figure>
-        </div>
 
-        <div class="card-content">
-          <h3>Hope/Remember</h3>
+          <p class="has-text-centered mb-0">Fairy Lost</p>
+          <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2021</p>
 
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
-            <span class="tag is-dark">Narrative design</span>
-          </div>
-
-          <p>Together with Arto Koistinen I worked on <i>Hope/Remember</i> for the 47th Ludum Dare game jam in October 2020. This game is a narrative game reminiscent of okd school top down RPGs, which a story centered around a time loop in the week op Halloween. I created the audio and music for the game, as well as helped brainstorming and conceptualizing the idea and narrative.</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.hope_remember.link }}">
-              <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
-              <span>Play game</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.hope_remember.soundcloud }}">
-              <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
-              <span>SoundCloud</span>
-            </a>
-          </div>
+          <a class="is-overlay" data-project="fairy_lost"></a>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <img src="{{ projects.ocarime.image }}" alt="Ocarime">
+      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.hope_remember.square }}" alt="Hope/Remember">
           </figure>
-        </div>
 
-        <div class="card-content">
-          <h3>Ocarime</h3>
+          <p class="has-text-centered mb-0">Hope/Remember</p>
+          <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2020</p>
 
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
-          </div>
-
-          <p><i>Ocarime</i> is a network of composers, sound designers and software developers. Our collaborative is composed of different audio specialists, creating a unique network to deliver carefully designed audio for both commercial and personal use.</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.ocarime.link }}">
-              <span class="icon is-small"><i class="fa fa-link"></i></span>
-              <span>Visit website</span>
-            </a>
-          </div>
+          <a class="is-overlay" data-project="hope_remember"></a>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <div class="scale">
-              <iframe class="has-ratio" src="{{ projects.ocarime_the_game.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.ocarime.square }}" alt="Ocarime">
+          </figure>
+
+          <p class="has-text-centered mb-0">Ocarime</p>
+          <p class="has-text-centered is-size-8 mb-0">Professional Network &middot; 2020</p>
+
+          <a class="is-overlay" data-project="ocarime"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.ocarime_the_game.square }}" alt="Ocarime: The Game">
+          </figure>
+
+          <p class="has-text-centered mb-0">Ocarime: The Game</p>
+          <p class="has-text-centered is-size-8 mb-0">Interactive Website &middot; 2020</p>
+
+          <a class="is-overlay" data-project="ocarime_the_game"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="composition">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.colors_of_the_night.square }}" alt="Colors Of The Night">
+          </figure>
+
+          <p class="has-text-centered mb-0">Colors Of The Night</p>
+          <p class="has-text-centered is-size-8 mb-0">Autunomous EP &middot; 2019</p>
+
+          <a class="is-overlay" data-project="colors_of_the_night"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games, media, composition, audio_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.exodus_burned.square }}" alt="Exodus Burned">
+          </figure>
+
+          <p class="has-text-centered mb-0">Exodus Burned</p>
+          <p class="has-text-centered is-size-8 mb-0">VR Experience &middot; 2019</p>
+
+          <a class="is-overlay" data-project="exodus_burned"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="game, composition, audio_design">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.room_of_doom.square }}" alt="Room Of Doom">
+          </figure>
+
+          <p class="has-text-centered mb-0">Room Of Doom</p>
+          <p class="has-text-centered is-size-8 mb-0">Platformer Game &middot; 2018</p>
+
+          <a class="is-overlay" data-project="room_of_doom"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="composition">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.blue_moon.square }}" alt="Blue Moon">
+          </figure>
+
+          <p class="has-text-centered mb-0">Blue Moon</p>
+          <p class="has-text-centered is-size-8 mb-0">Autonomous EP &middot; 2018</p>
+
+          <a class="is-overlay" data-project="blue_moon"></a>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="invisible_wings">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.invisible_wings.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Invisible Wings</h3>
+
+            <p><i>Invisible Wings</i> is an interactive visual novel which takes place in a modern fantasy world, characterized by constant tensions between humans, faeries and their hybrid chlidren. The story follows Dawn, a young hybrid, and her quest for answers to her own identity and self-acceptance.</p>
+            <p>Aside from my work as composer and technical audio designer, I have set up this game from scratch on my own, as the result of my dream of creating a narrative fantasy game. Furthermore I took the lead in the conceptualizing and developing the game, collaborating with a screenwriter, an illustrator and voice actors in the process. Upon finishing the demo, <i>Invisible Wings</i> will be released on Steam and Itch.io.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.link }}">
+                <span class="icon is-small"><i class="fas fa-link"></i></span>
+                <span>Visit website</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.steam }}">
+                <span class="icon is-small"><i class="fab fa-steam"></i></span>
+                <span>Steam</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.itch }}">
+                <span class="icon is-small"><i class="fab fa-itch-io"></i></span>
+                <span>Itch.io</span>
+              </a>
             </div>
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <h3>Ocarime: The Game</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
-          </div>
-
-          <p><i>Ocarime: The Game</i> is a prototype for an interactive portfolio website for the members of <i>Ocarime</i>. In the game the player can listen to the music and view the portfolio of the team members of <i>Ocarime</i> by interacting with the environment and objects. The game itself acts as a portfolio item for the team as well, and shows what its members are capable of creating.</p>
-          <p>All team members, including me, composed a musical piece to be played back in the prototype, which together form a nonlinear composition based on the location of the player. Furthermore I developed most of the engine for the game in HTML5 and JavaScript.</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.ocarime_the_game.link }}">
-              <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
-              <span>Play game</span>
-            </a>
           </div>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="system_design, paper">
-        <div class="card-content">
-          <h3>Nonlinear music in narrative games</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">System design</span>
-            <span class="tag is-dark">Paper</span>
+      <div class="grid-modal is-hidden" data-project-collapse="fairy_lost">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.fairy_lost.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
           </div>
 
-          <p>In this article I have researched the different functions of nonlinear music in narrative games, and how the music design used in the game contributes to that function. These findings are used in the development of a design strategy and its application in narrative games in my own portfolio.</p>
+          <div class="card-content">
+            <h3>Fairy Lost</h3>
 
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.thesis.read }}">
-              <span class="icon is-small"><i class="fas fa-file-pdf"></i></span>
-              <span>Read paper</span>
-            </a>
-          </div>
-        </div>
-      </div>
+            <p><i>Fairy Lost</i> is a game about exploring a mysterious magical forest as a lost fairy on her way back home. Play as Yuvi, a fairy who got lost deep in this magical forest. Meet interesting fantasy creatures and help them find what they lost and explore a handcrafted fantasy forest that combines pixel art with 3D.</p>
+            <p>I worked on <i>Fairy Lost</i> for the Global Game Jam 2021, together with Ronald van Egdom, Kian Kreikamp, Daphne Zwarts and Maoki Steeman. The game was made in 48 hours and won 2nd place overall and 1st place in the art category of all Dutch entries. I worked on the music and audio design for this game, which was awarded the 2nd place in its category as well.</p>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <img src="{{ projects.colors_of_the_night.image }}" alt="Colors Of The Night">
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <h3>Colors Of The Night</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-          </div>
-
-          <p><i>Colors Of The Night</i> is my second EP that released in July 2019. It features four nighttime stories told in beautiful music.</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.colors_of_the_night.spotify }}">
-              <span class="icon is-small"><i class="fab fa-spotify"></i></span>
-              <span>Spotify</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.colors_of_the_night.google }}">
-              <span class="icon is-small"><i class="fab fa-google-play" data-fa-transform="shrink-2"></i></span>
-              <span>Google Play Music</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.colors_of_the_night.soundcloud }}">
-              <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
-              <span>SoundCloud</span>
-            </a>
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.fairy_lost.itch }}">
+                <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
+                <span>Play game</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.fairy_lost.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <iframe class="has-ratio" src="{{ projects.exodus_burned.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <h3>Exodus Burned</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
+      <div class="grid-modal is-hidden" data-project-collapse="hope_remember">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ projects.hope_remember.image }}" alt="Hope/Remember">
+            </figure>
           </div>
 
-          <p>In 2018 and 2019 I did a technical audio design internship at <i>Pillow's Willow VR Studios</i>. During this internship I worked on sound effects, voice overs and audio flow and implementation for <i>Exodus Burned</i>, a multiplayer VR experience, where players use their whole body as a controller to complete challenges. All audio integration work was done in Unity and C#.</p>
-          <p>In 2020 I composed the music for their intro cinematic as well, for which I took inspiration from the epic orchestral music of <i>Two Steps From Hell</i>.</p>
+          <div class="card-content">
+            <h3>Hope/Remember</h3>
 
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.exodus_burned.link }}">
-              <span class="icon is-small"><i class="fas fa-link"></i></span>
-              <span>Visit website</span>
-            </a>
-          </div>
-        </div>
-      </div>
+            <p>Together with Arto Koistinen I worked on <i>Hope/Remember</i> for the 47th Ludum Dare game jam in October 2020. This game is a narrative game reminiscent of okd school top down RPGs, which a story centered around a time loop in the week op Halloween. I created the audio and music for the game, as well as helped brainstorming and conceptualizing the idea and narrative.</p>
 
-      <div class="card inverted" data-tag-collapse data-tags="system_design, paper">
-        <div class="card-content">
-          <h3>Audio integration in Unity</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">System design</span>
-            <span class="tag is-dark">Paper</span>
-          </div>
-
-          <p>In this (Dutch) article is discussed how nonlinear music can be implemented in a game using and building upon the audio components of the Unity game engine,</p>
-
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.paper.read }}">
-              <span class="icon is-small"><i class="fas fa-file-pdf"></i></span>
-              <span>Read paper</span>
-            </a>
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.hope_remember.itch }}">
+                <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
+                <span>Play game</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.hope_remember.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition, system_design">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <iframe class="has-ratio" src="{{ projects.room_of_doom.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <h3>Room Of Doom</h3>
-
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
-            <span class="tag is-dark">System design</span>
+      <div class="grid-modal is-hidden" data-project-collapse="ocarime">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ projects.ocarime.image }}" alt="Ocarime">
+            </figure>
           </div>
 
-          <p><i>Room Of Doom</i> is a two-player co-op party platformer created by Games & Interaction students of HKU in 2018. I worked on this student project as composer and sound designer. The integration of the music in the game was done using the FMOD audio middleware.</p>
+          <div class="card-content">
+            <h3>Ocarime</h3>
 
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.room_of_doom.soundcloud }}">
-              <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
-              <span>SoundCloud</span>
-            </a>
+            <p><i>Ocarime</i> is a network of composers, sound designers and software developers. Our collaborative is composed of different audio specialists, creating a unique network to deliver carefully designed audio for both commercial and personal use.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.ocarime.link }}">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                <span>Visit website</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card inverted" data-tag-collapse data-tags="composition">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <img src="{{ projects.blue_moon.image }}" alt="Blue Moon">
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <h3>Blue Moon</h3 data-tag-collapse data-tags="composition">
-
-          <div class="tags">
-            <span class="tag is-dark">Composition</span>
+      <div class="grid-modal is-hidden" data-project-collapse="ocarime_the_game">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <div class="scale">
+                <iframe class="has-ratio" src="{{ projects.ocarime_the_game.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </figure>
           </div>
 
-          <p><i>Blue Moon</i> is a collection of four tracks that tell a story about the difference between fantasy and reality. This EP released on major streaming platforms in March 2018.</p>
+          <div class="card-content">
+            <h3>Ocarime: The Game</h3>
 
-          <div class="buttons">
-            <a class="button is-link is-inverted" href="{{ projects.blue_moon.spotify }}">
-              <span class="icon is-small"><i class="fab fa-spotify"></i></span>
-              <span>Spotify</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.blue_moon.google }}">
-              <span class="icon is-small"><i class="fab fa-google-play" data-fa-transform="shrink-2"></i></span>
-              <span>Google Play Music</span>
-            </a>
-            <a class="button is-link is-inverted" href="{{ projects.blue_moon.soundcloud }}">
-              <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
-              <span>SoundCloud</span>
-            </a>
+            <p><i>Ocarime: The Game</i> is a prototype for an interactive portfolio website for the members of <i>Ocarime</i>. In the game the player can listen to the music and view the portfolio of the team members of <i>Ocarime</i> by interacting with the environment and objects. The game itself acts as a portfolio item for the team as well, and shows what its members are capable of creating.</p>
+            <p>All team members, including me, composed a musical piece to be played back in the prototype, which together form a nonlinear composition based on the location of the player. Furthermore I developed most of the engine for the game in HTML5 and JavaScript.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.ocarime_the_game.link }}">
+                <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
+                <span>Play game</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="colors_of_the_night">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ projects.colors_of_the_night.image }}" alt="Colors Of The Night">
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Colors Of The Night</h3>
+
+            <p><i>Colors Of The Night</i> is my second EP that released in July 2019. It features four nighttime stories told in beautiful music.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.colors_of_the_night.spotify }}">
+                <span class="icon is-small"><i class="fab fa-spotify"></i></span>
+                <span>Spotify</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.colors_of_the_night.google }}">
+                <span class="icon is-small"><i class="fab fa-youtube" data-fa-transform="shrink-2"></i></span>
+                <span>YouTube Music</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.colors_of_the_night.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="exodus_burned">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.exodus_burned.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Exodus Burned</h3>
+
+            <p>In 2018 and 2019 I did a technical audio design internship at <i>Pillow's Willow VR Studios</i>. During this internship I worked on sound effects, voice overs and audio flow and implementation for <i>Exodus Burned</i>, a multiplayer VR experience, where players use their whole body as a controller to complete challenges. All audio integration work was done in Unity and C#.</p>
+            <p>In 2020 I composed the music for their intro cinematic as well, for which I took inspiration from the epic orchestral music of <i>Two Steps From Hell</i>.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.exodus_burned.link }}">
+                <span class="icon is-small"><i class="fas fa-link"></i></span>
+                <span>Visit website</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="room_of_doom">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.room_of_doom.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Room Of Doom</h3>
+
+            <p><i>Room Of Doom</i> is a two-player co-op party platformer created by Games & Interaction students of HKU in 2018. I worked on this student project as composer and sound designer. The integration of the music in the game was done using the FMOD audio middleware.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.room_of_doom.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="blue_moon">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ projects.blue_moon.image }}" alt="Blue Moon">
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Blue Moon</h3 data-tag-collapse data-tags="composition">
+
+            <p><i>Blue Moon</i> is a collection of four tracks that tell a story about the difference between fantasy and reality. This EP released on major streaming platforms in March 2018.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.blue_moon.spotify }}">
+                <span class="icon is-small"><i class="fab fa-spotify"></i></span>
+                <span>Spotify</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.blue_moon.google }}">
+                <span class="icon is-small"><i class="fab fa-youtube" data-fa-transform="shrink-2"></i></span>
+                <span>YouTube Music</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.blue_moon.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
