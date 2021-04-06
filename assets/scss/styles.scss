@@ -71,6 +71,8 @@ a {
   @extend .mb-6;
   padding: 0 1.5rem;
 
+  background-color: rgba(0, 0, 0, 0);
+
   .navbar-item {
     @extend .is-size-6;
     @extend .is-uppercase;
@@ -224,7 +226,6 @@ a {
 
     // A box in a grid item
     .grid-box {
-      @extend .box;
       @extend .is-relative;
       @extend .is-radiusless;
       @extend .has-background-white;
@@ -243,6 +244,7 @@ a {
   .grid-modal {
     @extend .column;
     @extend .is-full;
+    @extend .py-0;
   }
 }
 

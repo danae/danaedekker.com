@@ -7,15 +7,15 @@ $family-primary: 'Lato', sans-serif;
 $family-secondary: 'Fresca', sans-serif;
 
 // Custom colors
-$primary: #AA0050;
-$light: #FCFCFF;
-$dark: #0A0A0A;
+$primary: rgb(170, 0, 80);
+$light: rgb(252, 252, 255);
+$dark: rgb(10, 10, 10);
 
 // Custom layout colors
 $background: $light;
 $link: $primary;
-$link-hover: $dark;
 $link-visited: $primary;
+$link-hover: $dark;
 
 // Custom sizes
 $size-1: 3rem;
