@@ -52,6 +52,13 @@ $feather->context = [
     'we_in_heaven' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
   ],
   'projects' => [
+    'ignis_universia' => [
+      'square' => $feather->base_path . '/assets/images/square_ignis_universia.png',
+      'embed' => 'https://www.youtube.com/embed/IiCshDIDKjM',
+      'website' => 'https://ignisuniversia.com/',
+      'steam' => 'https://store.steampowered.com/app/1545500/Ignis_Universia_Awakening_of_the_Erudite_Empress/',
+      'soundcloud' => 'https://soundcloud.com/ignisuniversia'
+    ],
     'invisible_wings' => [
       'square' => $feather->base_path . '/assets/images/square_invisible_wings.png',
       'embed' => 'https://www.youtube.com/embed/Zn5NWS1Zm7Q',
