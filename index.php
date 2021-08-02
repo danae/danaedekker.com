@@ -20,12 +20,8 @@ $feather->pages->addErrorPage(['template' => 'errors/500']);
 $feather->pages->addNotFoundPage(['template' => 'errors/404']);
 
 // Create the SoundCloud client
-$soundcloud = new Soundcloud([
-  'client_id' => $soundcloudId,
-  'client_secret' => $soundcloudSecret,
-  'username' => $soundcloudUsername,
-  'password' => $soundcloudPassword
-]);
+$soundcloud = new Soundcloud(['client_id' => $soundcloudId, 'client_secret' => $soundcloudSecret]);
+$soundcloud->authorizeWithClientCredentials();
 
 // Create context
 $feather->context = [

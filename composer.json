@@ -8,9 +8,9 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^7.4",
     "danae/feather": "^0.5",
-    "danae/soundcloud-php": "^2.0",
+    "danae/soundcloud-php": "^3.0",
     "swiftmailer/swiftmailer": "^6.0",
     "google/recaptcha": "^1.1"
   },
