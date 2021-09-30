@@ -73,16 +73,6 @@ $feather->context = [
       'itch' => 'https://arzi.itch.io/hoperemember',
       'soundcloud' => 'https://soundcloud.com/purplelum/hope-remember'
     ],
-    'ocarime' => [
-      'square' => $feather->base_path . '/assets/images/square_ocarime.png',
-      'image' => $feather->base_path . '/assets/images/splash_ocarime.png',
-      'link' => 'https://ocarime.com/'
-    ],
-    'ocarime_the_game' => [
-      'square' => $feather->base_path . '/assets/images/square_ocarime_the_game.png',
-      'embed' => 'https://www.youtube.com/embed/9VKsWIVDf7M',
-      'link' => 'https://beta.ocarime.com/'
-    ],
     'colors_of_the_night' => [
       'square' => $feather->base_path . '/assets/images/square_colors_of_the_night.png',
       'image' => $feather->base_path . '/assets/images/splash_colors_of_the_night.png',
@@ -94,11 +84,6 @@ $feather->context = [
       'square' => $feather->base_path . '/assets/images/square_exodus_burned.png',
       'embed' => 'https://www.youtube.com/embed/alquMRfFrSY',
       'link' => 'http://www.exodusburned.com/'
-    ],
-    'room_of_doom' => [
-      'square' => $feather->base_path . '/assets/images/square_room_of_doom.png',
-      'embed' => 'https://www.youtube.com/embed/2XK3Vkecf1A',
-      'soundcloud' => 'https://soundcloud.com/purplelum/room-of-doom'
     ],
     'blue_moon' => [
       'square' => $feather->base_path . '/assets/images/square_blue_moon.png',
