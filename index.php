@@ -27,10 +27,12 @@ $feather->context = [
   'assets' => $feather->base_path . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
+    'soundcloud' => 'https://soundcloud.com/purplelum',
     'spotify_danaedekker' => 'https://open.spotify.com/artist/0bta46UUaupzYcrrhG3yRQ',
     'spotify_purplelum' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt',
     'deezer_danaedekker' => 'https://www.deezer.com/nl/artist/124460692',
     'deezer_purplelum' => 'https://www.deezer.com/nl/artist/14398631',
+    'bandcamp' => 'https://danaedekker.bandcamp.com/',
     'twitter' => 'https://twitter.com/da___nae',
     'facebook' => 'https://www.facebook.com/danaedekkergameaudio',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
@@ -65,6 +67,7 @@ $feather->context = [
       'square' => $feather->base_path . '/assets/images/square_fairy_lost.png',
       'embed' => 'https://www.youtube.com/embed/Y21QE7zzHJg',
       'itch' => 'https://coolcast.itch.io/fairy-lost',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/fairy-lost-original-game-soundtrack',
       'soundcloud' => 'https://soundcloud.com/purplelum/fairy-lost-ost'
     ],
     'hope_remember' => [
@@ -76,8 +79,7 @@ $feather->context = [
     'colors_of_the_night' => [
       'square' => $feather->base_path . '/assets/images/square_colors_of_the_night.png',
       'image' => $feather->base_path . '/assets/images/splash_colors_of_the_night.png',
-      'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=hc_okt74TuaHvOrb7D-niA',
-      'google' => 'https://music.youtube.com/playlist?list=OLAK5uy_k77U0wmpl2kGL3gHaKDSfaTA_KJodE-1c',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/album/colors-of-the-night',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
     ],
     'exodus_burned' => [
@@ -88,9 +90,7 @@ $feather->context = [
     'blue_moon' => [
       'square' => $feather->base_path . '/assets/images/square_blue_moon.png',
       'image' => $feather->base_path . '/assets/images/splash_blue_moon.png',
-      'upc' => '5057728398730',
-      'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=fEArNvEiRMOxaILlXakgJg',
-      'google' => 'https://music.youtube.com/playlist?list=OLAK5uy_nuVhWZ0eLB_pLiHnvgAOiQlOZLIto_Vxw',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/album/blue-moon',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]
   ],
