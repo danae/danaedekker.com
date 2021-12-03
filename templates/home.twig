@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <p>I'm fascinated by musical storytelling in a fantastical and whimsical setting, which I apply in autonomous compositions, games and interactive media. Moreover, I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
+    <p>I'm fascinated by musical storytelling in a fantastical and whimsical setting, which I apply in <a href="{{ base_path_for(pages.projects) }}">autonomous compositions, games and interactive media</a>. Moreover, I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
     <p>I'm currently available for freelance and contract-based composition and technical audio design work, and I'm open for <a href="{{ base_path_for(pages.commissions) }}">personal music commissions</a> as well!</p>
   </section>
 
@@ -21,6 +21,17 @@
       <h2>Compositions</h2>
 
       <p>Below you can listen to some of the recent compositions I created. Most of these are also available at streaming services like <a href="{{ links.spotify_purplelum }}">Spotify</a> and <a href="{{ links.deezer_purplelum }}">Deezer</a>.</p>
+
+      <div class="card inverted">
+        <div class="card-image">
+          {{ soundcloud.oembed(compositions.mirrors, {'maxheight': 240, 'color': '#aa0050'}).html }}
+        </div>
+
+        <div class="card-content">
+          <h3>Mirrors</h3>
+          <p>This beautiful and calming musical piece tells us about how similar yet different people in love can be. </p>
+        </div>
+      </div>
 
       <div class="card inverted">
         <div class="card-image">
@@ -41,17 +52,6 @@
         <div class="card-content">
           <h3>Entanglement</h3>
           <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.celestine, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>Celestine</h3>
-          <p>This piece was inspired by my own track <i>Celestine II</i>, which I conjured up back in 2013, along with a spoonful of the epic orchestra from Two Steps From Hell and the vibe from big movies and games.</p>
         </div>
       </div>
 

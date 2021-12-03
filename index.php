@@ -42,13 +42,18 @@ $feather->context = [
     'showreel_embed' => 'https://www.youtube.com/embed/Ox1CHWTb3Vk'
   ],
   'compositions' => [
+    'mirrors' => 'https://soundcloud.com/purplelum/mirrors',
     'ocean_of_stars' => 'https://soundcloud.com/purplelum/ocean-of-stars',
     'entanglement' => 'https://soundcloud.com/purplelum/entanglement',
-    'celestine' => 'https://soundcloud.com/purplelum/celestine',
     'once_in_a_blue_moon' => 'https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered',
     'we_in_heaven' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
   ],
   'projects' => [
+    'starcrossed' => [
+      'square' => $feather->base_path . '/assets/images/square_starcrossed.png',
+      'image' => $feather->base_path . '/assets/images/splash_starcrossed.png',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/album/starcrossed'
+    ],
     'ignis_universia' => [
       'square' => $feather->base_path . '/assets/images/square_ignis_universia.png',
       'embed' => 'https://www.youtube.com/embed/IiCshDIDKjM',

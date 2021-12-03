@@ -15,13 +15,25 @@
         <li class="is-active"><a data-tag="*">All</a></li>
         <li><a data-tag="games">Games</a></li>
         <li><a data-tag="media">Media</a></li>
-        <li><a data-tag="composition">Composition</a></li>
-        <li><a data-tag="audio_design">Audio design</a></li>
+        <li><a data-tag="original">Original</a></li>
       </ul>
     </div>
 
     <div class="grid">
-      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+      <div class="grid-item" data-tag-collapse="original">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.starcrossed.square }}" alt="Starcrossed">
+          </figure>
+
+          <p class="has-text-centered mb-0">Starcrossed</p>
+          <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2021</p>
+
+          <a class="is-overlay" data-project="starcrossed"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.ignis_universia.square }}" alt="Ignis Universia">
@@ -34,7 +46,7 @@
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+      <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.invisible_wings.square }}" alt="Invisible Wings">
@@ -47,7 +59,7 @@
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+      <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.fairy_lost.square }}" alt="Fairy Lost">
@@ -60,7 +72,7 @@
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="games, composition, audio_design">
+      <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.hope_remember.square }}" alt="Hope/Remember">
@@ -73,7 +85,7 @@
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="games, media, composition, audio_design">
+      <div class="grid-item" data-tag-collapse="games, media">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.exodus_burned.square }}" alt="Exodus Burned">
@@ -86,29 +98,52 @@
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="composition">
+      <div class="grid-item" data-tag-collapse="original">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.colors_of_the_night.square }}" alt="Colors Of The Night">
           </figure>
 
           <p class="has-text-centered mb-0">Colors Of The Night</p>
-          <p class="has-text-centered is-size-8 mb-0">Autonomous EP &middot; 2019</p>
+          <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2019</p>
 
           <a class="is-overlay" data-project="colors_of_the_night"></a>
         </div>
       </div>
 
-      <div class="grid-item" data-tag-collapse="composition">
+      <div class="grid-item" data-tag-collapse="original">
         <div class="grid-box">
           <figure class="image is-square mb-2">
             <img src="{{ projects.blue_moon.square }}" alt="Blue Moon">
           </figure>
 
           <p class="has-text-centered mb-0">Blue Moon</p>
-          <p class="has-text-centered is-size-8 mb-0">Autonomous EP &middot; 2018</p>
+          <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2018</p>
 
           <a class="is-overlay" data-project="blue_moon"></a>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="starcrossed">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ projects.starcrossed.image }}" alt="Starcrossed">
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Starcrossed</h3>
+
+            <p><i>Starcrossed</i> is my third EP and contains five musical stories about journeys to faraway lands. This EP released on major streaming platforms in December 2021.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.starcrossed.bandcamp }}">
+                <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
+                <span>Bandcamp</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -296,7 +331,7 @@
           </div>
 
           <div class="card-content">
-            <h3>Blue Moon</h3 data-tag-collapse data-tags="composition">
+            <h3>Blue Moon</h3>
 
             <p><i>Blue Moon</i> is a collection of four tracks that tell a story about the difference between fantasy and reality. This EP released on major streaming platforms in March 2018.</p>
 
