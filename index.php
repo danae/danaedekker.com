@@ -42,17 +42,25 @@ $feather->context = [
     'showreel_embed' => 'https://www.youtube.com/embed/Ox1CHWTb3Vk'
   ],
   'compositions' => [
-    'mirrors' => 'https://soundcloud.com/purplelum/mirrors',
-    'ocean_of_stars' => 'https://soundcloud.com/purplelum/ocean-of-stars',
+    'journey_to_the_northern_lights' => 'https://soundcloud.com/purplelum/journey-to-the-northern-lights',
     'entanglement' => 'https://soundcloud.com/purplelum/entanglement',
+    'ocean_of_stars' => 'https://soundcloud.com/purplelum/ocean-of-stars',
     'once_in_a_blue_moon' => 'https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered',
     'we_in_heaven' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
   ],
   'projects' => [
+    'cathens' => [
+      'square' => $feather->base_path . '/assets/images/square_cathens.png',
+      'embed' => 'https://www.youtube.com/embed/LeJqDQb6q6E',
+      'itch' => 'https://runicpixels.itch.io/cathens',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/cathens-original-game-soundtrack',
+      'soundcloud' => 'https://soundcloud.com/purplelum/cathens-ost'
+    ],
     'starcrossed' => [
       'square' => $feather->base_path . '/assets/images/square_starcrossed.png',
       'image' => $feather->base_path . '/assets/images/splash_starcrossed.png',
-      'bandcamp' => 'https://danaedekker.bandcamp.com/album/starcrossed'
+      'bandcamp' => 'https://danaedekker.bandcamp.com/album/starcrossed',
+      'soundcloud' => 'https://soundcloud.com/purplelum/sets/starcrossed'
     ],
     'ignis_universia' => [
       'square' => $feather->base_path . '/assets/images/square_ignis_universia.png',
