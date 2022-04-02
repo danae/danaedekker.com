@@ -113,7 +113,7 @@ $feather->context = [
   ],
   'about' => [
     'thesis' => $feather->base_path . '/publications/Nonlinear_music_design_in_narrative_games.pdf',
-    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2021.pdf'
+    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2022.pdf'
   ]
 ];
 
