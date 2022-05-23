@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700|Fresca");
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,700,400italic|Pompiere");
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -330,7 +330,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Lato", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 code,
@@ -9606,11 +9606,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-size: 1.5rem !important;
 }
 
-.is-size-5, .content .lead, .footer .lead, .grid .lead {
+.is-size-5, .navbar .navbar-item, .content .lead, .footer .lead, .grid .lead {
   font-size: 1.25rem !important;
 }
 
-.is-size-6, .navbar .navbar-item {
+.is-size-6 {
   font-size: 1.125rem !important;
 }
 
@@ -10046,7 +10046,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   text-transform: lowercase !important;
 }
 
-.is-uppercase, .navbar .navbar-item {
+.is-uppercase, .navbar .navbar-item, .content h1, .footer h1, .grid h1, .content h2, .footer h2, .grid h2 {
   text-transform: uppercase !important;
 }
 
@@ -10054,7 +10054,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-style: italic !important;
 }
 
-.has-text-weight-light, .content .lead, .footer .lead, .grid .lead {
+.has-text-weight-light, .navbar .navbar-item, .content .lead, .footer .lead, .grid .lead {
   font-weight: 300 !important;
 }
 
@@ -10062,7 +10062,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 400 !important;
 }
 
-.has-text-weight-medium {
+.has-text-weight-medium, .content .lead b, .footer .lead b, .grid .lead b, .content .lead strong, .footer .lead strong, .grid .lead strong {
   font-weight: 500 !important;
 }
 
@@ -10070,16 +10070,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 600 !important;
 }
 
-.has-text-weight-bold, .navbar .navbar-item {
+.has-text-weight-bold, .content b, .footer b, .grid b, .content strong, .footer strong, .grid strong {
   font-weight: 700 !important;
 }
 
 .is-family-primary {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Barlow", sans-serif !important;
 }
 
 .is-family-secondary, .content h1, .footer h1, .grid h1, .content h2, .footer h2, .grid h2, .content h3, .footer h3, .grid h3, .content h4, .footer h4, .grid h4, .content h5, .footer h5, .grid h5, .content h6, .footer h6, .grid h6 {
-  font-family: "Fresca", sans-serif !important;
+  font-family: "Pompiere", cursive !important;
 }
 
 .is-family-sans-serif {
@@ -11467,13 +11467,13 @@ a.icon, a.is-overlay {
 
 .navbar {
   padding: 0 1.5rem;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .navbar .navbar-item a {
   padding: 4px 0px;
   color: #4a4a4a;
-  border-bottom: 2px #fcfcff solid;
+  border-bottom: 1px transparent solid;
 }
 
 .navbar .navbar-item a:hover, .navbar .navbar-item a:focus {
@@ -11508,10 +11508,6 @@ a.icon, a.is-overlay {
 .footer .icon {
   width: 1.75rem;
   height: 1.75rem;
-}
-
-.content b, .footer b, .grid b, .content strong, .footer strong, .grid strong {
-  font-weight: bolder;
 }
 
 .content figure, .footer figure, .grid figure {

@@ -71,17 +71,17 @@ a {
   @extend .mb-6;
   padding: 0 1.5rem;
 
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 
   .navbar-item {
-    @extend .is-size-6;
     @extend .is-uppercase;
-    @extend .has-text-weight-bold;
+    @extend .is-size-5;
+    @extend .has-text-weight-light;
 
     a {
       padding: 4px 0px;
       color: $text;
-      border-bottom: 2px $background solid;
+      border-bottom: 1px transparent solid;
 
       &:hover, &:focus {
         border-bottom-color: $text;
@@ -154,7 +154,7 @@ a {
 .content {
   // Bolder text
   b, strong {
-    font-weight: bolder;
+    @extend .has-text-weight-bold;
   }
 
   // Headings
@@ -162,7 +162,9 @@ a {
     h#{$i} {
       @extend .is-family-secondary;
       @extend .has-text-weight-normal;
+
       @if $i <= 2 {
+        @extend .is-uppercase;
         @extend .has-text-primary;
       }
     }
@@ -207,6 +209,10 @@ a {
   .lead {
     @extend .is-size-5;
     @extend .has-text-weight-light;
+
+    b, strong {
+      @extend .has-text-weight-medium;
+    }
   }
 }
 

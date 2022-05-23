@@ -1,10 +1,10 @@
 // Import the initial variables and fonts
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700|Fresca');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,700,400italic|Pompiere');
 @import "../bulma/sass/utilities/initial-variables.sass";
 
 // Custom fonts
-$family-primary: 'Lato', sans-serif;
-$family-secondary: 'Fresca', sans-serif;
+$family-primary: 'Barlow', sans-serif;
+$family-secondary: 'Pompiere', cursive;
 
 // Custom colors
 $primary: rgb(170, 0, 80);
