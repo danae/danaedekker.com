@@ -43,8 +43,9 @@ try
 
   // Create the message body
   $body = "
-    <p><i>Hello Danae, the following was sent to you by {$formName} using the contact form on your website:</i>
+    <p><i>Hello Danae, the following was sent to you by {$formName} &lt;{$formEmail}&gt; using the contact form on your website:</i>
     <pre>{$formMessage}</pre>
+    <p><i>Best regards,<br>your contact form script</i></p>
   ";
 
   // Create a new mail transport
@@ -59,10 +60,10 @@ try
   $message = new Swift_Message();
 
   // Fill the message
-  $message->setFrom([$mailSender => "{$formName} via contact form"]);
+  $message->setFrom([$mailSender => "Contact form script"]);
   $message->setTo($mailRecipients);
   $message->setReplyTo([$formEmail => $formName]);
-  $message->setSubject("Message from {$formName} via contact form");
+  $message->setSubject("Message from {$formName}");
   $message->setBody($body, 'text/html');
 
   // Send the message
