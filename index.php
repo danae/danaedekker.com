@@ -49,6 +49,19 @@ $feather->context = [
     'we_in_heaven' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
   ],
   'projects' => [
+    'feyrune' => [
+      'square' => $feather->base_path . '/assets/images/square_feyrune.png',
+      'embed' => 'https://www.youtube.com/embed/30kL41BxsxQ',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/feyrune-runic-clearing-original-game-soundtrack',
+      'soundcloud' => 'https://soundcloud.com/purplelum/feypunk-runic-clearing-original-game-soundtrack'
+    ],
+    'sakura_shrine' => [
+      'square' => $feather->base_path . '/assets/images/square_sakura_shrine.png',
+      'embed' => 'https://www.youtube.com/embed/NbBPjZCHw-s',
+      'itch' => 'https://arzi.itch.io/ld50',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/sakura-shrine-original-game-soundtrack',
+      'soundcloud' => 'https://soundcloud.com/purplelum/sakura-shrine'
+    ],
     'cathens' => [
       'square' => $feather->base_path . '/assets/images/square_cathens.png',
       'embed' => 'https://www.youtube.com/embed/LeJqDQb6q6E',

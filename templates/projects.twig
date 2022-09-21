@@ -23,13 +23,39 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
+            <img src="{{ projects.feyrune.square }}" alt="Feyrune">
+          </figure>
+
+          <p class="has-text-centered mb-0">Feyrune</p>
+          <p class="has-text-centered is-size-8 mb-0">Adventure Game &middot; 2022</p>
+
+          <a class="is-overlay" href="javascript:;" data-project="feyrune"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ projects.sakura_shrine.square }}" alt="Sakura Shrine">
+          </figure>
+
+          <p class="has-text-centered mb-0">Sakura Shrine</p>
+          <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2022</p>
+
+          <a class="is-overlay" href="javascript:;" data-project="sakura_shrine"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
             <img src="{{ projects.cathens.square }}" alt="Cathens">
           </figure>
 
           <p class="has-text-centered mb-0">Cathens</p>
           <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2022</p>
 
-          <a class="is-overlay" data-project="cathens"></a>
+          <a class="is-overlay" href="javascript:;" data-project="cathens"></a>
         </div>
       </div>
 
@@ -42,7 +68,7 @@
           <p class="has-text-centered mb-0">Starcrossed</p>
           <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2021</p>
 
-          <a class="is-overlay" data-project="starcrossed"></a>
+          <a class="is-overlay" href="javascript:;" data-project="starcrossed"></a>
         </div>
       </div>
 
@@ -55,7 +81,7 @@
           <p class="has-text-centered mb-0">Ignis Universia</p>
           <p class="has-text-centered is-size-8 mb-0">JRPG &middot; Visual Novel &middot; 2021</p>
 
-          <a class="is-overlay" data-project="ignis_universia"></a>
+          <a class="is-overlay" href="javascript:;" data-project="ignis_universia"></a>
         </div>
       </div>
 
@@ -68,7 +94,7 @@
           <p class="has-text-centered mb-0">Invisible Wings</p>
           <p class="has-text-centered is-size-8 mb-0">Narrative Adventure Game &middot; 2021</p>
 
-          <a class="is-overlay" data-project="invisible_wings"></a>
+          <a class="is-overlay" href="javascript:;" data-project="invisible_wings"></a>
         </div>
       </div>
 
@@ -81,7 +107,7 @@
           <p class="has-text-centered mb-0">Fairy Lost</p>
           <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2021</p>
 
-          <a class="is-overlay" data-project="fairy_lost"></a>
+          <a class="is-overlay" href="javascript:;" data-project="fairy_lost"></a>
         </div>
       </div>
 
@@ -94,7 +120,7 @@
           <p class="has-text-centered mb-0">Hope/Remember</p>
           <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2020</p>
 
-          <a class="is-overlay" data-project="hope_remember"></a>
+          <a class="is-overlay" href="javascript:;" data-project="hope_remember"></a>
         </div>
       </div>
 
@@ -107,7 +133,7 @@
           <p class="has-text-centered mb-0">Exodus Burned</p>
           <p class="has-text-centered is-size-8 mb-0">VR Experience &middot; 2019</p>
 
-          <a class="is-overlay" data-project="exodus_burned"></a>
+          <a class="is-overlay" href="javascript:;" data-project="exodus_burned"></a>
         </div>
       </div>
 
@@ -120,7 +146,7 @@
           <p class="has-text-centered mb-0">Colors Of The Night</p>
           <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2019</p>
 
-          <a class="is-overlay" data-project="colors_of_the_night"></a>
+          <a class="is-overlay" href="javascript:;" data-project="colors_of_the_night"></a>
         </div>
       </div>
 
@@ -133,7 +159,65 @@
           <p class="has-text-centered mb-0">Blue Moon</p>
           <p class="has-text-centered is-size-8 mb-0">Original EP &middot; 2018</p>
 
-          <a class="is-overlay" data-project="blue_moon"></a>
+          <a class="is-overlay" href="javascript:;" data-project="blue_moon"></a>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="feyrune">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.feyrune.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Feyrune</h3>
+
+            <p><i>Feyrune</i> is an enchanting take on modern pixel art, made by Luna van Egdom as het graduation project. I helped realizing her vision by making a whimsical and feylike soundtrack and sound effects for the game.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.feyrune.bandcamp }}">
+                <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
+                <span>Bandcamp</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.feyrune.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-modal is-hidden" data-project-collapse="sakura_shrine">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ projects.sakura_shrine.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Sakura Shrine</h3>
+
+            <p><i>Sakura Shrine</i> is a narrative tower defence-like game about a priestess protecting the sacred sakura tree from demons. This game was made for Ludum Dare 50 together with Arto Koistinen and Luna van Egdom, where I was responsible for the audio and helped developing the concept. Out of almost 2000 jam entries, the game was awarded 50th place in art and 32nd place in audio.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.itch }}">
+                <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
+                <span>Play game</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.bandcamp }}">
+                <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
+                <span>Bandcamp</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
