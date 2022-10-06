@@ -1,0 +1,184 @@
+{% extends "index.twig" %}
+
+{% block main %}
+  <section class="section content">
+    <div class="content">
+      <h2>Compositions</h2>
+
+      <p>Below you can listen to some of the recent autonomous compositions I created, you can click on the thumbnails to hear them! My music is also available to purchase on <a href="{{ links.bandcamp }}">Bankcamp</a> and to stream at <a href="{{ links.spotify_purplelum }}">Spotify</a> and <a href="{{ links.deezer_purplelum }}">Deezer</a>.</p>
+
+      <div class="grid">
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ music.journey_to_the_northern_lights.square }}" alt="Journey to the Northern Lights">
+            </figure>
+
+            <p class="has-text-centered mb-0">Journey to the Northern Lights</p>
+
+            <a class="is-overlay" href="javascript:;" data-project="journey_to_the_northern_lights"></a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ music.entanglement.square }}" alt="Entanglement">
+            </figure>
+
+            <p class="has-text-centered mb-0">Entanglement</p>
+
+            <a class="is-overlay" href="javascript:;" data-project="entanglement"></a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ music.ocean_of_stars.square }}" alt="Ocean Of Stars">
+            </figure>
+
+            <p class="has-text-centered mb-0">Ocean Of Stars</p>
+
+            <a class="is-overlay" href="javascript:;" data-project="ocean_of_stars"></a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ music.once_in_a_blue_moon.square }}" alt="Once In A Blue Moon">
+            </figure>
+
+            <p class="has-text-centered mb-0">Once In A Blue Moon</p>
+
+            <a class="is-overlay" href="javascript:;" data-project="once_in_a_blue_moon"></a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-box">
+            <figure class="image is-square mb-2">
+              <img src="{{ music.we_in_heaven.square }}" alt="We In Heaven">
+            </figure>
+
+            <p class="has-text-centered mb-0">We In Heaven</p>
+
+            <a class="is-overlay" href="javascript:;" data-project="we_in_heaven"></a>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="journey_to_the_northern_lights">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed(music.journey_to_the_northern_lights.embed, {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Journey to the Northern Lights</h3>
+              <p>This beautiful musical piece tells about an adventure of a lifetime to discover the unknown, something that a particular elf has been loning for her entire life. This track is the opening track of my EP Starcrossed.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="entanglement">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed(music.entanglement.embed, {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Entanglement</h3>
+
+              <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="ocean_of_stars">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed(music.ocean_of_stars.embed, {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Ocean Of Stars</h3>
+
+              <p>This piece is inspired by Maricu Mana's DTIYS challenge going on at her Twitter. Her art tells the story of Lynx, who loves to sneak away from their royal duties and spend time in their secret observatory, drifting away in the ocean of stars.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="once_in_a_blue_moon">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed(music.once_in_a_blue_moon.embed, {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>Once In A Blue Moon</h3>
+
+              <p>If you ever had the chance to escape from reality, where would you go? <i>Once In A Blue Moon</i> tells about a magical world filled with fantasy that you can only visit once in a blue moon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-modal is-hidden" data-project-collapse="we_in_heaven">
+          <div class="card inverted">
+            <div class="card-image">
+              {{ soundcloud.oembed(music.we_in_heaven.embed, {'maxheight': 240, 'color': '#aa0050'}).html }}
+            </div>
+
+            <div class="card-content">
+              <h3>We In Heaven</h3>
+
+              <p>This is the newest remix of my 2012 track <i>We In Heaven</i>, which I still consider one of the most influential tracks for my current style.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section content">
+    <h2>Music commissions</h2>
+
+    <p>Have you always wanted to have your own personal ringtone? Is your tabletop character in desperate need of a heroic theme song? Do you want to have splashing intro for your video, or an accompanying musical piece for your artwork? Or are you looking for a personal gift for a special person or occasion?</p>
+
+    <p>I'm currently open for personal music commissions, which means that I compose a musical piece based on your description. In the process you will get two revisions of the composition, and when it's done, you will recieve the high quality audio of your commissioned piece. You're free to listen to, share or gift the commisioned music, as long as it's for personal use and you don't claim it as your own.</p>
+
+    <p>If you want to order a music commission, <a href="{{ base_path_for(pages.about) }}">send me a message</a> with your request, including the genre and length of the piece, and reference tracks. From that I'll create a musical piece that maches your description as closely as possible. Payment is due before I start working on a commission, and made in euros using a PayPal invoice or bank transfer. Please refer to the <a href="{{ music.commissions.tos }}">terms of service</a> for a detailed overview of the requirements of a request and the commissioning process.</p>
+
+    <div class="columns">
+      <div class="column">
+        <div class="card inverted">
+          <div class="card-content has-text-centered">
+            <p class="lead mb-3">Ringtones or short clips</p>
+            <h1 class="my-3">€ 79,00</h1>
+            <p>
+              Price for maximal 30 seconds<br>
+              Includes 2 revisions in total
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card inverted">
+          <div class="card-content has-text-centered">
+          <p class="lead mb-3">Musical pieces</p>
+            <h1 class="my-3">€ 124,00</h1>
+            <p>
+              Price per minute of music<br>
+              Includes 2 revisions in total
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="is-size-8">All listed prices include transaction fees, but exclude currency conversion fees where applicable. Note that <a href="{{ music.commissions.dutch_tax_exemptions }}">composing music professionally is exempt from tax</a> in the Netherlands, so all listed prices don't include or require additional VAT.</p>
+
+    <p class="is-size-8">By purchasing a personal music commission, you automatically agree to the <a href="{{ music.commissions.tos }}">terms of service for personal music commissions</a>. Please read these carefully before buying!</p>
+  </section>
+{% endblock %}

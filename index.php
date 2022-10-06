@@ -1,6 +1,5 @@
 <?php
 require("vendor/autoload.php");
-require("settings.php");
 
 use Danae\Feather\Feather;
 use Danae\Soundcloud\Soundcloud;
@@ -10,10 +9,9 @@ $feather = new Feather();
 
 // Add pages
 $feather->pages->add('home', ['default' => true]);
-$feather->pages->add('projects');
-$feather->pages->add('commissions');
+$feather->pages->add('music');
+$feather->pages->add('work');
 $feather->pages->add('about');
-$feather->pages->add('contact');
 
 // Add error pages
 $feather->pages->addErrorPage(['template' => 'errors/500']);
@@ -27,6 +25,7 @@ $feather->context = [
   'assets' => $feather->base_path . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
+    'mail' => 'aW5mb0BkYW5hZWRla2tlci5jb20=',
     'soundcloud' => 'https://soundcloud.com/purplelum',
     'spotify_danaedekker' => 'https://open.spotify.com/artist/0bta46UUaupzYcrrhG3yRQ',
     'spotify_purplelum' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt',
@@ -41,14 +40,34 @@ $feather->context = [
   'home' => [
     'showreel_embed' => 'https://www.youtube.com/embed/Ox1CHWTb3Vk'
   ],
-  'compositions' => [
-    'journey_to_the_northern_lights' => 'https://soundcloud.com/purplelum/journey-to-the-northern-lights',
-    'entanglement' => 'https://soundcloud.com/purplelum/entanglement',
-    'ocean_of_stars' => 'https://soundcloud.com/purplelum/ocean-of-stars',
-    'once_in_a_blue_moon' => 'https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered',
-    'we_in_heaven' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
+  'music' => [
+    'journey_to_the_northern_lights' => [
+      'square' => 'https://i1.sndcdn.com/artworks-DiHrIIz67o81ogqz-MkPXbw-t500x500.jpg',
+      'embed' => 'https://soundcloud.com/purplelum/journey-to-the-northern-lights'
+    ],
+    'entanglement' => [
+      'square' => 'https://i1.sndcdn.com/artworks-7yDLmrUx3dJEIIQi-Lk9f7g-t500x500.jpg',
+      'embed' => 'https://soundcloud.com/purplelum/entanglement'
+    ],
+    'ocean_of_stars' => [
+      'square' => 'https://i1.sndcdn.com/artworks-U2eq9RcRuS7WvyXc-5oiyMg-t500x500.jpg',
+      'embed' => 'https://soundcloud.com/purplelum/ocean-of-stars'
+    ],
+    'once_in_a_blue_moon' => [
+      'square' => 'https://i1.sndcdn.com/artworks-o8gPqVOEAmzz5bf6-HxF4RQ-t500x500.jpg',
+      'embed' => 'https://soundcloud.com/purplelum/once-in-a-blue-moon-2020-remastered'
+    ],
+    'we_in_heaven' => [
+      'square' => 'https://i1.sndcdn.com/artworks-UjqsQDKjYH2nOSq2-kpuxXg-t500x500.jpg',
+      'embed' => 'https://soundcloud.com/purplelum/we-in-heaven-2020-remix'
+    ],
+
+    'commissions' => [
+      'tos' => $feather->base_path . '/publications/Personal_Music_Comissions_TOS.pdf',
+      'dutch_tax_exemptions' => 'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/vrijstellingen/vrijstelling_voor_componisten_schrijvers_cartoonisten_en_journalisten',
+    ],
   ],
-  'projects' => [
+  'work' => [
     'feyrune' => [
       'square' => $feather->base_path . '/assets/images/square_feyrune.png',
       'embed' => 'https://www.youtube.com/embed/30kL41BxsxQ',
@@ -119,10 +138,6 @@ $feather->context = [
       'bandcamp' => 'https://danaedekker.bandcamp.com/album/blue-moon',
       'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
     ]
-  ],
-  'commissions' => [
-    'tos' => $feather->base_path . '/publications/Personal_Music_Comissions_TOS.pdf',
-    'dutch_tax_exemptions' => 'https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/vrijstellingen/vrijstelling_voor_componisten_schrijvers_cartoonisten_en_journalisten',
   ],
   'about' => [
     'thesis' => $feather->base_path . '/publications/Nonlinear_music_design_in_narrative_games.pdf',

@@ -2,7 +2,7 @@
 
 {% block main %}
   <section class="section content">
-    <p class="lead">I am Danae Dekker, a composer and technical audio designer for games and interactive media.</p>
+    <p class="lead">Hi, I'm Danae and I create magical and ethereal music for games! I'm a composer and technical audio designer with a passion for musical and fantastical storytelling and I love to work on narrative and immersive games.</p>
 
     <div class="card">
       <div class="card-image">
@@ -12,70 +12,7 @@
       </div>
     </div>
 
-    <p>I'm fascinated by musical storytelling in a fantastical and whimsical setting, which I apply in <a href="{{ base_path_for(pages.projects) }}">autonomous compositions, games and interactive media</a>. Moreover, I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
-    <p>I'm currently available for freelance and contract-based composition and technical audio design work, and I'm open for <a href="{{ base_path_for(pages.commissions) }}">personal music commissions</a> as well!</p>
-  </section>
-
-  <section class="section content">
-    <div class="content">
-      <h2>Compositions</h2>
-
-      <p>Below you can listen to some of the recent compositions I created. Most of these are also available at streaming services like <a href="{{ links.spotify_purplelum }}">Spotify</a> and <a href="{{ links.deezer_purplelum }}">Deezer</a>.</p>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.journey_to_the_northern_lights, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>Journey to the Northern Lights</h3>
-          <p>This beautiful musical piece tells about an adventure of a lifetime to discover the unknown, something that a particular elf has been loning for her entire life. This track is the opening track of my EP Starcrossed.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.entanglement, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>Entanglement</h3>
-          <p>What happens when one careless faerie doesn't pay attention where she's flying? She gets caught in a spider's web, of course.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.ocean_of_stars, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>Ocean Of Stars</h3>
-          <p>This piece is inspired by Maricu Mana's DTIYS challenge going on at her Twitter. Her art tells the story of Lynx, who loves to sneak away from their royal duties and spend time in their secret observatory, drifting away in the ocean of stars.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.once_in_a_blue_moon, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>Once In A Blue Moon</h3>
-          <p>If you ever had the chance to escape from reality, where would you go? <i>Once In A Blue Moon</i> tells about a magical world filled with fantasy that you can only visit once in a blue moon.</p>
-        </div>
-      </div>
-
-      <div class="card inverted">
-        <div class="card-image">
-          {{ soundcloud.oembed(compositions.we_in_heaven, {'maxheight': 240, 'color': '#aa0050'}).html }}
-        </div>
-
-        <div class="card-content">
-          <h3>We In Heaven</h3>
-          <p>This is the newest remix of my 2012 track <i>We In Heaven</i>, which I still consider one of the most influential tracks for my current style.</p>
-        </div>
-      </div>
-    </div>
+    <p>I'm fascinated by telling stories in music, often in a fantastical and whimsical setting, which I apply in <a href="{{ base_path_for(pages.work) }}">autonomous compositions, games and interactive media</a>. Moreover, I have a broad knowledge of software and coding skills to implement music and audio in any interactive project.</p>
+    <p>I'm currently available for freelance and contract-based composition and technical audio design work, and I'm open for <a href="{{ base_path_for(pages.music) }}">personal music commissions</a> as well! If you wish to contact me about my work or interesting collaboration opportunities, don't hesitate to <a href="{{ base_path_for(pages.about) }}">send me a message or chat with me</a>!</p>
   </section>
 {% endblock %}

@@ -3,13 +3,11 @@
 {% block main %}
   <section class="section">
     <div class="content">
-      <h2>Projects</h2>
+      <h2>Previous work</h2>
 
-      <p>Below you can find projects I've been working on regarding composition and technical audio design. Most of my side software projects can be found on my <a href="{{ links.github }}">GitHub</a> profile.</p>
+      <p>Below you can find projects I've been working on regarding composition and technical audio design. You can click on the thumbnails to read, see and hear more about them!</p>
     </div>
-  </section>
 
-  <section class="section">
     <div class="tabs" data-tag-tabs>
       <ul>
         <li class="is-active"><a data-tag="*">All</a></li>
@@ -23,7 +21,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.feyrune.square }}" alt="Feyrune">
+            <img src="{{ work.feyrune.square }}" alt="Feyrune">
           </figure>
 
           <p class="has-text-centered mb-0">Feyrune</p>
@@ -36,7 +34,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.sakura_shrine.square }}" alt="Sakura Shrine">
+            <img src="{{ work.sakura_shrine.square }}" alt="Sakura Shrine">
           </figure>
 
           <p class="has-text-centered mb-0">Sakura Shrine</p>
@@ -49,7 +47,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.cathens.square }}" alt="Cathens">
+            <img src="{{ work.cathens.square }}" alt="Cathens">
           </figure>
 
           <p class="has-text-centered mb-0">Cathens</p>
@@ -62,7 +60,7 @@
       <div class="grid-item" data-tag-collapse="original">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.starcrossed.square }}" alt="Starcrossed">
+            <img src="{{ work.starcrossed.square }}" alt="Starcrossed">
           </figure>
 
           <p class="has-text-centered mb-0">Starcrossed</p>
@@ -75,7 +73,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.ignis_universia.square }}" alt="Ignis Universia">
+            <img src="{{ work.ignis_universia.square }}" alt="Ignis Universia">
           </figure>
 
           <p class="has-text-centered mb-0">Ignis Universia</p>
@@ -88,7 +86,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.invisible_wings.square }}" alt="Invisible Wings">
+            <img src="{{ work.invisible_wings.square }}" alt="Invisible Wings">
           </figure>
 
           <p class="has-text-centered mb-0">Invisible Wings</p>
@@ -101,7 +99,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.fairy_lost.square }}" alt="Fairy Lost">
+            <img src="{{ work.fairy_lost.square }}" alt="Fairy Lost">
           </figure>
 
           <p class="has-text-centered mb-0">Fairy Lost</p>
@@ -114,7 +112,7 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.hope_remember.square }}" alt="Hope/Remember">
+            <img src="{{ work.hope_remember.square }}" alt="Hope/Remember">
           </figure>
 
           <p class="has-text-centered mb-0">Hope/Remember</p>
@@ -127,7 +125,7 @@
       <div class="grid-item" data-tag-collapse="games, media">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.exodus_burned.square }}" alt="Exodus Burned">
+            <img src="{{ work.exodus_burned.square }}" alt="Exodus Burned">
           </figure>
 
           <p class="has-text-centered mb-0">Exodus Burned</p>
@@ -140,7 +138,7 @@
       <div class="grid-item" data-tag-collapse="original">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.colors_of_the_night.square }}" alt="Colors Of The Night">
+            <img src="{{ work.colors_of_the_night.square }}" alt="Colors Of The Night">
           </figure>
 
           <p class="has-text-centered mb-0">Colors Of The Night</p>
@@ -153,7 +151,7 @@
       <div class="grid-item" data-tag-collapse="original">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ projects.blue_moon.square }}" alt="Blue Moon">
+            <img src="{{ work.blue_moon.square }}" alt="Blue Moon">
           </figure>
 
           <p class="has-text-centered mb-0">Blue Moon</p>
@@ -167,7 +165,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.feyrune.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.feyrune.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -177,11 +175,11 @@
             <p><i>Feyrune</i> is an enchanting take on modern pixel art, made by Luna van Egdom as het graduation project. I helped realizing her vision by making a whimsical and feylike soundtrack and sound effects for the game.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.feyrune.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.feyrune.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.feyrune.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.feyrune.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -194,7 +192,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.sakura_shrine.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.sakura_shrine.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -204,15 +202,15 @@
             <p><i>Sakura Shrine</i> is a narrative tower defence-like game about a priestess protecting the sacred sakura tree from demons. This game was made for Ludum Dare 50 together with Arto Koistinen and Luna van Egdom, where I was responsible for the audio and helped developing the concept. Out of almost 2000 jam entries, the game was awarded 50th place in art and 32nd place in audio.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.itch }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.sakura_shrine.itch }}">
                 <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
                 <span>Play game</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.sakura_shrine.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.sakura_shrine.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.sakura_shrine.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -225,7 +223,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.cathens.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.cathens.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -235,15 +233,15 @@
             <p><i>Cathens</i> is a game about discovering the duality between being either a chonky buff cat or a agile mage cat in the streets of ancient Greece. I worked on this small game for the Global Game Jam 2022, together with Luna van Egdom, Kian Kreikamp, Daphne Zwarts and Maiko Steeman.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.cathens.itch }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.cathens.itch }}">
                 <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
                 <span>Play game</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.cathens.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.cathens.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.cathens.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.cathens.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -256,7 +254,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="{{ projects.starcrossed.image }}" alt="Starcrossed">
+              <img src="{{ work.starcrossed.image }}" alt="Starcrossed">
             </figure>
           </div>
 
@@ -266,11 +264,11 @@
             <p><i>Starcrossed</i> is my third EP and contains five musical stories about journeys to faraway lands. This EP released on major streaming platforms in December 2021.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.starcrossed.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.starcrossed.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.starcrossed.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.starcrossed.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -283,7 +281,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.ignis_universia.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.ignis_universia.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -294,15 +292,15 @@
             <p>Together with the developers at Random Potion I worked on the music, sound effects and audio implementation for the demo of the game, that is available to play now!</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.ignis_universia.website }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.ignis_universia.website }}">
                 <span class="icon is-small"><i class="fas fa-link"></i></span>
                 <span>Visit website</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.ignis_universia.steam }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.ignis_universia.steam }}">
                 <span class="icon is-small"><i class="fab fa-steam"></i></span>
                 <span>Steam</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.ignis_universia.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.ignis_universia.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -315,7 +313,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.invisible_wings.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.invisible_wings.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -326,15 +324,15 @@
             <p>Aside from my work as composer and technical audio designer, I have set up this game from scratch on my own, as the result of my dream of creating a narrative fantasy game. Furthermore I took the lead in the conceptualizing and developing the game, collaborating with a screenwriter, an illustrator and voice actors in the process. Upon finishing the demo, <i>Invisible Wings</i> will be released on Steam and Itch.io.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.website }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.invisible_wings.website }}">
                 <span class="icon is-small"><i class="fas fa-link"></i></span>
                 <span>Visit website</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.steam }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.invisible_wings.steam }}">
                 <span class="icon is-small"><i class="fab fa-steam"></i></span>
                 <span>Steam</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.invisible_wings.itch }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.invisible_wings.itch }}">
                 <span class="icon is-small"><i class="fab fa-itch-io"></i></span>
                 <span>Itch.io</span>
               </a>
@@ -347,7 +345,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.fairy_lost.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.fairy_lost.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -358,15 +356,15 @@
             <p>I worked on <i>Fairy Lost</i> for the Global Game Jam 2021, together with Luna van Egdom, Kian Kreikamp, Daphne Zwarts and Maiko Steeman. The game was made in 48 hours and won 2nd place overall and 1st place in the art category of all Dutch entries. I worked on the music and audio design for this game, which was awarded the 2nd place in its category as well.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.fairy_lost.itch }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.fairy_lost.itch }}">
                 <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
                 <span>Play game</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.fairy_lost.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.fairy_lost.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.fairy_lost.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.fairy_lost.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -379,7 +377,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="{{ projects.hope_remember.image }}" alt="Hope/Remember">
+              <img src="{{ work.hope_remember.image }}" alt="Hope/Remember">
             </figure>
           </div>
 
@@ -389,11 +387,11 @@
             <p>Together with Arto Koistinen I worked on <i>Hope/Remember</i> for the 47th Ludum Dare game jam in October 2020. This game is a narrative game reminiscent of okd school top down RPGs, which a story centered around a time loop in the week op Halloween. I created the audio and music for the game, as well as helped brainstorming and conceptualizing the idea and narrative.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.hope_remember.itch }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.hope_remember.itch }}">
                 <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
                 <span>Play game</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.hope_remember.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.hope_remember.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -406,7 +404,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="{{ projects.colors_of_the_night.image }}" alt="Colors Of The Night">
+              <img src="{{ work.colors_of_the_night.image }}" alt="Colors Of The Night">
             </figure>
           </div>
 
@@ -416,11 +414,11 @@
             <p><i>Colors Of The Night</i> is my second EP that released in July 2019. It features four nighttime stories told in beautiful music.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.colors_of_the_night.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.colors_of_the_night.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.colors_of_the_night.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.colors_of_the_night.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
@@ -433,7 +431,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <iframe class="has-ratio" src="{{ projects.exodus_burned.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="has-ratio" src="{{ work.exodus_burned.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -444,7 +442,7 @@
             <p>In 2020 I composed the music for their intro cinematic as well, for which I took inspiration from the epic orchestral music of <i>Two Steps From Hell</i>.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.exodus_burned.link }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.exodus_burned.link }}">
                 <span class="icon is-small"><i class="fas fa-link"></i></span>
                 <span>Visit website</span>
               </a>
@@ -457,7 +455,7 @@
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="{{ projects.blue_moon.image }}" alt="Blue Moon">
+              <img src="{{ work.blue_moon.image }}" alt="Blue Moon">
             </figure>
           </div>
 
@@ -467,11 +465,11 @@
             <p><i>Blue Moon</i> is a collection of four tracks that tell a story about the difference between fantasy and reality. This EP released on major streaming platforms in March 2018.</p>
 
             <div class="buttons">
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.blue_moon.bandcamp }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.blue_moon.bandcamp }}">
                 <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
                 <span>Bandcamp</span>
               </a>
-              <a class="button is-link is-inverted is-rounded" href="{{ projects.blue_moon.soundcloud }}">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.blue_moon.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
                 <span>SoundCloud</span>
               </a>
