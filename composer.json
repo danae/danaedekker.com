@@ -10,9 +10,7 @@
   "require": {
     "php": "^7.4||^8.0",
     "danae/feather": "^0.5",
-    "danae/soundcloud-php": "^3.0",
-    "swiftmailer/swiftmailer": "^6.0",
-    "google/recaptcha": "^1.1"
+    "danae/soundcloud-php": "^3.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
