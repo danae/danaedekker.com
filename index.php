@@ -68,6 +68,17 @@ $feather->context = [
     ],
   ],
   'work' => [
+    'warden_of_the_woods' => [
+      'square' => $feather->base_path . '/assets/images/square_warden_of_the_woods.png',
+      'image' => $feather->base_path . '/assets/images/splash_warden_of_the_woods.png',
+      'itch' => 'https://arzi.itch.io/ld52',
+      'soundcloud' => 'https://soundcloud.com/purplelum/warden-of-the-woods'
+    ],
+    'rayman_2_hd' => [
+      'square' => $feather->base_path . '/assets/images/square_rayman_2_hd.png',
+      'embed' => 'https://www.youtube.com/embed/_dHlU-YV0Gc',
+      'website' => 'https://newdawn.games/'
+    ],
     'feyrune' => [
       'square' => $feather->base_path . '/assets/images/square_feyrune.png',
       'embed' => 'https://www.youtube.com/embed/30kL41BxsxQ',
@@ -105,8 +116,9 @@ $feather->context = [
       'square' => $feather->base_path . '/assets/images/square_invisible_wings.png',
       'embed' => 'https://www.youtube.com/embed/Zn5NWS1Zm7Q',
       'website' => 'https://invisiblewingsgame.com/',
-      'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings/',
-      'itch' => 'https://audune.itch.io/invisiblewings'
+      'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings_Chapter_One/',
+      'itch' => 'https://audune.itch.io/invisiblewings',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/album/invisible-wings-chapter-one-original-game-soundtrack',
     ],
     'fairy_lost' => [
       'square' => $feather->base_path . '/assets/images/square_fairy_lost.png',
