@@ -38,7 +38,7 @@ $feather->context = [
     'linktree' => 'https://danae.link/'
   ],
   'home' => [
-    'showreel_embed' => 'https://www.youtube.com/embed/Ox1CHWTb3Vk'
+    'showreel_embed' => 'https://www.youtube.com/embed/IxIdXyCCp0A'
   ],
   'music' => [
     'journey_to_the_northern_lights' => [
@@ -68,10 +68,18 @@ $feather->context = [
     ],
   ],
   'work' => [
+    'roots_of_skye' => [
+      'square' => $feather->base_path . '/assets/images/square_roots_of_skye.png',
+      'embed' => 'https://www.youtube.com/embed/czFwxPxQxyU',
+      'itch' => 'https://runicpixels.itch.io/roots-of-skye',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/roots-of-skye-original-game-soundtrack',
+      'soundcloud' => 'https://soundcloud.com/purplelum/roots-of-skye'
+    ],
     'warden_of_the_woods' => [
       'square' => $feather->base_path . '/assets/images/square_warden_of_the_woods.png',
-      'image' => $feather->base_path . '/assets/images/splash_warden_of_the_woods.png',
+      'embed' => 'https://www.youtube.com/embed/8Gt_u-zDUNg',
       'itch' => 'https://arzi.itch.io/ld52',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/warden-of-the-woods-original-game-soundtrack',
       'soundcloud' => 'https://soundcloud.com/purplelum/warden-of-the-woods'
     ],
     'rayman_2_hd' => [
@@ -114,7 +122,7 @@ $feather->context = [
     ],
     'invisible_wings' => [
       'square' => $feather->base_path . '/assets/images/square_invisible_wings.png',
-      'embed' => 'https://www.youtube.com/embed/Zn5NWS1Zm7Q',
+      'embed' => 'https://www.youtube.com/embed/IbGgyq8-2xk',
       'website' => 'https://invisiblewingsgame.com/',
       'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings_Chapter_One/',
       'itch' => 'https://audune.itch.io/invisiblewings',

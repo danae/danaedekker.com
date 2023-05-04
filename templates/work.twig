@@ -21,7 +21,20 @@
       <div class="grid-item" data-tag-collapse="games">
         <div class="grid-box">
           <figure class="image is-square mb-2">
-            <img src="{{ work.warden_of_the_woods.square }}" alt="Feyrune">
+            <img src="{{ work.roots_of_skye.square }}" alt="Roots of Skye">
+          </figure>
+
+          <p class="has-text-centered mb-0">Roots of Skye</p>
+          <p class="has-text-centered is-size-8 mb-0">Game Jam Game &middot; 2023</p>
+
+          <a class="is-overlay" href="javascript:;" data-project="roots_of_skye"></a>
+        </div>
+      </div>
+
+      <div class="grid-item" data-tag-collapse="games">
+        <div class="grid-box">
+          <figure class="image is-square mb-2">
+            <img src="{{ work.warden_of_the_woods.square }}" alt="Warden of the Woods">
           </figure>
 
           <p class="has-text-centered mb-0">Warden of the Woods</p>
@@ -187,11 +200,42 @@
         </div>
       </div>
 
+      <div class="grid-modal is-hidden" data-project-collapse="roots_of_skye">
+        <div class="card inverted">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="{{ work.roots_of_skye.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <h3>Roots of Skye</h3>
+
+            <p><i>Roots of Skye</i> is a retro-style adventure game about a girl from a viking elf clan wanting to discover her elven roots. She wants to learn more about her forgotten ancestors and decides to sail towards the Skye tree and climb it to discover its secrets and learn about her past. This game was made for Global game Jam 2023 together with Arto Koistinen, Auroranekai, Flashkirby and Luna van Egdom.</p>
+
+            <div class="buttons">
+              <a class="button is-link is-inverted is-rounded" href="{{ work.roots_of_skye.itch }}">
+                <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
+                <span>Play game</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ work.roots_of_skye.bandcamp }}">
+                <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
+                <span>Bandcamp</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ work.roots_of_skye.soundcloud }}">
+                <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
+                <span>SoundCloud</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="grid-modal is-hidden" data-project-collapse="warden_of_the_woods">
         <div class="card inverted">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="{{ work.warden_of_the_woods.image }}" alt="Starcrossed">
+              <iframe class="has-ratio" src="{{ work.warden_of_the_woods.embed }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
           </div>
 
@@ -204,6 +248,10 @@
               <a class="button is-link is-inverted is-rounded" href="{{ work.warden_of_the_woods.itch }}">
                 <span class="icon is-small"><i class="fas fa-gamepad"></i></span>
                 <span>Play game</span>
+              </a>
+              <a class="button is-link is-inverted is-rounded" href="{{ work.warden_of_the_woods.bandcamp }}">
+                <span class="icon is-small"><i class="fab fa-bandcamp"></i></span>
+                <span>Bandcamp</span>
               </a>
               <a class="button is-link is-inverted is-rounded" href="{{ work.warden_of_the_woods.soundcloud }}">
                 <span class="icon is-small"><i class="fab fa-soundcloud" data-fa-transform="shrink-7" data-fa-mask="fas fa-square"></i></span>
