@@ -1,0 +1,17 @@
+{
+  "name": "danaedekker.com",
+  "version": "0.1.0",
+  "author": "Danae Dekker <info@danaedekker.com>",
+  "description": "My personal portfolio website ",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danae/danaedekker.com.git"
+  },
+  "homepage": "https://danaedekker.com/",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "bulma": "^0.9.4",
+    "jquery": "^3.6.3"
+  }
+}
