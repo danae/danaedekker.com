@@ -25,7 +25,7 @@ $feather->context = [
   'assets' => $feather->base_path . '/assets',
   'soundcloud' => $soundcloud,
   'links' => [
-    'mail' => 'aW5mb0BkYW5hZWRla2tlci5jb20=',
+    'mail' => 'aGVsbG9AZGFuYWVkZWtrZXIuY29t',
     'soundcloud' => 'https://soundcloud.com/purplelum',
     'spotify_danaedekker' => 'https://open.spotify.com/artist/0bta46UUaupzYcrrhG3yRQ',
     'spotify_purplelum' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt',
@@ -33,7 +33,7 @@ $feather->context = [
     'deezer_purplelum' => 'https://www.deezer.com/nl/artist/14398631',
     'bandcamp' => 'https://danaedekker.bandcamp.com/',
     'twitter' => 'https://twitter.com/da___nae',
-    'facebook' => 'https://www.facebook.com/danaedekkergameaudio',
+    'facebook' => 'https://www.facebook.com/danaedekkermusic',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
     'linktree' => 'https://danae.link/'
   ],
