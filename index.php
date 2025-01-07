@@ -32,8 +32,8 @@ $feather->context = [
     'deezer_danaedekker' => 'https://www.deezer.com/nl/artist/124460692',
     'deezer_purplelum' => 'https://www.deezer.com/nl/artist/14398631',
     'bandcamp' => 'https://danaedekker.bandcamp.com/',
-    'twitter' => 'https://twitter.com/da___nae',
-    'facebook' => 'https://www.facebook.com/danaedekkermusic',
+    'youtube' => 'https://youtube.com/@danaedekker',
+    'bluesky' => 'https://bsky.app/profile/danae.link',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
     'linktree' => 'https://danae.link/'
   ],
@@ -68,56 +68,69 @@ $feather->context = [
     ],
   ],
   'work' => [
+    'rayman_2_redreamed' => [
+      'square' => $feather->base_path . '/assets/images/square_rayman_2_redreamed.png',
+      'embed' => 'https://www.youtube.com/embed/v5nR2t-XtHk',
+      'website' => 'https://newdawn.games/'
+    ],
+    'repair_game' => [
+      'square' => $feather->base_path . '/assets/images/square_repair_game.png',
+      'embed' => 'https://www.youtube.com/embed/-3a6ZsoHoGc',
+      'steam' => 'https://store.steampowered.com/app/2480840/Wesley_Smiths_Repair_Game/',
+      'itch' => 'https://audune.itch.io/repairgame',
+    ],
+    'bean_and_brew' => [
+      'square' => $feather->base_path . '/assets/images/square_bean_and_brew.png',
+      'embed' => 'https://www.youtube.com/embed/c26FER2AicM',
+      'itch' => 'https://runicpixels.itch.io/ludum-dare-55',
+      'bandcamp' => 'https://danaedekker.bandcamp.com/track/bean-and-brew-original-game-soundtrack',
+      'spotify' => 'https://open.spotify.com/album/63ooyVv50L91nL54AHuLvZ?si=hGL9dDqARPqnHx54uGitpQ',
+    ],
     'roots_of_skye' => [
       'square' => $feather->base_path . '/assets/images/square_roots_of_skye.png',
       'embed' => 'https://www.youtube.com/embed/czFwxPxQxyU',
       'itch' => 'https://runicpixels.itch.io/roots-of-skye',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/roots-of-skye-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/roots-of-skye'
+      'spotify' => 'https://open.spotify.com/album/3Gvi28iLbm1vNcPFpyXKCZ?si=knO6M_ILSkCSr0YsMBM45Q',
     ],
     'warden_of_the_woods' => [
       'square' => $feather->base_path . '/assets/images/square_warden_of_the_woods.png',
       'embed' => 'https://www.youtube.com/embed/8Gt_u-zDUNg',
       'itch' => 'https://arzi.itch.io/ld52',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/warden-of-the-woods-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/warden-of-the-woods'
-    ],
-    'rayman_2_hd' => [
-      'square' => $feather->base_path . '/assets/images/square_rayman_2_hd.png',
-      'embed' => 'https://www.youtube.com/embed/_dHlU-YV0Gc',
-      'website' => 'https://newdawn.games/'
+      'spotify' => 'https://open.spotify.com/album/5gon4zFmmCLE5xzLosRWjq?si=PQhBjAI3QrS7kJqLP8G_-g',
     ],
     'feyrune' => [
       'square' => $feather->base_path . '/assets/images/square_feyrune.png',
       'embed' => 'https://www.youtube.com/embed/30kL41BxsxQ',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/feyrune-runic-clearing-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/feypunk-runic-clearing-original-game-soundtrack'
+      'soundcloud' => 'https://soundcloud.com/purplelum/feypunk-runic-clearing-original-game-soundtrack',
     ],
     'sakura_shrine' => [
       'square' => $feather->base_path . '/assets/images/square_sakura_shrine.png',
       'embed' => 'https://www.youtube.com/embed/NbBPjZCHw-s',
       'itch' => 'https://arzi.itch.io/ld50',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/sakura-shrine-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/sakura-shrine'
+      'spotify' => 'https://open.spotify.com/album/0q18N5cdPPEUv9vWoH8KP0?si=S0hgKaCCTWW7TroIosBzLw',
     ],
     'cathens' => [
       'square' => $feather->base_path . '/assets/images/square_cathens.png',
       'embed' => 'https://www.youtube.com/embed/LeJqDQb6q6E',
       'itch' => 'https://runicpixels.itch.io/cathens',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/cathens-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/cathens-ost'
+      'spotify' => 'https://open.spotify.com/album/0f1WnKoEH7rJ4G2TB9nwxn?si=WIhfUnZGRc6YSLmELXiynQ',
     ],
     'starcrossed' => [
       'square' => $feather->base_path . '/assets/images/square_starcrossed.png',
       'image' => $feather->base_path . '/assets/images/splash_starcrossed.png',
       'bandcamp' => 'https://danaedekker.bandcamp.com/album/starcrossed',
-      'soundcloud' => 'https://soundcloud.com/purplelum/sets/starcrossed'
+      'spotify' => 'https://open.spotify.com/album/1qlECuzZ6rPlDytM0O7ek8?si=RXWtdvmoS4uABrkmEMG6cQ',
     ],
     'ignis_universia' => [
       'square' => $feather->base_path . '/assets/images/square_ignis_universia.png',
       'embed' => 'https://www.youtube.com/embed/IiCshDIDKjM',
       'website' => 'https://ignisuniversia.com/',
-      'steam' => 'https://store.steampowered.com/app/1545500/Ignis_Universia_Awakening_of_the_Erudite_Empress/',
+      'steam' => 'https://store.steampowered.com/app/1545500/Ignis_Universia_Spa_of_Destiny/',
       'soundcloud' => 'https://soundcloud.com/ignisuniversia'
     ],
     'invisible_wings' => [
@@ -127,42 +140,43 @@ $feather->context = [
       'steam' => 'https://store.steampowered.com/app/1419380/Invisible_Wings_Chapter_One/',
       'itch' => 'https://audune.itch.io/invisiblewings',
       'bandcamp' => 'https://danaedekker.bandcamp.com/album/invisible-wings-chapter-one-original-game-soundtrack',
+      'spotify' => 'https://open.spotify.com/album/34l0R4F0FA8WE91f0RuUDV?si=e-cwVPXYR8ekot3QkZXFzw',
     ],
     'fairy_lost' => [
       'square' => $feather->base_path . '/assets/images/square_fairy_lost.png',
       'embed' => 'https://www.youtube.com/embed/Y21QE7zzHJg',
       'itch' => 'https://coolcast.itch.io/fairy-lost',
       'bandcamp' => 'https://danaedekker.bandcamp.com/track/fairy-lost-original-game-soundtrack',
-      'soundcloud' => 'https://soundcloud.com/purplelum/fairy-lost-ost'
+      'spotify' => 'https://open.spotify.com/album/7epLwpypXL7udJFyUggn5k?si=Ug8g1SbkRWajTXhRSNNNkQ',
     ],
     'hope_remember' => [
       'square' => $feather->base_path . '/assets/images/square_hope_remember.png',
       'image' => $feather->base_path . '/assets/images/splash_hope_remember.png',
       'itch' => 'https://arzi.itch.io/hoperemember',
-      'soundcloud' => 'https://soundcloud.com/purplelum/hope-remember'
+      'soundcloud' => 'https://soundcloud.com/purplelum/hope-remember',
     ],
     'colors_of_the_night' => [
       'square' => $feather->base_path . '/assets/images/square_colors_of_the_night.png',
       'image' => $feather->base_path . '/assets/images/splash_colors_of_the_night.png',
       'bandcamp' => 'https://danaedekker.bandcamp.com/album/colors-of-the-night',
-      'soundcloud' => 'https://soundcloud.com/purplelum/sets/colors-of-the-night'
+      'spotify' => 'https://open.spotify.com/album/6B7otGMfr7Hjhnhyhfj9km?si=1mbQxIpLS3qgGuEtcpurBQ',
     ],
     'exodus_burned' => [
       'square' => $feather->base_path . '/assets/images/square_exodus_burned.png',
       'embed' => 'https://www.youtube.com/embed/alquMRfFrSY',
-      'link' => 'http://www.exodusburned.com/'
+      'website' => 'http://www.exodusburned.com/',
     ],
     'blue_moon' => [
       'square' => $feather->base_path . '/assets/images/square_blue_moon.png',
       'image' => $feather->base_path . '/assets/images/splash_blue_moon.png',
       'bandcamp' => 'https://danaedekker.bandcamp.com/album/blue-moon',
-      'soundcloud' => 'https://soundcloud.com/purplelum/sets/blue-moon'
-    ]
+      'spotify' => 'https://open.spotify.com/album/759u3tjG0t3Fkkycxd9SNC?si=7VQKr1qlQw-fHLMEEx-Dqw',
+      ],
   ],
   'about' => [
     'thesis' => $feather->base_path . '/publications/Nonlinear_music_design_in_narrative_games.pdf',
-    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2022.pdf'
-  ]
+    'resume' => $feather->base_path . '/publications/Danae_Dekker_CV_2025.pdf',
+  ],
 ];
 
 // Run!
