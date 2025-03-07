@@ -1,12 +1,14 @@
 {
-  "name": "danae/website",
+  "name": "danae/danaedekker.com",
   "type": "project",
   "authors": [
     {
       "name": "Danae Dekker",
-      "email": "info@danaedekker.com"
+      "email": "hello@danaedekker.com"
     }
   ],
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://danaedekker.com/",
   "require": {
     "php": "^8.0",
     "danae/feather": "^0.5",
