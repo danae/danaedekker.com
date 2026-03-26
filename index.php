@@ -26,19 +26,16 @@ $feather->context = [
   'soundcloud' => $soundcloud,
   'links' => [
     'mail' => 'aGVsbG9AZGFuYWVkZWtrZXIuY29t',
-    'soundcloud' => 'https://soundcloud.com/purplelum',
-    'spotify_danaedekker' => 'https://open.spotify.com/artist/0bta46UUaupzYcrrhG3yRQ',
-    'spotify_purplelum' => 'https://open.spotify.com/artist/26zydGirRGiAVUaWRR0Wvt',
-    'deezer_danaedekker' => 'https://www.deezer.com/nl/artist/124460692',
-    'deezer_purplelum' => 'https://www.deezer.com/nl/artist/14398631',
     'bandcamp' => 'https://danaedekker.bandcamp.com/',
-    'youtube' => 'https://youtube.com/@danaedekker',
-    'bluesky' => 'https://bsky.app/profile/danae.link',
+    'soundcloud' => 'https://soundcloud.com/purplelum',
+    'spotify' => 'https://open.spotify.com/playlist/4sBP88TmHZMjseWKDKURRi?si=3a16056a56834e4e',
+    'bluesky' => 'https://bsky.app/profile/danae.dev',
+    'discord' => 'https://discord.gg/2bbEpTkPDG',
     'linkedin' => 'https://linkedin.com/in/danaedekker/',
-    'linktree' => 'https://danae.link/'
+    'linktree' => 'https://danae.dev/'
   ],
   'home' => [
-    'showreel_embed' => 'https://www.youtube.com/embed/IxIdXyCCp0A'
+    'showreel_embed' => 'https://www.youtube.com/embed/ovj11GEpTP4'
   ],
   'music' => [
     'journey_to_the_northern_lights' => [
